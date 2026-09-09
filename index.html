@@ -38,8 +38,12 @@
               personalidad reconocible. Trabajo entre la identidad de marca, la interfaz y la narrativa.
             </p>
             <div class="cta-row">
-              <a class="button primary" href="#proyectos">Ver proyectos</a>
-              <a class="button ghost" href="#contacto">Hablemos</a>
+              <button type="button" class="cta-collapsible" data-contact-trigger aria-label="Hablar sobre un proyecto">
+                <span class="cta-collapsed">Hablemos</span>
+                <span class="cta-expanded">Solicitar proyecto</span>
+                <span class="cta-arrow" aria-hidden="true">→</span>
+              </button>
+              <a class="button ghost" href="#proyectos">Ver proyectos</a>
             </div>
             <ul class="hero-meta" aria-label="Datos de trabajo">
               <li>+8 años</li>
@@ -156,34 +160,122 @@
       </section>
 
       <section class="section process" id="proceso">
-        <div class="container">
-          <div class="section-header">
+        <div class="container process-shell">
+          <div class="process-intro">
             <p class="eyebrow dark">Proceso</p>
             <h3>Cómo trabajo</h3>
           </div>
 
-          <div class="timeline">
-            <div class="timeline-item">
-              <span>01</span>
-              <div>
-                <h4>Diagnóstico</h4>
-                <p>Entiendo el contexto, público y la diferencia que debe marcar tu proyecto.</p>
+          <div class="process-grid" aria-label="Flujos de trabajo interactivos">
+            <article class="process-column">
+              <div class="process-card card-diagnostic">
+                <div class="card-head">
+                  <div class="card-number">01</div>
+                  <div class="card-title-wrap">
+                    <h4>Diagnóstico</h4>
+                    <span>Análisis / Investigación / Estrategia</span>
+                  </div>
+                </div>
+
+                <p class="card-copy">Entiendo el contexto, público y la diferencia que debe marcar tu proyecto.</p>
+
+                <div class="process-flow-block">
+                  <div class="mini-label">Tools</div>
+                  <div class="flow-steps">
+                    <span class="flow-node">Figma</span>
+                    <span class="flow-node">Google Forms</span>
+                    <span class="flow-node">Analytics</span>
+                  </div>
+                </div>
+
+                <div class="flow-stage">
+                  <div class="stage-box">Recolección de información</div>
+                  <span class="flow-arrow">↓</span>
+                  <div class="stage-box">Análisis y síntesis</div>
+                  <span class="flow-arrow">↓</span>
+                  <div class="stage-box">Definición de insights</div>
+                </div>
+
+                <div class="flow-result">
+                  <span class="result-tag">Resultado</span>
+                  <p>Contexto claro, objetivos definidos y una base sólida para tomar decisiones.</p>
+                </div>
               </div>
-            </div>
-            <div class="timeline-item">
-              <span>02</span>
-              <div>
-                <h4>Dirección visual</h4>
-                <p>Defino la propuesta estética, la tipografía, el tono y los elementos clave.</p>
+            </article>
+
+            <article class="process-column">
+              <div class="process-card card-visual">
+                <div class="card-head">
+                  <div class="card-number">02</div>
+                  <div class="card-title-wrap">
+                    <h4>Dirección visual</h4>
+                    <span>Concepto / Estética / Sistema</span>
+                  </div>
+                </div>
+
+                <p class="card-copy">Defino la propuesta estética, la tipografía, el tono y los elementos clave.</p>
+
+                <div class="process-flow-block">
+                  <div class="mini-label">Tools</div>
+                  <div class="flow-steps">
+                    <span class="flow-node">Illustrator</span>
+                    <span class="flow-node">Figma</span>
+                    <span class="flow-node">Photoshop</span>
+                  </div>
+                </div>
+
+                <div class="flow-stage visual-grid">
+                  <div class="stage-box">Exploración visual</div>
+                  <div class="stage-box">Tipografía</div>
+                  <div class="stage-box">Paleta de colores</div>
+                  <div class="stage-box">Elementos gráficos</div>
+                  <div class="stage-box full">Ajustes y prueba</div>
+                </div>
+
+                <div class="flow-result">
+                  <span class="result-tag">Resultado</span>
+                  <p>Identidad visual definida, coherente y adaptable a distintos formatos y medios.</p>
+                </div>
               </div>
-            </div>
-            <div class="timeline-item">
-              <span>03</span>
-              <div>
-                <h4>Desarrollo</h4>
-                <p>Materializo la pieza o experiencia con coherencia, consistencia y estructura.</p>
+            </article>
+
+            <article class="process-column">
+              <div class="process-card card-development">
+                <div class="card-head">
+                  <div class="card-number">03</div>
+                  <div class="card-title-wrap">
+                    <h4>Desarrollo</h4>
+                    <span>Frontend / Backend / Testing</span>
+                  </div>
+                </div>
+
+                <p class="card-copy">Materializo la pieza o experiencia con coherencia, consistencia y estructura.</p>
+
+                <div class="process-flow-block">
+                  <div class="mini-label">Tools</div>
+                  <div class="flow-steps">
+                    <span class="flow-node">VS Code</span>
+                    <span class="flow-node">Git</span>
+                    <span class="flow-node">Figma</span>
+                  </div>
+                </div>
+
+                <div class="flow-stage">
+                  <div class="stage-box">Preparación del entorno</div>
+                  <span class="flow-arrow">↓</span>
+                  <div class="stage-box">Construcción</div>
+                  <span class="flow-arrow">↓</span>
+                  <div class="stage-box">Pruebas y validación</div>
+                  <span class="flow-arrow">↓</span>
+                  <div class="stage-box">Depuración</div>
+                </div>
+
+                <div class="flow-result">
+                  <span class="result-tag">Resultado</span>
+                  <p>Producto funcional, listo para ser usado, medido y mejorado con datos reales.</p>
+                </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -222,12 +314,46 @@
       </section>
 
       <section class="section contact" id="contacto">
-        <div class="container contact-box">
-          <div>
+        <div class="container contact-wrap">
+          <div class="contact-copy">
             <p class="eyebrow dark">Contacto</p>
             <h3>Necesitás una presencia digital con carácter.</h3>
+            <p>
+              Escribime con tu idea, proyecto o necesidad. Te respondo con una propuesta clara y una ruta de trabajo.
+            </p>
+            <button type="button" class="inline-contact-trigger" data-contact-trigger>
+              Solicitar proyecto
+            </button>
           </div>
-          <a class="button primary" href="mailto:diego@example.com">diego@example.com</a>
+
+          <div class="contact-form-panel" data-contact-panel aria-hidden="true">
+            <form id="contactForm" class="contact-form">
+              <div class="field-row two-up">
+                <label>
+                  <span>Nombre</span>
+                  <input type="text" name="nombre" placeholder="Tu nombre" />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" placeholder="tu@email.com" required />
+                </label>
+              </div>
+
+              <label>
+                <span>Proyecto</span>
+                <input type="text" name="proyecto" placeholder="Branding, UX/UI, sitio web..." />
+              </label>
+
+              <label>
+                <span>Mensaje</span>
+                <textarea name="mensaje" rows="5" placeholder="Contame qué necesitás..."></textarea>
+              </label>
+
+              <div class="form-actions">
+                <button class="button primary" type="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
     </main>
@@ -240,5 +366,8 @@
 
     <script src="data/projects.js"></script>
     <script src="js/projects.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/contact-toggle.js"></script>
+    <script src="js/contact-form.js"></script>
   </body>
 </html>
