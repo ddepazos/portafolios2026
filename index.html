@@ -8,6 +8,7 @@
       name="description"
       content="Portfolio brutalista de Diego Pazos. Diseño gráfico, UX/UI, dirección visual y sistemas de marca."
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -117,15 +118,62 @@
               intención.
             </p>
           </div>
-          <div class="feature-list">
-            <ul class="value-list">
-              <li>Identidad visual</li>
-              <li>Diseño estratégico</li>
-              <li>Experiencia digital</li>
-              <li>Art direction</li>
-              <li>Interfaces limpias</li>
-              <li>Presencia editorial</li>
-            </ul>
+
+          <div class="expertise-accordion" aria-label="Especialidades profesionales">
+            <details class="expertise-item" open>
+              <summary>
+                <span class="summary-title">Identidad de marca</span>
+                <span class="toggle-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="expertise-content">
+                <ul>
+                  <li>Logo</li>
+                  <li>Branding</li>
+                  <li>Sistema visual</li>
+                  <li>Tipografía</li>
+                  <li>Color</li>
+                  <li>Manual de marca</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="expertise-item">
+              <summary>
+                <span class="summary-title">UX / UI Design</span>
+                <span class="toggle-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="expertise-content">
+                <ul>
+                  <li>Research</li>
+                  <li>Benchmark</li>
+                  <li>Personas</li>
+                  <li>User journey</li>
+                  <li>Wireframes</li>
+                  <li>Prototipos</li>
+                  <li>UI kit</li>
+                  <li>Design system</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="expertise-item">
+              <summary>
+                <span class="summary-title">Desarrollo web</span>
+                <span class="toggle-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="expertise-content">
+                <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>Bootstrap</li>
+                  <li>Responsive</li>
+                  <li>WordPress</li>
+                  <li>WooCommerce</li>
+                  <li>SQL</li>
+                </ul>
+              </div>
+            </details>
           </div>
         </div>
       </section>
@@ -137,23 +185,50 @@
             <h3>Lo que hago</h3>
           </div>
 
-          <div class="card-grid three-up">
-            <article class="service-card">
+          <div class="services-showcase">
+            <article class="service-card service-branding">
               <span class="card-index">01</span>
               <h4>Branding</h4>
-              <p>Identidad visual, narrativa, voz y sistemas de marca pensados para reconocimiento.</p>
+              <p>
+                Identidad visual, narrativa, voz y sistemas de marca pensados para reconocimiento,
+                consistencia y resonancia.
+              </p>
+              <ul class="service-list">
+                <li>Logo</li>
+                <li>Branding</li>
+                <li>Sistema visual</li>
+                <li>Manual de marca</li>
+              </ul>
             </article>
 
-            <article class="service-card">
+            <article class="service-card service-ux">
               <span class="card-index">02</span>
               <h4>UX/UI</h4>
-              <p>Interfaces limpias, consistentes y orientadas a la acción con foco en claridad.</p>
+              <p>
+                Interfaces limpias, consistentes y orientadas a la acción con foco en claridad,
+                usabilidad y experiencia.
+              </p>
+              <ul class="service-list">
+                <li>Research</li>
+                <li>Wireframes</li>
+                <li>Prototipos</li>
+                <li>Design system</li>
+              </ul>
             </article>
 
-            <article class="service-card">
+            <article class="service-card service-digital">
               <span class="card-index">03</span>
               <h4>Diseño digital</h4>
-              <p>Landing pages, campañas y experiencias web con tono propio y objetivos concretos.</p>
+              <p>
+                Landing pages, campañas y experiencias web con tono propio, objetivos claros y presencia
+                que se recuerda.
+              </p>
+              <ul class="service-list">
+                <li>Landing pages</li>
+                <li>UI digital</li>
+                <li>Responsive</li>
+                <li>Campañas</li>
+              </ul>
             </article>
           </div>
         </div>
@@ -301,14 +376,38 @@
           </div>
 
           <div class="tag-list" aria-label="Herramientas y disciplinas">
-            <span>Figma</span>
-            <span>Photoshop</span>
-            <span>Illustrator</span>
-            <span>UX Research</span>
-            <span>Art Direction</span>
-            <span>Brand Systems</span>
-            <span>Design Systems</span>
-            <span>Web Design</span>
+            <span class="skill-tag">
+              <span class="material-symbols-outlined">design_services</span>
+              Figma
+            </span>
+            <span class="skill-tag">
+              <span class="material-symbols-outlined">image</span>
+              Photoshop
+            </span>
+            <span class="skill-tag">
+              <span class="material-symbols-outlined">draw</span>
+              Illustrator
+            </span>
+            <span class="skill-tag">
+              <span class="material-symbols-outlined">manage_search</span>
+              UX Research
+            </span>
+            <span class="skill-tag">
+              <span class="material-symbols-outlined">architecture</span>
+              Art Direction
+            </span>
+            <span class="skill-tag">
+              <span class="material-symbols-outlined">fingerprint</span>
+              Brand Systems
+            </span>
+            <span class="skill-tag">
+              <span class="material-symbols-outlined">account_tree</span>
+              Design Systems
+            </span>
+            <span class="skill-tag">
+              <span class="material-symbols-outlined">web</span>
+              Web Design
+            </span>
           </div>
         </div>
       </section>
@@ -331,7 +430,7 @@
               <div class="field-row two-up">
                 <label>
                   <span>Nombre</span>
-                  <input type="text" name="nombre" placeholder="Tu nombre" />
+                  <input type="text" name="name" placeholder="Tu nombre" required />
                 </label>
                 <label>
                   <span>Email</span>
@@ -341,12 +440,12 @@
 
               <label>
                 <span>Proyecto</span>
-                <input type="text" name="proyecto" placeholder="Branding, UX/UI, sitio web..." />
+                <input type="text" name="subject" placeholder="Branding, UX/UI, sitio web..." />
               </label>
 
               <label>
                 <span>Mensaje</span>
-                <textarea name="mensaje" rows="5" placeholder="Contame qué necesitás..."></textarea>
+                <textarea name="message" rows="5" placeholder="Contame qué necesitás..." required></textarea>
               </label>
 
               <div class="form-actions">
