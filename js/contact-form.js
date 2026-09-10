@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const statusMessage = form.querySelector('.form-status');
   const EMAILJS_PUBLIC_KEY = 'MxxrOLdRiz3tV9i51';
   const EMAILJS_SERVICE_ID = 'service_rbw0qkx';
-  const EMAILJS_TEMPLATE_ID = 'template_lfzhy7f';
+  const EMAILJS_TEMPLATE_ID = 'template_60b7sol';
 
   const setStatus = (type, text) => {
     if (!statusMessage) return;
