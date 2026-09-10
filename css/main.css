@@ -1196,6 +1196,24 @@ body {
   align-items: center;
 }
 
+.form-status {
+  min-height: 24px;
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.form-status.is-success {
+  color: #87f2a6;
+}
+
+.form-status.is-error {
+  color: #ff8b7a;
+}
+
 .site-footer {
   border-top: 3px solid var(--line);
   padding: 28px 0 42px;
