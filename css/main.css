@@ -94,6 +94,101 @@ body {
   align-items: end;
 }
 
+.hero-panel {
+  display: grid;
+  gap: 18px;
+  align-content: center;
+}
+
+.rubik-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 290px;
+  padding: 20px 12px 10px;
+  border: 3px solid var(--line);
+  background: #0b0b0b;
+  box-shadow: 10px 10px 0 var(--yellow);
+  overflow: hidden;
+}
+
+.rubik-stage::before {
+  content: "";
+  position: absolute;
+  inset: 10% 12%;
+  background: radial-gradient(circle, rgba(255, 211, 52, 0.15), transparent 65%);
+  border: 2px solid rgba(255, 255, 255, 0.06);
+}
+
+.rubik-scene {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  display: grid;
+  place-items: center;
+  perspective: 1000px;
+}
+
+.rubik-cube {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  transform-style: preserve-3d;
+  animation: rubikSpin 14s linear infinite;
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  background: rgba(10, 10, 10, 0.9);
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.28);
+}
+
+.front { transform: translateZ(85px); }
+.back { transform: rotateY(180deg) translateZ(85px); }
+.right { transform: rotateY(90deg) translateZ(85px); }
+.left { transform: rotateY(-90deg) translateZ(85px); }
+.top { transform: rotateX(90deg) translateZ(85px); }
+.bottom { transform: rotateX(-90deg) translateZ(85px); }
+
+.tile {
+  display: block;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.13);
+}
+
+.red { background: #ff4d4d; }
+.orange { background: #ff8a1d; }
+.white { background: #f2efe8; }
+.blue { background: #2866ff; }
+.green { background: #36d07c; }
+.yellow { background: #ffd63b; }
+
+@keyframes rubikSpin {
+  0% {
+    transform: rotateX(-25deg) rotateY(0deg) rotateZ(0deg);
+  }
+  25% {
+    transform: rotateX(-10deg) rotateY(90deg) rotateZ(12deg);
+  }
+  50% {
+    transform: rotateX(18deg) rotateY(180deg) rotateZ(0deg);
+  }
+  75% {
+    transform: rotateX(2deg) rotateY(270deg) rotateZ(-12deg);
+  }
+  100% {
+    transform: rotateX(-25deg) rotateY(360deg) rotateZ(0deg);
+  }
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.18em;

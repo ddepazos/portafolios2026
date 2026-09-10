@@ -48,27 +48,27 @@ window.PORTFOLIO_PROJECTS = [
     live: '#'
   },
   {
-    slug: 'brand-voice',
-    title: 'Brand Voice',
-    category: 'Narrativa',
-    summary: 'Sistema de tono, palabras clave y mensajes clave para marcas con una personalidad más definida.',
-    detail: 'proyectos/design-system.html',
-    live: '#'
+    slug: 'portfolio-antiguo',
+    title: 'Portfolio Antiguo',
+    category: 'Portfolio / Personal Brand',
+    summary: 'Versión previa del portafolio personal con identidad propia, estructura editorial y una presencia digital más cercana a la marca.',
+    detail: 'https://katarsispazos.github.io/pazos/',
+    live: 'https://katarsispazos.github.io/pazos/'
   },
   {
-    slug: 'ux-audit',
-    title: 'UX Audit',
-    category: 'Research',
-    summary: 'Diagnóstico de experiencia para reformular navegación y convertir contenido en recorrido claro.',
-    detail: 'proyectos/recorrido.html',
-    live: '#'
+    slug: 'portfolio-antiguo-2',
+    title: 'Pazos Portfolio',
+    category: 'Personal Brand',
+    summary: 'Referencia visual y narrativa previa que permite reforzar la identidad del estudio y la coherencia de la marca.',
+    detail: 'https://katarsispazos.github.io/pazos/',
+    live: 'https://katarsispazos.github.io/pazos/'
   },
   {
-    slug: 'visual-systems',
-    title: 'Visual Systems',
-    category: 'Sistema',
-    summary: 'Biblioteca visual y guía de estilo para proyectos que necesitan coherencia y rapidez de ejecución.',
-    detail: 'proyectos/design-system.html',
-    live: '#'
+    slug: 'portfolio-antiguo-3',
+    title: 'Portfolio 2025',
+    category: 'Brand / Web',
+    summary: 'Precedente de la identidad digital actual, útil para comparar evolución y consolidar la dirección visual del proyecto.',
+    detail: 'https://katarsispazos.github.io/pazos/',
+    live: 'https://katarsispazos.github.io/pazos/'
   }
 ];
