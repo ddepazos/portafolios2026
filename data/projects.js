@@ -11,7 +11,7 @@ window.PORTFOLIO_PROJECTS = [
     slug: 'corpus-tattoo',
     title: 'Corpus Tattoo',
     category: 'Visual identity',
-    summary: 'Identidad visual y presencia web para un estudio con tono editorial y fuerte personalidad.',
+    summary: 'Identidad de marca para un estudio de tatuajes con una mirada más editorial y distintiva, junto a la construcción de su sitio web y la implementación de analytics para medir tráfico y comportamiento.',
     detail: 'proyectos/corpus-tattoo.html',
     live: 'https://diegopazos1984.github.io/parasubida-/'
   },
@@ -55,14 +55,7 @@ window.PORTFOLIO_PROJECTS = [
     detail: 'https://katarsispazos.github.io/pazos/',
     live: 'https://katarsispazos.github.io/pazos/'
   },
-  {
-    slug: 'portfolio-antiguo-2',
-    title: 'Pazos Portfolio',
-    category: 'Personal Brand',
-    summary: 'Referencia visual y narrativa previa que permite reforzar la identidad del estudio y la coherencia de la marca.',
-    detail: 'https://katarsispazos.github.io/pazos/',
-    live: 'https://katarsispazos.github.io/pazos/'
-  },
+
   {
     slug: 'portfolio-2025',
     title: 'Portfolio 2025',
