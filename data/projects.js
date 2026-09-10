@@ -64,11 +64,19 @@ window.PORTFOLIO_PROJECTS = [
     live: 'https://katarsispazos.github.io/pazos/'
   },
   {
-    slug: 'portfolio-antiguo-3',
+    slug: 'portfolio-2025',
     title: 'Portfolio 2025',
     category: 'Brand / Web',
-    summary: 'Precedente de la identidad digital actual, útil para comparar evolución y consolidar la dirección visual del proyecto.',
-    detail: 'https://katarsispazos.github.io/pazos/',
-    live: 'https://katarsispazos.github.io/pazos/'
+    summary: 'Referencia previa de la identidad digital y presencia profesional, con foco en la evolución de la marca y la experiencia de portfolio personal.',
+    detail: 'https://diegopazos1984.github.io/cv/',
+    live: 'https://diegopazos1984.github.io/cv/'
+  },
+  {
+    slug: 'billetera-digital',
+    title: 'Billetera Digital',
+    category: 'Product / UX',
+    summary: 'Sistema de pagos y gestión de saldo con foco en claridad, confianza, usabilidad y una experiencia digital más cercana al usuario.',
+    detail: '#',
+    live: '#'
   }
 ];
