@@ -5,7 +5,7 @@ window.PORTFOLIO_PROJECTS = [
     category: 'Fintech / UX/UI / Product',
     summary: 'Caso de producto digital: investigación, arquitectura, flujos, billetera y moneda propia, diseño responsive y definición técnica de una plataforma financiera.',
     detail: 'proyectos/proletarian-coin.html',
-    live: '#'
+    live: 'proyectos/proletarian-coin.html'
   },
   {
     slug: 'triad',
@@ -63,7 +63,6 @@ window.PORTFOLIO_PROJECTS = [
     detail: 'https://katarsispazos.github.io/pazos/',
     live: 'https://katarsispazos.github.io/pazos/'
   },
-
   {
     slug: 'portfolio-2025',
     title: 'Portfolio 2025',
