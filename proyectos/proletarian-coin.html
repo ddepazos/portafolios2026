@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proletarian Coin | Caso de estudio | Diego Pazos</title>
+  <meta name="description" content="Caso de estudio de Proletarian Coin: investigación, UX/UI, arquitectura, flujos, billetera digital, moneda propia y desarrollo." />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    .case-hero{padding:90px 0 55px}.case-hero h1{font-size:clamp(3.4rem,9vw,8rem);line-height:.82;letter-spacing:-.08em;text-transform:uppercase;margin:0 0 28px}
+    .case-kicker{max-width:850px}.case-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:35px}
+    .case-meta div,.case-block{border:3px solid var(--line);background:#0b0b0b;padding:20px;box-shadow:7px 7px 0 var(--yellow)}
+    .case-meta strong{display:block;color:var(--red);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+    .case-section{padding:65px 0;border-top:3px solid var(--line)}.case-section h2{font-size:clamp(2.2rem,5vw,4.5rem);line-height:.9;letter-spacing:-.06em;text-transform:uppercase;margin:0 0 25px}
+    .case-section h3{font-size:1.4rem;text-transform:uppercase;margin:0 0 12px}.case-section p,.case-section li{color:var(--muted);line-height:1.7}
+    .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.case-grid.three{grid-template-columns:repeat(3,1fr)}
+    .case-block ul{padding-left:18px;margin-bottom:0}.case-number{font-size:3rem;font-weight:1000;color:var(--yellow);line-height:1;margin-bottom:15px}
+    .flow{display:grid;gap:8px;margin-top:24px}.flow span{border:2px solid var(--line);padding:15px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;background:#080808}.flow b{text-align:center;color:var(--red);font-size:1.5rem}
+    .decision{border-left:8px solid var(--red);padding-left:22px}.case-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.case-tags span{border:2px solid var(--line);padding:8px 10px;font-size:.68rem;font-weight:900;text-transform:uppercase}
+    @media(max-width:800px){.case-meta,.case-grid,.case-grid.three{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="site-header"><div class="container nav-wrap"><a class="brand" href="../index.html"><span>DIEGO PAZOS</span></a><nav class="main-nav"><a href="../index.html#proyectos">Casos</a><a href="#proceso-plc">Proceso</a><a href="#arquitectura">Arquitectura</a></nav></div></header>
+<main>
+<section class="case-hero"><div class="container">
+<p class="eyebrow">Caso de estudio · Producto digital</p><h1>Proletarian<br>Coin</h1>
+<p class="lead case-kicker">Diseño de una billetera digital conectada a una moneda propia. El proyecto explora cómo transformar una idea financiera compleja en un producto comprensible: desde la investigación y definición del problema hasta los flujos, la arquitectura de información, el sistema visual, las interfaces desktop/mobile y la base técnica para su desarrollo.</p>
+<div class="case-meta"><div><strong>Rol</strong>UX/UI · Product Design · Desarrollo</div><div><strong>Tipo</strong>Fintech / Wallet / Moneda digital</div><div><strong>Plataformas</strong>Desktop + Mobile</div><div><strong>Estado</strong>Diseño y arquitectura en desarrollo</div></div>
+<div class="case-tags"><span>UX Research</span><span>Figma</span><span>Arquitectura</span><span>User Flows</span><span>UI Kit</span><span>Base de datos</span><span>Front-end</span><span>Back-end</span></div>
+</div></section>
+
+<section class="case-section"><div class="container"><p class="eyebrow dark">01 · Contexto</p><h2>El punto de partida</h2>
+<div class="case-grid"><div class="case-block"><h3>La idea</h3><p>Proletarian Coin nace como ejercicio de diseño y desarrollo de un ecosistema digital propio: una moneda, una billetera y una interfaz desde la que una persona pueda consultar saldo, administrar activos y comprender sus movimientos sin enfrentarse a la complejidad habitual de este tipo de plataformas.</p></div>
+<div class="case-block decision"><h3>Problema de diseño</h3><p>Una wallet puede concentrar conceptos técnicos, datos financieros y acciones sensibles en muy poco espacio. El desafío fue ordenar esa complejidad, construir jerarquías claras y proyectar una experiencia que transmita control y legibilidad antes de avanzar al código.</p></div></div></div></section>
+
+<section class="case-section" id="proceso-plc"><div class="container"><p class="eyebrow dark">02 · Investigación</p><h2>Investigar antes de dibujar pantallas</h2>
+<div class="case-grid three">
+<div class="case-block"><div class="case-number">01</div><h3>Exploración</h3><p>Revisión del funcionamiento general de billeteras digitales, exchanges y productos fintech para reconocer patrones: dashboard, balance, movimientos, envío/recepción, estados de transacción, seguridad y navegación.</p></div>
+<div class="case-block"><div class="case-number">02</div><h3>Análisis funcional</h3><p>Separación entre lo que el usuario necesita ver y lo que el sistema necesita procesar. Esto permitió pensar la interfaz junto con datos, autenticación, transacciones y persistencia, en vez de diseñarla como una colección aislada de pantallas.</p></div>
+<div class="case-block"><div class="case-number">03</div><h3>Hipótesis</h3><p>La experiencia debía reducir carga cognitiva: mostrar primero balance y acciones principales, revelar detalle cuando fuese necesario y mantener consistencia entre desktop y mobile.</p></div>
+</div></div></section>
+
+<section class="case-section"><div class="container"><p class="eyebrow dark">03 · Definición</p><h2>De la investigación al sistema</h2>
+<div class="case-grid"><div class="case-block"><h3>Objetivos de experiencia</h3><ul><li>Comprender el estado de la cuenta rápidamente.</li><li>Distinguir saldo, moneda y movimientos.</li><li>Reducir pasos en las acciones principales.</li><li>Dar feedback claro ante cada operación.</li><li>Mantener una lógica común en desktop y mobile.</li><li>Preparar el producto para conectarse posteriormente a una base de datos real.</li></ul></div>
+<div class="case-block"><h3>Arquitectura de información</h3><p>La estructura se organizó alrededor de un núcleo de cuenta y wallet, acompañado por movimientos, operaciones y configuración. La arquitectura se definió antes de cerrar la interfaz para evitar que la navegación dependiera únicamente de decisiones visuales.</p>
+<div class="flow"><span>Acceso / autenticación</span><b>↓</b><span>Dashboard / balance</span><b>↓</b><span>Wallet + acciones</span><b>↓</b><span>Transacciones / historial</span><b>↓</b><span>Perfil / configuración</span></div></div></div></div></section>
+
+<section class="case-section" id="arquitectura"><div class="container"><p class="eyebrow dark">04 · Flujos</p><h2>Diseñar también lo que ocurre entre pantallas</h2>
+<p class="lead">El flujo se trabajó como parte central del proyecto. No bastaba con diseñar estados finales: había que entender decisiones, entradas, validaciones, respuestas del sistema y rutas de error.</p>
+<div class="case-grid three" style="margin-top:28px">
+<div class="case-block"><h3>Entrada</h3><p>Acceso del usuario, validación de identidad y llegada al estado principal de la cuenta.</p></div>
+<div class="case-block"><h3>Operación</h3><p>Selección de acción, ingreso de datos, validación, confirmación y registro de la transacción.</p></div>
+<div class="case-block"><h3>Respuesta</h3><p>Estados de éxito, error o espera diseñados para que el usuario siempre comprenda qué ocurrió y cuál es el siguiente paso.</p></div>
+</div></div></section>
+
+<section class="case-section"><div class="container"><p class="eyebrow dark">05 · UX/UI</p><h2>Desktop y mobile como un mismo producto</h2>
+<div class="case-grid"><div class="case-block"><h3>Wireframes y jerarquía</h3><p>Las primeras decisiones se concentraron en distribución, navegación, jerarquía del balance y posición de las acciones. La prioridad fue validar estructura antes de agregar detalle visual.</p></div>
+<div class="case-block"><h3>Responsive</h3><p>Mobile no se planteó como una reducción mecánica del desktop. Los componentes se reorganizan según prioridad, preservando acciones esenciales y simplificando densidad de información para pantallas pequeñas.</p></div>
+<div class="case-block"><h3>UI Kit</h3><p>El sistema contempla componentes reutilizables: botones, inputs, cards, navegación, estados, indicadores, elementos de balance y módulos de transacciones. La intención es mantener consistencia y acelerar nuevas vistas.</p></div>
+<div class="case-block"><h3>Dirección visual</h3><p>La identidad toma referencias geométricas y de composición Bauhaus para diferenciar el producto sin sacrificar lectura. Forma, contraste y jerarquía trabajan como parte de la usabilidad, no sólo como decoración.</p></div></div></div></section>
+
+<section class="case-section"><div class="container"><p class="eyebrow dark">06 · Tecnología</p><h2>Diseñar pensando en implementación</h2>
+<div class="case-grid three"><div class="case-block"><h3>Front-end</h3><p>La interfaz se proyecta como una aplicación responsive con componentes reutilizables y estados preparados para conectarse con lógica real.</p></div>
+<div class="case-block"><h3>Back-end</h3><p>El producto requiere lógica para usuarios, autenticación, balances, operaciones y registro de movimientos. La separación de responsabilidades permite evolucionar la interfaz sin mezclar presentación y datos.</p></div>
+<div class="case-block"><h3>Datos</h3><p>El modelo considera entidades relacionadas para usuario, wallet, activo y transacción. La base de datos forma parte de la arquitectura del proyecto desde el inicio, no como una integración posterior.</p></div></div>
+<div class="case-tags"><span>HTML/CSS/JS</span><span>Git / GitHub</span><span>SQL</span><span>Figma</span><span>Responsive Design</span><span>MVC / separación de capas</span></div>
+</div></section>
+
+<section class="case-section"><div class="container"><p class="eyebrow dark">07 · Validación</p><h2>Qué se evalúa</h2>
+<div class="case-grid"><div class="case-block"><h3>Usabilidad</h3><p>Se revisan comprensión de navegación, visibilidad del balance, claridad de las acciones y cantidad de pasos necesarios para completar operaciones clave.</p></div><div class="case-block"><h3>Consistencia</h3><p>Se comprueba que componentes, estados, lenguaje y comportamiento mantengan la misma lógica en todo el producto y entre tamaños de pantalla.</p></div><div class="case-block"><h3>Errores y estados</h3><p>Una operación financiera necesita comunicar qué está pasando. Por eso los estados vacíos, carga, error, confirmación y éxito se consideran parte del diseño.</p></div><div class="case-block"><h3>Iteración</h3><p>Los hallazgos vuelven al flujo y a los componentes. El diseño se entiende como un sistema que se corrige progresivamente, no como una pantalla terminada de una sola vez.</p></div></div></div></section>
+
+<section class="case-section"><div class="container"><p class="eyebrow dark">08 · Resultado</p><h2>Un proyecto de producto, no sólo de interfaz</h2>
+<p class="lead">Proletarian Coin reúne investigación, diseño de experiencia, arquitectura, identidad visual y pensamiento técnico dentro de un mismo caso. El valor del proceso está en conectar cada pantalla con una necesidad, cada flujo con una operación y cada decisión visual con la estructura que deberá sostener el producto.</p>
+<div class="case-block" style="margin-top:30px"><h3>Próximos pasos</h3><p>Completar y conectar las vistas mobile, consolidar el flujo integral, profundizar el modelo de datos, implementar autenticación y persistencia, desarrollar las operaciones de la wallet, realizar pruebas con usuarios y documentar la evolución del producto con métricas y hallazgos verificables.</p></div>
+<div class="cta-row"><a class="button primary" href="../index.html#proyectos">Volver a casos</a><a class="button ghost" href="https://github.com/ddepazos/portafolios2026" target="_blank" rel="noreferrer">Repositorio del portfolio</a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="container"><p>© 2026 Diego Pazos · Proletarian Coin</p></div></footer>
+</body></html>
