@@ -72,12 +72,4 @@ window.PORTFOLIO_PROJECTS = [
     detail: 'https://diegopazos1984.github.io/cv/',
     live: 'https://diegopazos1984.github.io/cv/'
   },
-  {
-    slug: 'billetera-digital',
-    title: 'Billetera Digital',
-    category: 'Product / UX',
-    summary: 'Sistema de pagos y gestión de saldo con foco en claridad, confianza, usabilidad y una experiencia digital más cercana al usuario.',
-    detail: '#',
-    live: '#'
-  }
 ];
