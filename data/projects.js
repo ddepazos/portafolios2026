@@ -5,7 +5,7 @@ window.PORTFOLIO_PROJECTS = [
     category: 'Fintech / UX/UI / Product',
     summary: 'Caso de producto digital: investigación, arquitectura, flujos, billetera y moneda propia, diseño responsive y definición técnica de una plataforma financiera.',
     detail: 'proyectos/proletarian-coin.html',
-    live: 'proyectos/proletarian-coin.html'
+    live: 'https://ddepazos.github.io/plc/pages/perfil.html'
   },
   {
     slug: 'triad',
