@@ -1,5 +1,13 @@
 window.PORTFOLIO_PROJECTS = [
   {
+    slug: 'proletarian-coin',
+    title: 'Proletarian Coin',
+    category: 'Fintech / UX/UI / Product',
+    summary: 'Caso de producto digital: investigación, arquitectura, flujos, billetera y moneda propia, diseño responsive y definición técnica de una plataforma financiera.',
+    detail: 'proyectos/proletarian-coin.html',
+    live: '#'
+  },
+  {
     slug: 'triad',
     title: 'Triad',
     category: 'Brand / UX',
