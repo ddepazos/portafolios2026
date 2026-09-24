@@ -25,11 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
     detailLink.textContent = 'Detalle';
 
     const liveLink = document.createElement('a');
-    liveLink.href = project.live || '#';
-    liveLink.target = project.live && project.live.startsWith('http') ? '_blank' : '_self';
-    liveLink.rel = 'noreferrer';
+    const hasExternalLive = Boolean(project.live && project.live !== '#' && project.live.startsWith('http'));
+    liveLink.href = hasExternalLive ? project.live : project.detail;
+    liveLink.target = hasExternalLive ? '_blank' : '_self';
+    liveLink.rel = hasExternalLive ? 'noreferrer' : '';
     liveLink.className = 'link-button primary';
-    liveLink.textContent = project.live && project.live.startsWith('http') ? 'Live' : 'Proyecto';
+    liveLink.textContent = hasExternalLive ? 'Live' : 'Ver caso';
 
     actions.append(detailLink, liveLink);
     card.append(tag, title, summary, actions);
