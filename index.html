@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/design.css" />
   </head>
   <body>
     <header class="site-header">
@@ -21,6 +22,7 @@
         </a>
         <nav class="main-nav" aria-label="Navegación principal">
           <a href="#proyectos">Proyectos</a>
+          <a href="#diseno">Diseño</a>
           <a href="#servicios">Servicios</a>
           <a href="#proceso">Proceso</a>
           <a href="#contacto">Contacto</a>
@@ -440,6 +442,51 @@
         </div>
       </section>
 
+
+      <section class="section design-section" id="diseno" aria-labelledby="design-title">
+        <div class="container">
+          <div class="design-heading">
+            <div><p class="eyebrow dark">Archivo visual · Selección</p><h2 id="design-title">Diseño con<br>carácter propio.</h2></div>
+            <p>Identidades, ilustración y exploraciones gráficas. Cuatro trabajos para mirar de cerca la forma, el color y el detalle.</p>
+          </div>
+          <div class="design-grid">
+            <article class="design-card">
+              <button class="design-preview design-preview--mercado-quilin" type="button" data-design-index="0" aria-label="Ampliar Mercado Quilín">
+                <img src="assets/design/mercado-quilin.webp" alt="Logotipo Mercado Quilín con símbolo MQ verde, letras negras y lema Date un gusto." loading="lazy" decoding="async">
+                <span class="design-open" aria-hidden="true">Ver pieza ↗</span>
+              </button>
+              <div class="design-caption"><span class="design-category">01 / Identidad visual</span><h3>Mercado Quilín</h3><p>Símbolo geométrico y contraste verde/negro para una marca comercial.</p></div>
+            </article>
+            <article class="design-card">
+              <button class="design-preview design-preview--jabones-camii" type="button" data-design-index="1" aria-label="Ampliar Jabones Camii">
+                <img src="assets/design/jabones-camii.webp" alt="Logotipo circular rosa de Jabones Camii con lettering blanco." loading="lazy" decoding="async">
+                <span class="design-open" aria-hidden="true">Ver pieza ↗</span>
+              </button>
+              <div class="design-caption"><span class="design-category">02 / Identidad visual</span><h3>Jabones Camii</h3><p>Lettering blanco y una paleta rosa para una identidad de cuidado personal.</p></div>
+            </article>
+            <article class="design-card">
+              <button class="design-preview design-preview--ilustracion-nina-gato" type="button" data-design-index="2" aria-label="Ampliar Entre mariposas">
+                <img src="assets/design/ilustracion-nina-gato.webp" alt="Ilustración de una niña de cabello naranja junto a un gato y mariposas." loading="lazy" decoding="async">
+                <span class="design-open" aria-hidden="true">Ver pieza ↗</span>
+              </button>
+              <div class="design-caption"><span class="design-category">03 / Ilustración</span><h3>Entre mariposas</h3><p>Personaje, movimiento y color en una composición con una niña, su gato y mariposas.</p></div>
+            </article>
+            <article class="design-card">
+              <button class="design-preview design-preview--patron-fractal" type="button" data-design-index="3" aria-label="Ampliar Ritmo fractal">
+                <img src="assets/design/patron-fractal.webp" alt="Patrón de líneas curvas en blanco y negro con formas que se repiten." loading="lazy" decoding="async">
+                <span class="design-open" aria-hidden="true">Ver pieza ↗</span>
+              </button>
+              <div class="design-caption"><span class="design-category">04 / Exploración gráfica</span><h3>Ritmo fractal</h3><p>Repetición, curvas y contraste en blanco y negro para construir profundidad visual.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <dialog class="design-dialog" aria-labelledby="design-dialog-title">
+        <div class="design-dialog-bar"><p id="design-dialog-title"></p><button class="design-close" type="button" aria-label="Cerrar imagen ampliada">Cerrar ×</button></div>
+        <img class="design-dialog-image" alt="">
+        <div class="design-dialog-footer"><button type="button" class="design-previous" aria-label="Ver pieza anterior">← Anterior</button><span class="design-counter" aria-live="polite"></span><button type="button" class="design-next" aria-label="Ver pieza siguiente">Siguiente →</button></div>
+      </dialog>
+
       <section class="section stack">
         <div class="container">
           <div class="section-header">
@@ -541,5 +588,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/contact-toggle.js"></script>
     <script src="js/contact-form.js"></script>
+    <script src="js/design-gallery.js" defer></script>
   </body>
 </html>
