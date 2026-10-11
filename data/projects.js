@@ -42,8 +42,8 @@ window.PORTFOLIO_PROJECTS = [
   {
     slug: 'recorrido',
     title: 'Recorrido',
-    category: 'Editorial',
-    summary: 'Sistema de narrativa visual y presentación para proyectos más complejos y de fondo.',
+    category: 'UX Research / Usabilidad / Travel',
+    summary: 'Caso UX sobre compra de pasajes en Recorrido.cl: test de 5 segundos, observación de tarea, fricciones de rendimiento, errores 404 y oportunidades de recuperación del flujo.',
     detail: 'proyectos/recorrido.html',
     live: '#'
   },
