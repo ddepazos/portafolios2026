@@ -1,21 +1,325 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Design System | Diego Pazos</title>
-    <link rel="stylesheet" href="../css/variables.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="../index.html">DIEGO PAZOS</a>
-        <nav class="main-nav"><a href="../index.html#proyectos">Volver</a></nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Design System | Caso UI y sistemas | Diego Pazos</title>
+  <meta name="description" content="Caso de estudio sobre diseño modular, componentes, estados de interacción, responsive design y documentación de un sistema de interfaz." />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    .ds-hero{padding:92px 0 62px}
+    .ds-hero h1{font-size:clamp(4rem,10vw,8.5rem);line-height:.82;letter-spacing:-.075em;text-transform:uppercase;margin:0 0 24px}
+    .ds-intro{max-width:940px}
+    .ds-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:34px}
+    .ds-meta div,.ds-card{border:3px solid var(--line);background:#0b0b0b;padding:20px;box-shadow:7px 7px 0 var(--yellow)}
+    .ds-meta strong{display:block;color:var(--red);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+    .ds-section{padding:66px 0;border-top:3px solid var(--line)}
+    .ds-section h2{font-size:clamp(2.2rem,5vw,4.6rem);line-height:.92;letter-spacing:-.055em;text-transform:uppercase;margin:0 0 26px}
+    .ds-section h3{font-size:1.25rem;text-transform:uppercase;margin:0 0 12px}
+    .ds-section p,.ds-section li{color:var(--muted);line-height:1.7}
+    .ds-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .ds-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .ds-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .ds-card ul{padding-left:18px;margin-bottom:0}
+    .eyebrow.dark{color:var(--yellow)}
+    .ds-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+    .ds-tags span{border:2px solid var(--line);padding:8px 10px;font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+
+    .atomic-stack{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:24px}
+    .atomic-item{min-height:160px;padding:18px;border:2px solid var(--line);background:#111;display:flex;flex-direction:column;justify-content:space-between}
+    .atomic-item span{color:var(--red);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    .atomic-item strong{font-size:1.15rem;text-transform:uppercase}
+    .atomic-item p{font-size:.88rem;margin-bottom:0}
+
+    .component-lab{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+    .lab-panel{border:3px solid var(--line);background:#101010;padding:22px}
+    .lab-panel h3{margin-bottom:18px}
+    .demo-stack{display:grid;gap:14px}
+    .demo-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .ui-btn{border:2px solid var(--line);padding:12px 18px;background:#111;color:var(--ink);font:inherit;font-weight:900;text-transform:uppercase;letter-spacing:.04em}
+    .ui-btn.primary{background:var(--yellow);color:#111;border-color:var(--yellow)}
+    .ui-btn.danger{background:var(--red);border-color:var(--red);color:#fff}
+    .ui-btn.disabled{opacity:.38}
+    .ui-field{display:grid;gap:7px}
+    .ui-field label{font-size:.72rem;font-weight:900;text-transform:uppercase}
+    .ui-input{border:2px solid #555;background:#0b0b0b;color:#fff;padding:13px 14px;font:inherit}
+    .ui-input.focus{outline:3px solid var(--yellow);outline-offset:3px}
+    .ui-badge{display:inline-flex;align-items:center;gap:7px;border:2px solid var(--line);padding:7px 10px;font-size:.7rem;font-weight:900;text-transform:uppercase}
+    .dot{width:9px;height:9px;border-radius:50%;background:var(--yellow)}
+
+    .state-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+    .state{border:2px solid var(--line);padding:16px;background:#111}
+    .state strong{display:block;color:var(--yellow);text-transform:uppercase;font-size:.76rem;margin-bottom:7px}
+
+    .grid-demo{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;margin-top:20px;padding:16px;border:2px solid var(--line);background:#0d0d0d}
+    .grid-demo span{height:110px;background:rgba(255,221,62,.16);border:1px solid var(--yellow)}
+    .responsive-flow{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+    .device{border:2px solid var(--line);padding:18px;background:#111}
+    .device strong{display:block;color:var(--yellow);text-transform:uppercase;margin-bottom:8px}
+
+    .workflow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+    .workflow article{border:2px solid var(--line);padding:16px;background:#0d0d0d}
+    .workflow span{display:block;color:var(--red);font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    .workflow strong{display:block;text-transform:uppercase;line-height:1.15}
+
+    .tool-cloud{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+    .tool-cloud span{border:2px solid var(--line);padding:10px 12px;font-size:.75rem;font-weight:900;text-transform:uppercase;background:#111}
+
+    .resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .resource-card{border:3px solid var(--line);padding:20px;background:#111;display:flex;flex-direction:column;min-height:230px}
+    .resource-card .resource-type{color:var(--red);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    .resource-card h3{margin:10px 0 10px}
+    .resource-card p{flex:1}
+    .resource-card a{align-self:flex-start;margin-top:14px}
+
+    .callout{border-left:8px solid var(--yellow);padding:20px 22px;background:#111}
+    .callout p{margin-bottom:0}
+
+    @media(max-width:950px){
+      .ds-meta,.ds-grid,.ds-grid.three,.ds-grid.four,.component-lab,.resource-grid{grid-template-columns:1fr}
+      .atomic-stack,.state-list,.workflow{grid-template-columns:1fr 1fr}
+      .responsive-flow{grid-template-columns:1fr}
+    }
+    @media(max-width:620px){
+      .ds-hero{padding-top:70px}
+      .atomic-stack,.state-list,.workflow{grid-template-columns:1fr}
+      .ds-meta div,.ds-card,.lab-panel{padding:18px}
+      .grid-demo{gap:3px;padding:10px}
+      .grid-demo span{height:75px}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html"><span>DIEGO PAZOS</span></a>
+    <nav class="main-nav" aria-label="Navegación del caso">
+      <a href="../index.html#proyectos">Casos</a>
+      <a href="#sistema">Sistema</a>
+      <a href="#archivos">Archivos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="ds-hero">
+    <div class="container">
+      <p class="eyebrow">Caso · UI / Design Systems / Front-end</p>
+      <h1>Design System</h1>
+      <p class="lead ds-intro">
+        Para mí un sistema de diseño no es una página llena de botones: es una forma de ordenar decisiones para que una interfaz pueda crecer sin perder coherencia. Esta sección reúne la lógica modular, los componentes, estados, reglas de layout y criterios de interacción que uso como base al diseñar productos digitales.
+      </p>
+
+      <div class="ds-meta">
+        <div><strong>Enfoque</strong>Modularidad y reutilización</div>
+        <div><strong>Herramienta principal</strong>Figma + documentación</div>
+        <div><strong>Criterios</strong>Consistencia · estados · responsive</div>
+        <div><strong>Salida</strong>Componentes y reglas reutilizables</div>
       </div>
-    </header>
-    <main class="section"><div class="container narrow"><p class="eyebrow dark">Proyecto</p><h1>Design System</h1><p class="lead">Base modular para escalar identidad visual y experiencias de manera coherente.</p><a class="button ghost" href="../index.html">Volver al portfolio</a></div></main>
-    <script src="../js/analytics-config.js?v=20261011-1"></script>
-  <script src="../js/analytics.js?v=20261011-1"></script>
+
+      <div class="ds-tags">
+        <span>Atomic Design</span><span>Componentes</span><span>Estados</span><span>Grillas</span>
+        <span>Responsive</span><span>Accesibilidad</span><span>Figma</span><span>Front-end</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section" id="sistema">
+    <div class="container">
+      <p class="eyebrow dark">01 · Pensar en sistema</p>
+      <h2>Diseñar componentes antes que páginas aisladas</h2>
+      <p class="lead ds-intro">
+        El material de Atomic Design que tengo archivado en Drive propone dejar de pensar la web como una colección de páginas estáticas y trabajarla como un sistema dinámico de piezas que se combinan. Esa lógica me sirve para separar elementos simples, agrupaciones y estructuras completas sin repetir decisiones.
+      </p>
+
+      <div class="atomic-stack">
+        <article class="atomic-item"><span>Nivel 01</span><strong>Átomos</strong><p>Color, tipografía, iconos, botones, inputs y unidades básicas.</p></article>
+        <article class="atomic-item"><span>Nivel 02</span><strong>Moléculas</strong><p>Combinaciones pequeñas: buscador, campo + acción, etiqueta + estado.</p></article>
+        <article class="atomic-item"><span>Nivel 03</span><strong>Organismos</strong><p>Cabeceras, formularios, tarjetas, tablas o módulos completos.</p></article>
+        <article class="atomic-item"><span>Nivel 04</span><strong>Plantillas</strong><p>Estructuras que ordenan organismos y definen jerarquía de contenido.</p></article>
+        <article class="atomic-item"><span>Nivel 05</span><strong>Páginas</strong><p>La composición final, alimentada por contenido y casos reales.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <div class="container">
+      <p class="eyebrow dark">02 · Componentes</p>
+      <h2>La consistencia aparece en los detalles repetidos</h2>
+      <p class="lead ds-intro">
+        El trabajo en Figma parte por frames, guías y grillas, pero gana valor cuando los elementos repetidos se convierten en componentes. En vez de redibujar cada botón o campo, se define una base y se controlan sus variaciones.
+      </p>
+
+      <div class="component-lab">
+        <div class="lab-panel">
+          <h3>Familia de acciones</h3>
+          <div class="demo-stack">
+            <div class="demo-row">
+              <button class="ui-btn primary" type="button">Primaria</button>
+              <button class="ui-btn" type="button">Secundaria</button>
+              <button class="ui-btn danger" type="button">Destructiva</button>
+              <button class="ui-btn disabled" type="button" disabled>Deshabilitada</button>
+            </div>
+            <span class="ui-badge"><i class="dot"></i> Estado activo</span>
+          </div>
+        </div>
+
+        <div class="lab-panel">
+          <h3>Campos y foco</h3>
+          <div class="demo-stack">
+            <div class="ui-field">
+              <label>Campo por defecto</label>
+              <input class="ui-input" value="Texto de ejemplo" readonly>
+            </div>
+            <div class="ui-field">
+              <label>Estado de foco</label>
+              <input class="ui-input focus" value="Navegación por teclado" readonly>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="state-list" style="margin-top:22px">
+        <article class="state"><strong>Default</strong><p>Estado base y claramente interactivo.</p></article>
+        <article class="state"><strong>Hover</strong><p>Feedback visual en interfaces con mouse.</p></article>
+        <article class="state"><strong>Focus</strong><p>Crítico para navegación por teclado y accesibilidad.</p></article>
+        <article class="state"><strong>Active</strong><p>Confirma que la acción del usuario fue recibida.</p></article>
+        <article class="state"><strong>Disabled</strong><p>Comunica que una acción no está disponible todavía.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <div class="container">
+      <p class="eyebrow dark">03 · Layout y responsive</p>
+      <h2>La grilla ordena, pero no debe rigidizar</h2>
+      <p class="lead ds-intro">
+        Los documentos de interfaz que revisé en Drive remarcan el uso de grillas, guías y restricciones para mantener alineación y consistencia. En desktop, una estructura de 12 columnas permite dividir el espacio de muchas maneras; en móvil, la prioridad pasa a lectura, alcance del pulgar y reducción de pasos.
+      </p>
+
+      <div class="grid-demo" aria-label="Representación de grilla de 12 columnas">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="responsive-flow">
+        <article class="device"><strong>Desktop</strong><p>Mayor densidad, comparación lateral y uso de hover cuando aporta contexto.</p></article>
+        <article class="device"><strong>Tablet</strong><p>Reorganización de columnas y componentes sin perder jerarquía.</p></article>
+        <article class="device"><strong>Mobile</strong><p>Prioridad en lectura, zonas táctiles y acciones principales al alcance.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <div class="container">
+      <p class="eyebrow dark">04 · Reglas de interacción</p>
+      <h2>El sistema tiene que explicar qué está pasando</h2>
+
+      <div class="ds-grid four">
+        <article class="ds-card"><h3>Claridad</h3><p>La función de cada componente debe entenderse sin depender de explicaciones externas.</p></article>
+        <article class="ds-card"><h3>Consistencia</h3><p>Elementos equivalentes deben conservar apariencia y comportamiento entre pantallas.</p></article>
+        <article class="ds-card"><h3>Feedback</h3><p>Cada acción necesita una respuesta visible: éxito, error, carga o cambio de estado.</p></article>
+        <article class="ds-card"><h3>Accesibilidad</h3><p>Contraste, foco, navegación con teclado, etiquetas y estados no pueden quedar como detalles finales.</p></article>
+      </div>
+
+      <div class="callout" style="margin-top:24px">
+        <h3>Una regla que atraviesa todo el sistema</h3>
+        <p>Si un usuario tiene que adivinar qué puede hacer, dónde está o si su acción funcionó, el componente todavía no está resuelto.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <div class="container">
+      <p class="eyebrow dark">05 · Flujo de trabajo</p>
+      <h2>Del frame al componente implementable</h2>
+
+      <div class="workflow">
+        <article><span>01</span><strong>Frame y contexto</strong><p>Definir dispositivo, tamaño y necesidad real.</p></article>
+        <article><span>02</span><strong>Grilla</strong><p>Ordenar columnas, márgenes, espaciados y restricciones.</p></article>
+        <article><span>03</span><strong>Componentes</strong><p>Convertir patrones repetidos en piezas reutilizables.</p></article>
+        <article><span>04</span><strong>Estados</strong><p>Documentar hover, focus, active, disabled, loading y error.</p></article>
+        <article><span>05</span><strong>Implementación</strong><p>Traducir las reglas visuales a HTML, CSS y comportamiento real.</p></article>
+      </div>
+
+      <div class="tool-cloud" aria-label="Herramientas relacionadas encontradas en Drive">
+        <span>Figma</span><span>Miro</span><span>Optimal Workshop</span><span>Maze</span>
+        <span>Notion</span><span>Trello</span><span>VS Code</span><span>Material Design 3</span>
+        <span>Carbon Design System</span><span>Atlassian Design</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <div class="container">
+      <p class="eyebrow dark">06 · Aplicación en mis proyectos</p>
+      <h2>El sistema no vive separado del producto</h2>
+
+      <div class="ds-grid three">
+        <article class="ds-card">
+          <h3>Pagana Circular</h3>
+          <p>El UI kit organiza marca, iconografía, botones, campos, color y tipografía para mantener consistencia entre navegación y tienda.</p>
+        </article>
+        <article class="ds-card">
+          <h3>Proletarian Coin</h3>
+          <p>La lógica de componentes permite mantener jerarquía y comportamiento entre dashboard, wallet, transacciones, seguridad y vistas responsive.</p>
+        </article>
+        <article class="ds-card">
+          <h3>ENAC / interfaces de administración</h3>
+          <p>Los análisis de front-end que guardé en Drive refuerzan consistencia visual, retroalimentación, responsive, accesibilidad y modularidad como criterios de evaluación.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section" id="archivos">
+    <div class="container">
+      <p class="eyebrow dark">07 · Archivos revisados en Drive</p>
+      <h2>La base documental detrás de esta sección</h2>
+      <p class="lead ds-intro">
+        Para fortalecer este caso revisé material de formación, análisis propios y una planilla de herramientas. No los presento como un “design system terminado” en producción, sino como la documentación que sostiene la forma en que estructuro componentes y reglas.
+      </p>
+
+      <div class="resource-grid">
+        <article class="resource-card">
+          <span class="resource-type">Documento de trabajo</span>
+          <h3>Análisis de Front-End</h3>
+          <p>Revisión de navegación, coherencia gráfica, responsive, accesibilidad, feedback, modularidad y mantenimiento aplicada a una interfaz administrativa.</p>
+          <a class="button ghost" href="https://docs.google.com/document/d/1ZjA_MAxBz7w2dhkcLrWd73-dTSmXTSkm9YBhxQ9Ee10/edit" target="_blank" rel="noreferrer">Ver en Drive</a>
+        </article>
+
+        <article class="resource-card">
+          <span class="resource-type">Planilla propia</span>
+          <h3>Kit de herramientas UX/UI</h3>
+          <p>Inventario de herramientas y referencias: Figma, Miro, Optimal Workshop, Maze, Material Design 3, Carbon, Atlassian Design y recursos de documentación.</p>
+          <a class="button ghost" href="https://docs.google.com/spreadsheets/d/1YXmvN4QvwKCQ-IyJhYVU6sgEN-s5VUzSNr5W_-QL7eQ/edit" target="_blank" rel="noreferrer">Ver en Drive</a>
+        </article>
+
+        <article class="resource-card">
+          <span class="resource-type">Material de formación</span>
+          <h3>Diseño de interfaz con Figma</h3>
+          <p>Trabajo con frames, guías, grillas, pantallas y componentes reutilizables como base para mantener consistencia visual.</p>
+          <a class="button ghost" href="https://drive.google.com/file/d/1565RyXVJv3j0O90xSobnRgh25XFYVKbR/view" target="_blank" rel="noreferrer">Ver referencia</a>
+        </article>
+
+        <article class="resource-card">
+          <span class="resource-type">Material de formación</span>
+          <h3>Diseño de interfaz e interacción</h3>
+          <p>Estados de componentes, claridad, consistencia, feedback, affordances, accesibilidad, grillas y comportamiento responsive.</p>
+          <a class="button ghost" href="https://drive.google.com/file/d/15x8YT_A5VcI7KmN9666kBSpF9kM3Lb-j/view" target="_blank" rel="noreferrer">Ver referencia</a>
+        </article>
+      </div>
+
+      <div class="cta-row" style="margin-top:30px">
+        <a class="button primary" href="../index.html#proyectos">Volver a casos</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><p>© 2026 Diego Pazos · Design System</p></div></footer>
+<script src="../js/analytics-config.js?v=20261011-1"></script>
+<script src="../js/analytics.js?v=20261011-1"></script>
 </body>
 </html>
