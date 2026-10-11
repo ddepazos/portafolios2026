@@ -102,6 +102,12 @@ document.addEventListener('DOMContentLoaded', () => {
         templateParams
       );
 
+      window.trackPortfolioEvent?.('generate_lead', {
+        event_category: 'contact',
+        form_name: 'portfolio_contact',
+        project_type: templateParams.subject || 'Sin especificar'
+      });
+
       form.reset();
       setStatus('success', 'Mensaje enviado. Te responderé pronto.');
 
