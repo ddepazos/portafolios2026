@@ -35,7 +35,7 @@ window.PORTFOLIO_PROJECTS = [
     slug: 'raki',
     title: 'Raki',
     category: 'Branding / Packaging / Web',
-    summary: 'Caso de identidad visual para una distribuidora de productos del sur de Chile: sistema de marca, etiquetas, piezas promocionales y aplicación digital con foco en origen, cercanía y producto artesanal.',
+    summary: 'Para Raki desarrollé una identidad visual inspirada en el sur de Chile, aplicada a etiquetas, piezas promocionales y web, buscando que todo se sintiera parte de una misma marca.',
     detail: 'proyectos/raki.html',
     live: 'https://rakidistribuidora.cl/'
   },
