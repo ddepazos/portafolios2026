@@ -46,6 +46,7 @@ Presentar la identidad profesional de manera directa, con una estructura de info
 - CSS3
 - JavaScript vanilla
 - EmailJS para envío de formularios
+- Google Analytics 4 (GA4) preparado para medir páginas, proyectos, piezas de diseño, clics externos y formularios
 - GitHub Pages para despliegue
 
 ## Flujo de trabajo
@@ -65,3 +66,8 @@ El sitio se despliega en GitHub Pages y se mantiene actualizado desde la rama pr
 ## Nota
 
 La versión actual prioriza una identidad personal fuerte, un enfoque visual reconocible y una experiencia web funcional, clara y lista para presentar proyectos y captar contactos.
+
+
+## Google Analytics 4
+
+La integración está preparada en `js/analytics-config.js` y `js/analytics.js`. Para activarla se debe ingresar el ID público de medición con formato `G-XXXXXXXXXX` en `js/analytics-config.js`. Mientras el valor esté vacío, el sitio no envía datos a Google Analytics.
