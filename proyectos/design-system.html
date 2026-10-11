@@ -7,6 +7,7 @@
   <meta name="description" content="Caso de estudio sobre diseño modular, componentes, estados de interacción, responsive design y documentación de un sistema de interfaz." />
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,500,0,0" />
   <style>
     .ds-hero{padding:92px 0 62px}
     .ds-hero h1{font-size:clamp(4rem,10vw,8.5rem);line-height:.82;letter-spacing:-.075em;text-transform:uppercase;margin:0 0 24px}
@@ -67,11 +68,28 @@
     .tool-cloud span{border:2px solid var(--line);padding:10px 12px;font-size:.75rem;font-weight:900;text-transform:uppercase;background:#111}
 
     .resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-    .resource-card{border:3px solid var(--line);padding:20px;background:#111;display:flex;flex-direction:column;min-height:230px}
-    .resource-card .resource-type{color:var(--red);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    .resource-card{border:3px solid #3f3f3f;background:#111;min-height:250px;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+    .resource-card:hover,.resource-card[open]{transform:translateY(-3px);border-color:var(--yellow);box-shadow:7px 7px 0 var(--yellow)}
+    .resource-card summary{list-style:none;cursor:pointer;padding:22px;min-height:245px;display:flex;flex-direction:column}
+    .resource-card summary::-webkit-details-marker{display:none}
+    .resource-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+    .resource-icon{width:52px;height:52px;display:grid;place-items:center;border:2px solid var(--line);background:#0b0b0b;color:var(--yellow);flex:0 0 auto}
+    .resource-icon .material-symbols-outlined{font-size:28px}
+    .resource-toggle{display:flex;align-items:center;gap:7px;color:var(--yellow);font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+    .resource-toggle .material-symbols-outlined{font-size:20px;transition:transform .2s ease}
+    .resource-card[open] .resource-toggle .material-symbols-outlined{transform:rotate(180deg)}
+    .resource-card .resource-type{display:block;color:var(--red);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-top:20px}
     .resource-card h3{margin:10px 0 10px}
-    .resource-card p{flex:1}
-    .resource-card a{align-self:flex-start;margin-top:14px}
+    .resource-card summary p{margin-bottom:0}
+    .resource-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:20px}
+    .resource-meta span{border:1px solid #4c4c4c;padding:6px 8px;font-size:.66rem;font-weight:800;text-transform:uppercase;color:#d5d5d5}
+    .resource-detail{border-top:2px solid #333;padding:20px 22px 22px;background:#0c0c0c}
+    .resource-detail strong{display:block;color:var(--yellow);font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px}
+    .resource-detail ul{margin:0;padding-left:18px}
+    .resource-detail li{margin:5px 0}
+    .resource-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+    .resource-actions a{margin:0}
+    .resource-source-note{font-size:.75rem;color:#9f9f9f;margin-top:12px}
 
     .callout{border-left:8px solid var(--yellow);padding:20px 22px;background:#111}
     .callout p{margin-bottom:0}
@@ -97,7 +115,7 @@
     <nav class="main-nav" aria-label="Navegación del caso">
       <a href="../index.html#proyectos">Casos</a>
       <a href="#sistema">Sistema</a>
-      <a href="#archivos">Archivos</a>
+      <a href="#referencias">Referencias</a>
     </nav>
   </div>
 </header>
@@ -273,42 +291,126 @@
     </div>
   </section>
 
-  <section class="ds-section" id="archivos">
+  <section class="ds-section" id="referencias">
     <div class="container">
       <p class="eyebrow dark">07 · Referencias y documentación</p>
       <h2>Fundamentos y material de apoyo</h2>
       <p class="lead ds-intro">
-        Esta sección reúne material de formación, análisis propios y recursos de trabajo que respaldan la forma en que estructuro componentes, estados, reglas de interacción y criterios de consistencia.
+        Esta sección toma información directamente de los documentos que tengo organizados en Drive. Cada tarjeta resume qué contiene el archivo, qué parte aporta al sistema y permite desplegar más detalle sin salir de la página.
       </p>
 
       <div class="resource-grid">
-        <article class="resource-card">
-          <span class="resource-type">Documento de trabajo</span>
-          <h3>Análisis de Front-End</h3>
-          <p>Revisión de navegación, coherencia gráfica, responsive, accesibilidad, feedback, modularidad y mantenimiento aplicada a una interfaz administrativa.</p>
-          <a class="button ghost" href="https://docs.google.com/document/d/1ZjA_MAxBz7w2dhkcLrWd73-dTSmXTSkm9YBhxQ9Ee10/edit" target="_blank" rel="noreferrer">Ver en Drive</a>
-        </article>
+        <details class="resource-card">
+          <summary>
+            <div class="resource-card-top">
+              <div class="resource-icon" aria-hidden="true"><span class="material-symbols-outlined">description</span></div>
+              <span class="resource-toggle">Ver detalle <span class="material-symbols-outlined">expand_more</span></span>
+            </div>
+            <span class="resource-type">Documento de trabajo</span>
+            <h3>Análisis de Front-End</h3>
+            <p>Revisión de navegación, coherencia gráfica, responsive, accesibilidad, feedback, modularidad y mantenimiento aplicada a una interfaz administrativa.</p>
+            <div class="resource-meta">
+              <span>Google Docs</span><span>17 KB</span><span>09 MAY 2025</span>
+            </div>
+          </summary>
+          <div class="resource-detail">
+            <strong>Qué aporta al sistema</strong>
+            <ul>
+              <li>Consistencia de navegación y estructura visual.</li>
+              <li>Estados de confirmación, error y retroalimentación.</li>
+              <li>Accesibilidad: contraste, ARIA y navegación por teclado.</li>
+              <li>Responsive, modularidad y criterios de mantenimiento.</li>
+            </ul>
+            <div class="resource-actions">
+              <a class="button ghost" href="https://docs.google.com/document/d/1ZjA_MAxBz7w2dhkcLrWd73-dTSmXTSkm9YBhxQ9Ee10/edit" target="_blank" rel="noreferrer">Abrir documento</a>
+            </div>
+            <p class="resource-source-note">Datos y síntesis extraídos del documento guardado en Drive.</p>
+          </div>
+        </details>
 
-        <article class="resource-card">
-          <span class="resource-type">Planilla propia</span>
-          <h3>Kit de herramientas UX/UI</h3>
-          <p>Inventario de herramientas y referencias: Figma, Miro, Optimal Workshop, Maze, Material Design 3, Carbon, Atlassian Design y recursos de documentación.</p>
-          <a class="button ghost" href="https://docs.google.com/spreadsheets/d/1YXmvN4QvwKCQ-IyJhYVU6sgEN-s5VUzSNr5W_-QL7eQ/edit" target="_blank" rel="noreferrer">Ver en Drive</a>
-        </article>
+        <details class="resource-card">
+          <summary>
+            <div class="resource-card-top">
+              <div class="resource-icon" aria-hidden="true"><span class="material-symbols-outlined">table_chart</span></div>
+              <span class="resource-toggle">Ver detalle <span class="material-symbols-outlined">expand_more</span></span>
+            </div>
+            <span class="resource-type">Planilla de recursos</span>
+            <h3>Kit de herramientas UX/UI</h3>
+            <p>Inventario de herramientas y referencias de investigación, prototipado, documentación, pruebas y sistemas de diseño.</p>
+            <div class="resource-meta">
+              <span>Google Sheets</span><span>1.16 MB</span><span>09 NOV 2024</span>
+            </div>
+          </summary>
+          <div class="resource-detail">
+            <strong>Herramientas registradas</strong>
+            <ul>
+              <li>Figma, Miro, Optimal Workshop y Maze.</li>
+              <li>Notion y Trello para documentación y seguimiento.</li>
+              <li>Material Design 3, Carbon y Atlassian Design como referencias de sistemas.</li>
+              <li>VS Code y recursos front-end para implementación.</li>
+            </ul>
+            <div class="resource-actions">
+              <a class="button ghost" href="https://docs.google.com/spreadsheets/d/1YXmvN4QvwKCQ-IyJhYVU6sgEN-s5VUzSNr5W_-QL7eQ/edit" target="_blank" rel="noreferrer">Abrir planilla</a>
+            </div>
+            <p class="resource-source-note">Selección tomada del inventario de herramientas disponible en Drive.</p>
+          </div>
+        </details>
 
-        <article class="resource-card">
-          <span class="resource-type">Material de formación</span>
-          <h3>Diseño de interfaz con Figma</h3>
-          <p>Trabajo con frames, guías, grillas, pantallas y componentes reutilizables como base para mantener consistencia visual.</p>
-          <a class="button ghost" href="https://drive.google.com/file/d/1565RyXVJv3j0O90xSobnRgh25XFYVKbR/view" target="_blank" rel="noreferrer">Ver referencia</a>
-        </article>
+        <details class="resource-card">
+          <summary>
+            <div class="resource-card-top">
+              <div class="resource-icon" aria-hidden="true"><span class="material-symbols-outlined">design_services</span></div>
+              <span class="resource-toggle">Ver detalle <span class="material-symbols-outlined">expand_more</span></span>
+            </div>
+            <span class="resource-type">Material de formación</span>
+            <h3>Diseño de interfaz con Figma</h3>
+            <p>Ejercicio centrado en frames, guías, grillas, pantallas y creación de componentes básicos para mantener consistencia.</p>
+            <div class="resource-meta">
+              <span>PDF</span><span>7.32 MB</span><span>03 MAY 2024</span>
+            </div>
+          </summary>
+          <div class="resource-detail">
+            <strong>Contenido relevante</strong>
+            <ul>
+              <li>Configuración de frames para móvil o web.</li>
+              <li>Uso de guías y grillas para diagramación.</li>
+              <li>Diseño de varias pantallas dentro de un mismo sistema.</li>
+              <li>Creación y reutilización de componentes, especialmente botones.</li>
+            </ul>
+            <div class="resource-actions">
+              <a class="button ghost" href="https://drive.google.com/file/d/1565RyXVJv3j0O90xSobnRgh25XFYVKbR/view" target="_blank" rel="noreferrer">Abrir material</a>
+            </div>
+            <p class="resource-source-note">Síntesis basada en el PDF de diseño de interfaz con Figma guardado en Drive.</p>
+          </div>
+        </details>
 
-        <article class="resource-card">
-          <span class="resource-type">Material de formación</span>
-          <h3>Diseño de interfaz e interacción</h3>
-          <p>Estados de componentes, claridad, consistencia, feedback, affordances, accesibilidad, grillas y comportamiento responsive.</p>
-          <a class="button ghost" href="https://drive.google.com/file/d/15x8YT_A5VcI7KmN9666kBSpF9kM3Lb-j/view" target="_blank" rel="noreferrer">Ver referencia</a>
-        </article>
+        <details class="resource-card">
+          <summary>
+            <div class="resource-card-top">
+              <div class="resource-icon" aria-hidden="true"><span class="material-symbols-outlined">touch_app</span></div>
+              <span class="resource-toggle">Ver detalle <span class="material-symbols-outlined">expand_more</span></span>
+            </div>
+            <span class="resource-type">Material de formación</span>
+            <h3>Diseño de interfaz e interacción</h3>
+            <p>Estados de componentes, claridad, consistencia, feedback, affordances, accesibilidad, grillas y comportamiento responsive.</p>
+            <div class="resource-meta">
+              <span>PDF</span><span>10.37 MB</span><span>02 MAY 2024</span>
+            </div>
+          </summary>
+          <div class="resource-detail">
+            <strong>Contenido relevante</strong>
+            <ul>
+              <li>Estados default, hover, focus y active.</li>
+              <li>Affordances y feedback como señales de interacción.</li>
+              <li>Accesibilidad, reducción de carga cognitiva y predictibilidad.</li>
+              <li>Layouts fluidos, adaptativos y responsive, además de grillas de 12 columnas.</li>
+            </ul>
+            <div class="resource-actions">
+              <a class="button ghost" href="https://drive.google.com/file/d/15x8YT_A5VcI7KmN9666kBSpF9kM3Lb-j/view" target="_blank" rel="noreferrer">Abrir material</a>
+            </div>
+            <p class="resource-source-note">Síntesis basada en el PDF de diseño de interfaz e interacción guardado en Drive.</p>
+          </div>
+        </details>
       </div>
 
       <div class="cta-row" style="margin-top:30px">
