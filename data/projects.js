@@ -34,8 +34,8 @@ window.PORTFOLIO_PROJECTS = [
   {
     slug: 'raki',
     title: 'Raki',
-    category: 'Product / Web',
-    summary: 'Diseño de interfaz y estructura de contenido para una marca con fuerte contenido visual.',
+    category: 'Branding / Packaging / Web',
+    summary: 'Caso de identidad visual para una distribuidora de productos del sur de Chile: sistema de marca, etiquetas, piezas promocionales y aplicación digital con foco en origen, cercanía y producto artesanal.',
     detail: 'proyectos/raki.html',
     live: 'https://rakidistribuidora.cl/'
   },
