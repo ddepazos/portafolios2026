@@ -1,21 +1,262 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Recorrido | Diego Pazos</title>
-    <link rel="stylesheet" href="../css/variables.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="../index.html">DIEGO PAZOS</a>
-        <nav class="main-nav"><a href="../index.html#proyectos">Volver</a></nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recorrido.cl | Caso de estudio UX Research | Diego Pazos</title>
+  <meta name="description" content="Caso de estudio UX de Recorrido.cl: test de 5 segundos, observación de compra de pasajes, hallazgos de usabilidad y oportunidades de mejora en el flujo de compra." />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    .case-hero{padding:92px 0 62px}
+    .case-hero h1{font-size:clamp(4rem,10vw,8.5rem);line-height:.82;letter-spacing:-.075em;text-transform:uppercase;margin:0 0 24px}
+    .case-intro{max-width:900px}
+    .case-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:34px}
+    .case-meta div,.case-card{border:3px solid var(--line);background:#0b0b0b;padding:20px;box-shadow:7px 7px 0 var(--yellow)}
+    .case-meta strong{display:block;color:var(--red);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+    .case-section{padding:66px 0;border-top:3px solid var(--line)}
+    .case-section h2{font-size:clamp(2.2rem,5vw,4.6rem);line-height:.92;letter-spacing:-.055em;text-transform:uppercase;margin:0 0 26px}
+    .case-section h3{font-size:1.2rem;text-transform:uppercase;margin:0 0 10px}
+    .case-section p,.case-section li{color:var(--muted);line-height:1.72}
+    .case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .case-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .case-card ul{padding-left:18px;margin-bottom:0}
+    .eyebrow.dark{color:var(--yellow)}
+    .score-card{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+    .score-value{font-size:clamp(4rem,8vw,7rem);font-weight:1000;line-height:.8;color:var(--yellow);letter-spacing:-.08em}
+    .flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-top:26px}
+    .flow-step{border:2px solid var(--line);background:#0d0d0d;padding:15px;min-height:138px}
+    .flow-step span{display:block;color:var(--red);font-size:.67rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    .flow-step strong{display:block;text-transform:uppercase;line-height:1.1;margin-bottom:8px}
+    .flow-step.problem{border-color:var(--red);box-shadow:5px 5px 0 var(--red)}
+    .finding{border-left:7px solid var(--yellow);padding-left:18px}
+    .finding strong{display:block;color:var(--yellow);text-transform:uppercase;margin-bottom:7px}
+    .memory-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:20px}
+    .memory-chip{border:2px solid var(--line);padding:16px;text-align:center;font-weight:900;text-transform:uppercase;background:#111}
+    .metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .metric{border:2px solid var(--line);padding:18px;background:#111}
+    .metric strong{display:block;color:var(--yellow);text-transform:uppercase;margin-bottom:8px}
+    .note{font-size:.9rem;color:var(--muted);margin-top:20px}
+    @media(max-width:900px){
+      .case-meta,.case-grid,.case-grid.three,.metric-grid{grid-template-columns:1fr}
+      .flow{grid-template-columns:1fr 1fr}
+      .memory-list{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:620px){
+      .case-hero{padding-top:70px}
+      .flow,.memory-list{grid-template-columns:1fr}
+      .case-meta div,.case-card{padding:18px}
+      .score-card{align-items:flex-start;flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html"><span>DIEGO PAZOS</span></a>
+    <nav class="main-nav" aria-label="Navegación del caso">
+      <a href="../index.html#proyectos">Casos</a>
+      <a href="#investigacion">Investigación</a>
+      <a href="#hallazgos">Hallazgos</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="case-hero">
+    <div class="container">
+      <p class="eyebrow">Caso de estudio · UX Research / Usabilidad / E-commerce de viajes</p>
+      <h1>Recorrido.cl</h1>
+      <p class="lead case-intro">
+        Este caso parte desde la observación de una compra real de pasajes. Más que rediseñar por intuición, el trabajo buscó entender qué recordaba el usuario, cómo recorría el sitio, dónde aparecía fricción y qué elementos sí ayudaban a avanzar.
+      </p>
+
+      <div class="case-meta">
+        <div><strong>Rol</strong>UX Research · análisis de usabilidad</div>
+        <div><strong>Métodos</strong>Test de 5 segundos · observación de tarea</div>
+        <div><strong>Flujo estudiado</strong>Búsqueda y compra de pasajes</div>
+        <div><strong>Foco</strong>Fluidez · confianza · errores · recuperación</div>
       </div>
-    </header>
-    <main class="section"><div class="container narrow"><p class="eyebrow dark">Proyecto</p><h1>Recorrido</h1><p class="lead">Narrativa visual para un proyecto con profundidad y recorrido editorial.</p><a class="button ghost" href="../index.html">Volver al portfolio</a></div></main>
-    <script src="../js/analytics-config.js?v=20261011-1"></script>
-  <script src="../js/analytics.js?v=20261011-1"></script>
+    </div>
+  </section>
+
+  <section class="case-section" id="investigacion">
+    <div class="container">
+      <p class="eyebrow dark">01 · Enfoque de investigación</p>
+      <h2>Primero entender el problema</h2>
+      <div class="case-grid">
+        <div class="case-card">
+          <h3>Qué se quería evaluar</h3>
+          <p>
+            El marco de investigación planteaba revisar facilidad de navegación, estructura del sitio, puntos de frustración, eficiencia de las interacciones clave, arquitectura de información y comportamiento de botones, formularios y menús.
+          </p>
+        </div>
+        <div class="case-card">
+          <h3>Cómo se observó</h3>
+          <p>
+            El estudio conservado en Drive registra un test de 5 segundos y una sesión de aproximadamente 10 minutos siguiendo a un usuario mientras buscaba y trataba de comprar pasajes en Recorrido.cl.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">02 · Test de 5 segundos</p>
+      <h2>Qué quedó en la memoria después del primer vistazo</h2>
+      <p class="lead case-intro">
+        En la prueba breve, el usuario recordó principalmente elementos visuales y de navegación. La lectura inicial permitía reconocer que se trataba de un servicio dirigido a personas, pero no fue suficiente para construir una percepción clara de confianza.
+      </p>
+
+      <div class="memory-list">
+        <div class="memory-chip">Mucho blanco</div>
+        <div class="memory-chip">Fotografía</div>
+        <div class="memory-chip">Logo</div>
+        <div class="memory-chip">Menú</div>
+      </div>
+
+      <div class="case-grid" style="margin-top:22px">
+        <div class="case-card">
+          <h3>Lectura del público</h3>
+          <p>El usuario interpretó que la página estaba dirigida a personas naturales.</p>
+        </div>
+        <div class="case-card">
+          <h3>Confianza</h3>
+          <p>No pudo emitir un juicio claro sobre confianza con la información disponible en esos primeros segundos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">03 · Observación de compra</p>
+      <h2>El flujo funcionaba hasta que la plataforma dejaba de responder</h2>
+
+      <div class="flow">
+        <div class="flow-step"><span>01</span><strong>Buscar</strong><p>Pasajes hacia el norte desde Santiago / San Bernardo.</p></div>
+        <div class="flow-step"><span>02</span><strong>Comparar</strong><p>Primera salida, servicios, rutas y alternativas disponibles.</p></div>
+        <div class="flow-step"><span>03</span><strong>Elegir</strong><p>El precio fue determinante; eligió Cóndor Bus.</p></div>
+        <div class="flow-step"><span>04</span><strong>Confiar</strong><p>La familiaridad con la empresa influyó en la decisión de ida y vuelta.</p></div>
+        <div class="flow-step problem"><span>05</span><strong>Perder compra</strong><p>La operación se perdió por demanda y tuvo que repetirse.</p></div>
+        <div class="flow-step problem"><span>06</span><strong>Error 404</strong><p>Los errores persistieron incluso al cambiar de compañía.</p></div>
+      </div>
+
+      <div class="case-grid" style="margin-top:24px">
+        <div class="case-card">
+          <h3>Algo que sí ayudó</h3>
+          <p>El usuario valoró el reloj o contador presente durante la compra porque entregaba una referencia temporal clara mientras completaba la operación.</p>
+        </div>
+        <div class="case-card">
+          <h3>La fricción dominante</h3>
+          <p>La lentitud de carga, problemas de servidor y errores 404 interrumpieron un flujo que, hasta ese punto, el usuario podía seguir y comprender.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" id="hallazgos">
+    <div class="container">
+      <p class="eyebrow dark">04 · Hallazgos</p>
+      <h2>Los problemas más graves no eran decorativos</h2>
+
+      <div class="case-grid">
+        <div class="case-card finding">
+          <strong>01 · Rendimiento</strong>
+          <p>La lentitud apareció desde la búsqueda inicial. En un flujo transaccional, esperar no es un detalle: afecta la percepción de control y la continuidad de la tarea.</p>
+        </div>
+        <div class="case-card finding">
+          <strong>02 · Estabilidad</strong>
+          <p>Los errores 404 rompieron la compra incluso después de cambiar de empresa de buses. El problema se percibió como parte de la plataforma, no como una excepción aislada.</p>
+        </div>
+        <div class="case-card finding">
+          <strong>03 · Confianza</strong>
+          <p>La elección de operador no dependió solo de la interfaz. La fidelidad y confianza previa en Cóndor Bus tuvieron un peso claro en la decisión.</p>
+        </div>
+        <div class="case-card finding">
+          <strong>04 · Recuperación</strong>
+          <p>Cuando la compra se perdió, el usuario tuvo que volver a gestionar la operación. El flujo necesitaba una mejor recuperación después de una interrupción.</p>
+        </div>
+      </div>
+
+      <div class="case-card score-card" style="margin-top:24px">
+        <div>
+          <h3>Evaluación registrada</h3>
+          <p>El usuario entregó una calificación de <strong>3</strong>, asociándola a falta de fluidez, poca intuitividad y errores durante el proceso.</p>
+        </div>
+        <div class="score-value">3</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">05 · Oportunidades de mejora</p>
+      <h2>Qué debería resolver un rediseño</h2>
+
+      <div class="case-grid three">
+        <div class="case-card">
+          <h3>Conservar el progreso</h3>
+          <p>Ante un fallo o pérdida de disponibilidad, el usuario debería poder retomar la búsqueda o compra sin reconstruir toda la operación.</p>
+        </div>
+        <div class="case-card">
+          <h3>Errores accionables</h3>
+          <p>Un 404 no explica qué ocurrió ni qué hacer después. La recuperación debería ofrecer alternativas concretas: reintentar, volver a resultados o cambiar servicio.</p>
+        </div>
+        <div class="case-card">
+          <h3>Reforzar señales de confianza</h3>
+          <p>Precio y operador fueron criterios importantes. Conviene mantener visibles las condiciones, empresa, tipo de servicio y estado de disponibilidad durante la decisión.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">06 · Cómo validaría las mejoras</p>
+      <h2>No basta con que el cambio se vea mejor</h2>
+      <p class="lead case-intro">
+        El documento de investigación también dejó definido qué métricas mirar para comprobar si una mejora realmente funciona. No son resultados medidos en este estudio, sino indicadores propuestos para una etapa posterior de validación.
+      </p>
+
+      <div class="metric-grid">
+        <div class="metric"><strong>Comportamiento</strong><p>Tiempo en página, páginas por sesión, rebote y abandono.</p></div>
+        <div class="metric"><strong>Conversión</strong><p>Tasa de cumplimiento de objetivos clave y valor de las conversiones.</p></div>
+        <div class="metric"><strong>Adquisición</strong><p>Visitas, usuarios nuevos/recurrentes y fuentes de tráfico.</p></div>
+        <div class="metric"><strong>Tecnología</strong><p>Dispositivos, navegadores y sistemas operativos para detectar diferencias de rendimiento.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">07 · Aprendizaje</p>
+      <h2>La experiencia de compra depende tanto del flujo como de la estabilidad</h2>
+      <div class="case-grid">
+        <div class="case-card">
+          <h3>Lo que mostró el estudio</h3>
+          <p>
+            El usuario podía buscar, comparar y decidir. La mayor ruptura apareció cuando la plataforma perdió fluidez y dejó de responder correctamente. Eso cambia la prioridad del problema: antes de agregar más elementos visuales, había que proteger la continuidad de la compra.
+          </p>
+        </div>
+        <div class="case-card">
+          <h3>Qué aporta al portafolio</h3>
+          <p>
+            Recorrido.cl muestra una etapa de investigación aplicada: observar comportamiento real, registrar fricción, separar problemas de interfaz de problemas técnicos y convertirlos en oportunidades concretas de mejora.
+          </p>
+        </div>
+      </div>
+      <p class="note">Caso construido a partir de los documentos de investigación UX y del registro de test de 5 segundos / sesión de compra conservados en Google Drive.</p>
+      <div class="cta-row" style="margin-top:26px">
+        <a class="button ghost" href="../index.html#proyectos">Volver a casos</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><p>© 2026 Diego Pazos · Recorrido.cl</p></div></footer>
+<script src="../js/analytics-config.js?v=20261011-1"></script>
+<script src="../js/analytics.js?v=20261011-1"></script>
 </body>
 </html>
