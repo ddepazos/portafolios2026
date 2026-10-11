@@ -50,8 +50,8 @@ window.PORTFOLIO_PROJECTS = [
   {
     slug: 'design-system',
     title: 'Design System',
-    category: 'Systems',
-    summary: 'Estructura modular y reutilizable para escalar identidad y interfaces con coherencia.',
+    category: 'UI / Design Systems / Front-end',
+    summary: 'Sistema modular de componentes, estados, grillas y reglas responsive, respaldado por documentación de interfaz, Figma y análisis de front-end.',
     detail: 'proyectos/design-system.html',
     live: '#'
   },
