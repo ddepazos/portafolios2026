@@ -41,6 +41,9 @@
     .raki-piece.wide{grid-column:1/-1}
     .raki-piece.wide button{aspect-ratio:16/9;padding:0;background:#111}
     .raki-piece.wide img{object-fit:cover}
+    .raki-piece--logo button{background:linear-gradient(180deg,#1f1f1f 0%,#111 100%)}
+    .raki-piece--logo img{object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,.28))}
+    .raki-piece--logo figcaption{background:#050505}
     .raki-dialog{width:min(1180px,calc(100vw - 32px));max-height:calc(100dvh - 32px);padding:0;border:2px solid var(--yellow);background:#0b0b0b;color:var(--ink);overflow:hidden}
     .raki-dialog::backdrop{background:rgba(0,0,0,.92);backdrop-filter:blur(2px)}
     .raki-dialog-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid #2d2d2d;background:#0b0b0b}
@@ -245,7 +248,7 @@
           <figcaption><strong>Fotografía · Producto</strong><span>Una imagen que conecta directamente con humo, madera y preparación artesanal.</span></figcaption>
         </figure>
 
-        <figure class="raki-piece">
+        <figure class="raki-piece raki-piece--logo">
           <button type="button" data-raki-image="https://rakidistribuidora.cl/assets/logpngblan.png" data-raki-title="Sello principal">
             <img src="https://rakidistribuidora.cl/assets/logpngblan.png" alt="Logo circular de Distribuidora Raki" />
           </button>
