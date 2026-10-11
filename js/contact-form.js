@@ -54,16 +54,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const getReadableError = (error) => {
     const status = Number(error?.status || 0);
+    const rawText = String(error?.text || error?.message || '').trim();
+    const detail = [status ? 'Error ' + status : '', rawText].filter(Boolean).join(' · ');
 
     if (status === 401 || status === 403) {
-      return 'El formulario no pudo validar la conexión de correo. Intenta nuevamente más tarde.';
+      return 'El formulario no pudo validar la conexión de correo.' + (detail ? ' ' + detail : '');
     }
 
     if (status === 412) {
-      return 'La conexión del correo necesita ser renovada. Intenta nuevamente más tarde.';
+      return 'La conexión del correo necesita ser renovada.' + (detail ? ' ' + detail : '');
     }
 
-    return 'No se pudo enviar el mensaje. Intenta nuevamente en unos segundos.';
+    if (status === 400 || status === 404 || status === 422) {
+      return 'EmailJS rechazó la configuración del envío.' + (detail ? ' ' + detail : '');
+    }
+
+    return 'No se pudo enviar el mensaje.' + (detail ? ' ' + detail : ' Intenta nuevamente en unos segundos.');
   };
 
   if (window.emailjs) {
