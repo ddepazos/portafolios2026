@@ -26,8 +26,8 @@ window.PORTFOLIO_PROJECTS = [
   {
     slug: 'pagana-circular',
     title: 'Pagana Circular',
-    category: 'Art direction',
-    summary: 'Experiencia visual y narrativa para una propuesta más orgánica y conceptual.',
+    category: 'UX/UI / Research / E-commerce',
+    summary: 'Caso UX para un e-commerce de moda circular: inventario de contenido, arquitectura de información, análisis heurístico, reorganización de navegación y prototipado en Figma.',
     detail: 'proyectos/pagana-circular.html',
     live: 'https://katarsispazos.github.io/pagana/'
   },
