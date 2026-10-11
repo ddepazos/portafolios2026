@@ -35,3 +35,18 @@ body.design-viewing { overflow:hidden; }
   .design-dialog-image { height:60dvh; }
 }
 @media(prefers-reduced-motion:reduce) { .design-preview img { transition:none; } }
+
+
+/* Jesucrisis: proceso de gráfica animada */
+.jesucrisis-feature { margin-top:72px; padding-top:52px; border-top:3px solid var(--line); }
+.jesucrisis-intro { display:grid; grid-template-columns:1.1fr 1fr; gap:32px; align-items:end; margin-bottom:32px; }
+.jesucrisis-intro h3 { margin:8px 0 0; font-size:clamp(2rem,4vw,3.8rem); line-height:.95; letter-spacing:-.05em; text-transform:uppercase; }
+.jesucrisis-intro > p { margin:0; color:var(--muted); line-height:1.7; max-width:560px; }
+.jesucrisis-card .design-preview { background:#101010; padding:18px; }
+.jesucrisis-card .design-preview img { object-fit:contain; }
+.jesucrisis-card .design-caption { min-height:205px; }
+@media(max-width:700px) {
+  .jesucrisis-feature { margin-top:54px; padding-top:40px; }
+  .jesucrisis-intro { grid-template-columns:1fr; gap:18px; }
+  .jesucrisis-card .design-caption { min-height:0; }
+}
