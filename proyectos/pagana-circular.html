@@ -1,32 +1,256 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pagana Circular | Diego Pazos</title>
-    <link rel="stylesheet" href="../css/variables.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="../index.html">DIEGO PAZOS</a>
-        <nav class="main-nav"><a href="../index.html#proyectos">Volver</a></nav>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pagana Circular | Caso de estudio UX/UI | Diego Pazos</title>
+  <meta name="description" content="Caso de estudio de Pagana Circular: inventario de contenido, arquitectura de información, análisis heurístico, reorganización de navegación y prototipado UX/UI para un e-commerce de moda circular." />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    .case-hero{padding:92px 0 62px}
+    .case-hero h1{font-size:clamp(4rem,10vw,8.5rem);line-height:.82;letter-spacing:-.075em;text-transform:uppercase;margin:0 0 24px}
+    .case-intro{max-width:920px}
+    .case-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:34px}
+    .case-meta div,.case-card{border:3px solid var(--line);background:#0b0b0b;padding:20px;box-shadow:7px 7px 0 var(--yellow)}
+    .case-meta strong{display:block;color:var(--red);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+    .case-section{padding:66px 0;border-top:3px solid var(--line)}
+    .case-section h2{font-size:clamp(2.2rem,5vw,4.6rem);line-height:.92;letter-spacing:-.055em;text-transform:uppercase;margin:0 0 26px}
+    .case-section h3{font-size:1.3rem;text-transform:uppercase;margin:0 0 12px}
+    .case-section p,.case-section li{color:var(--muted);line-height:1.72}
+    .case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .case-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .case-card ul{padding-left:18px;margin-bottom:0}
+    .case-number{font-size:3rem;font-weight:1000;color:var(--yellow);line-height:1;margin-bottom:14px}
+    .case-quote{border-left:8px solid var(--red);padding-left:22px}
+    .case-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+    .case-tags span{border:2px solid var(--line);padding:8px 10px;font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+    .findings{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .finding{border:2px solid var(--line);padding:18px;background:#111}
+    .finding strong{display:block;color:var(--yellow);text-transform:uppercase;margin-bottom:8px}
+    .process-line{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+    .process-step{border:2px solid var(--line);padding:16px;background:#0d0d0d}
+    .process-step span{display:block;color:var(--red);font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    .process-step strong{display:block;text-transform:uppercase;line-height:1.15}
+    .comparison{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .comparison .case-card:first-child{box-shadow:7px 7px 0 var(--red)}
+    .comparison .case-card:last-child{box-shadow:7px 7px 0 var(--yellow)}
+    .note{font-size:.92rem;color:var(--muted)}
+    @media(max-width:900px){
+      .case-meta,.case-grid,.case-grid.three,.findings,.comparison{grid-template-columns:1fr}
+      .process-line{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:620px){
+      .case-hero{padding-top:70px}
+      .process-line{grid-template-columns:1fr}
+      .case-meta div,.case-card{padding:18px}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html"><span>DIEGO PAZOS</span></a>
+    <nav class="main-nav" aria-label="Navegación del caso">
+      <a href="../index.html#proyectos">Casos</a>
+      <a href="#investigacion">Investigación</a>
+      <a href="#decisiones">Decisiones</a>
+    </nav>
+  </div>
+</header>
 
-    <main class="section">
-      <div class="container narrow">
-        <p class="eyebrow dark">Proyecto</p>
-        <h1>Pagana Circular</h1>
-        <p class="lead">Narrativa y sistema visual para una propuesta con mayor fuerza conceptual y compositiva.</p>
-        <div class="cta-row">
-          <a class="button primary" href="https://katarsispazos.github.io/pagana/" target="_blank" rel="noreferrer">Ver proyecto live</a>
-          <a class="button ghost" href="../index.html">Volver al portfolio</a>
+<main>
+  <section class="case-hero">
+    <div class="container">
+      <p class="eyebrow">Caso de estudio · UX/UI / Research / E-commerce</p>
+      <h1>Pagana Circular</h1>
+      <p class="lead case-intro">
+        En Pagana Circular trabajé sobre un e-commerce de moda circular que ya tenía una identidad fuerte, pero una navegación cargada y varias rutas repetidas. El foco del proyecto fue entender cómo estaba organizado el contenido, detectar dónde se producía fricción y proponer una estructura más clara sin quitarle personalidad a la marca.
+      </p>
+
+      <div class="cta-row">
+        <a class="button primary" href="https://katarsispazos.github.io/pagana/" target="_blank" rel="noreferrer">Ver proyecto live</a>
+        <a class="button ghost" href="#investigacion">Ver investigación</a>
+      </div>
+
+      <div class="case-meta">
+        <div><strong>Rol</strong>UX/UI · Research · Arquitectura de información</div>
+        <div><strong>Contexto</strong>E-commerce de moda circular</div>
+        <div><strong>Problema</strong>Redundancia, sobrecarga y tienda difícil de escanear</div>
+        <div><strong>Salida</strong>Reorganización, prototipo y propuesta responsive</div>
+      </div>
+
+      <div class="case-tags">
+        <span>Inventario de contenido</span><span>Arquitectura de información</span><span>Análisis heurístico</span>
+        <span>Card sorting</span><span>Wireframes</span><span>Figma</span><span>Responsive</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" id="investigacion">
+    <div class="container">
+      <p class="eyebrow dark">01 · Investigación</p>
+      <h2>Antes de rediseñar, había que entender el sitio</h2>
+
+      <div class="case-grid">
+        <div class="case-card">
+          <h3>Inventario de contenido</h3>
+          <p>
+            Levanté la estructura completa del sitio: navegación principal, tienda, colecciones, gift cards, preorder, “Deja tus jeans aquí”, garantía verde, blog, prensa, carrito, newsletter, contacto y redes. Esto permitió ver cuántos caminos distintos llevaban a contenidos similares y dónde aparecían repeticiones.
+          </p>
+        </div>
+        <div class="case-card">
+          <h3>Arquitectura de información</h3>
+          <p>
+            La tienda concentraba muchas categorías y subcategorías —colecciones, chaquetas, pantalones, vestidos, faldas, tops y otras prendas— dentro de una estructura que podía volverse difícil de recorrer. El análisis apuntó a reducir redundancias y hacer más visible la lógica de agrupación.
+          </p>
         </div>
       </div>
-    </main>
-    <script src="../js/analytics-config.js?v=20261011-1"></script>
-  <script src="../js/analytics.js?v=20261011-1"></script>
+
+      <div class="findings" style="margin-top:22px">
+        <div class="finding"><strong>Hallazgo 01</strong><p>Había demasiados enlaces y accesos repetidos, especialmente en navegación y home.</p></div>
+        <div class="finding"><strong>Hallazgo 02</strong><p>La tienda era la parte más crítica del negocio, pero su subdivisión no ayudaba a comparar ni encontrar productos con rapidez.</p></div>
+        <div class="finding"><strong>Hallazgo 03</strong><p>El contenido tenía fuerza visual, pero la cantidad de bloques y textos competía por atención.</p></div>
+        <div class="finding"><strong>Hallazgo 04</strong><p>La experiencia era responsive, aunque faltaban mejoras de accesibilidad y opciones para usuarios con necesidades visuales específicas.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">02 · Análisis</p>
+      <h2>El problema no era la identidad: era cómo se recorría</h2>
+      <div class="comparison">
+        <div class="case-card">
+          <h3>Lo que funcionaba</h3>
+          <ul>
+            <li>Identidad visual consistente y fotografías de buena calidad.</li>
+            <li>Paleta asociada al denim, reciclaje y sostenibilidad.</li>
+            <li>Contenido alineado con la propuesta de moda circular.</li>
+            <li>Presencia de tienda, postventa, prensa, blog y canales de contacto.</li>
+            <li>Comportamiento responsive en escritorio y móvil.</li>
+          </ul>
+        </div>
+        <div class="case-card">
+          <h3>Lo que generaba fricción</h3>
+          <ul>
+            <li>Redundancia entre botones, banners y accesos repetidos.</li>
+            <li>Menú de tienda demasiado extenso y difícil de leer de una sola vez.</li>
+            <li>Carruseles e imágenes que repetían destinos ya presentes en navegación.</li>
+            <li>Footer sobredimensionado en escritorio.</li>
+            <li>Falta de una jerarquía más clara entre compra, reutilización, postventa y contenido editorial.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case-card case-quote" style="margin-top:22px">
+        <h3>Objetivo de trabajo</h3>
+        <p>
+          La meta que guiaba el rediseño era reducir el tiempo necesario para encontrar información y hacer más directa la ruta hacia productos y acciones importantes, sin convertir el sitio en una experiencia genérica.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" id="decisiones">
+    <div class="container">
+      <p class="eyebrow dark">03 · Decisiones de diseño</p>
+      <h2>Simplificar sin quitarle carácter a Pagana</h2>
+      <div class="case-grid three">
+        <div class="case-card">
+          <div class="case-number">01</div>
+          <h3>Menú principal</h3>
+          <p>Reduje rutas repetidas y agrupé contenidos para que el usuario pudiera entender mejor dónde comprar, conocer la marca, reutilizar prendas o resolver dudas.</p>
+        </div>
+        <div class="case-card">
+          <div class="case-number">02</div>
+          <h3>Tienda</h3>
+          <p>La propuesta reorganiza categorías para que colecciones y tipos de prenda no compitan entre sí dentro de un desplegable interminable.</p>
+        </div>
+        <div class="case-card">
+          <div class="case-number">03</div>
+          <h3>Carrito y footer</h3>
+          <p>Se eliminaron redundancias y se priorizaron acciones realmente útiles, dejando contacto y postventa en lugares más previsibles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">04 · Proceso</p>
+      <h2>Del sitio existente al prototipo</h2>
+      <div class="process-line">
+        <div class="process-step"><span>01</span><strong>Inventario</strong><p>Revisión de páginas, componentes y rutas.</p></div>
+        <div class="process-step"><span>02</span><strong>Análisis IA</strong><p>Evaluación de categorías, redundancias y jerarquía.</p></div>
+        <div class="process-step"><span>03</span><strong>Card sorting</strong><p>Reagrupación de contenidos y navegación.</p></div>
+        <div class="process-step"><span>04</span><strong>Wireframes</strong><p>Prueba de estructura antes del detalle visual.</p></div>
+        <div class="process-step"><span>05</span><strong>Prototipo</strong><p>Versión de mediana resolución en Figma con frames vinculados.</p></div>
+      </div>
+
+      <div class="case-card" style="margin-top:22px">
+        <h3>Qué buscaba comprobar con el prototipo</h3>
+        <p>
+          Más que “hacer una página nueva”, quería comprobar si una estructura más corta podía mejorar la orientación del usuario. Por eso el trabajo se concentró en navegación, categorías de tienda, carrito, footer y relación entre contenido comercial y contenido de marca.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">05 · Marca y sostenibilidad</p>
+      <h2>La experiencia tenía que reflejar cómo trabaja la empresa</h2>
+      <div class="case-grid">
+        <div class="case-card">
+          <h3>Moda circular</h3>
+          <p>
+            Pagana Circular trabaja reutilizando jeans en desuso para crear nuevas prendas. El proyecto no se plantea solo como tienda: también comunica reutilización, producción por encargo y una lógica de consumo más responsable.
+          </p>
+        </div>
+        <div class="case-card">
+          <h3>Dimensión social</h3>
+          <p>
+            La propuesta de la marca incorpora trabajo descentralizado e integración de mujeres en contextos socioeconómicos vulnerables. Esa dimensión hacía importante que el sitio no redujera todo a producto y precio, sino que también dejara espacio para explicar propósito y proceso.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">06 · Resultado</p>
+      <h2>Un caso de UX con fundamento, no una plantilla</h2>
+      <div class="case-grid">
+        <div class="case-card">
+          <h3>Qué cambió</h3>
+          <p>
+            La propuesta pasó de una lectura centrada en “cómo se ve” a una estructura sustentada en contenido, navegación y decisiones de arquitectura. El rediseño ordena categorías, reduce accesos repetidos y deja más claro qué hacer en cada etapa.
+          </p>
+        </div>
+        <div class="case-card">
+          <h3>Qué demuestra este proyecto</h3>
+          <p>
+            Este caso muestra trabajo de research, análisis de arquitectura de información, evaluación heurística, síntesis y prototipado. La parte visual viene después de entender el problema, no antes.
+          </p>
+        </div>
+      </div>
+
+      <p class="note" style="margin-top:20px">
+        Nota: el archivo histórico de Figma que trabajé para Pagana no aparece hoy con un enlace recuperable en las fuentes conectadas, pero el registro del proyecto conserva el proceso de inventario, card sorting, wireframes y prototipo de mediana resolución.
+      </p>
+
+      <div class="cta-row" style="margin-top:26px">
+        <a class="button primary" href="https://katarsispazos.github.io/pagana/" target="_blank" rel="noreferrer">Ver proyecto live</a>
+        <a class="button ghost" href="../index.html#proyectos">Volver a casos</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><p>© 2026 Diego Pazos · Pagana Circular</p></div></footer>
+<script src="../js/analytics-config.js?v=20261011-1"></script>
+<script src="../js/analytics.js?v=20261011-1"></script>
 </body>
 </html>
