@@ -49,8 +49,11 @@
     .raki-dialog-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid #2d2d2d;background:#0b0b0b}
     .raki-dialog-bar strong{text-transform:uppercase;font-size:.82rem;letter-spacing:.06em}
     .raki-dialog-close{border:0;background:var(--yellow);color:#111;padding:9px 13px;font:inherit;font-size:.8rem;font-weight:900;cursor:pointer}
-    .raki-dialog-stage{display:flex;align-items:center;justify-content:center;width:100%;max-height:calc(100dvh - 88px);padding:22px;background:#111;overflow:auto}
-    .raki-dialog-image{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100dvh - 132px);object-fit:contain;background:transparent;image-rendering:auto}
+    .raki-dialog-stage{display:flex;align-items:center;justify-content:center;width:100%;height:calc(100dvh - 82px);padding:22px;background:#111;overflow:auto}
+    .raki-dialog-image{display:block;flex:0 0 auto;width:auto!important;height:auto!important;max-width:calc(100vw - 80px);max-height:calc(100dvh - 136px);object-fit:contain!important;object-position:center;background:transparent;image-rendering:auto}
+    .raki-dialog-image.is-poster{max-width:min(720px,calc(100vw - 80px));max-height:calc(100dvh - 136px)}
+    .raki-piece--poster button{aspect-ratio:4/3!important;padding:18px!important;background:#111!important}
+    .raki-piece--poster img{width:100%;height:100%;object-fit:contain!important}
     .next-steps{margin-top:28px}
     @media(max-width:850px){
       .case-meta,.case-grid,.case-grid.three,.visual-system,.raki-gallery{grid-template-columns:1fr}
@@ -63,8 +66,9 @@
       .raki-piece.wide button{aspect-ratio:4/3}
       .raki-piece.wide img{object-fit:contain}
       .raki-dialog{width:calc(100vw - 16px);max-height:calc(100dvh - 16px)}
-      .raki-dialog-stage{padding:8px;max-height:calc(100dvh - 74px)}
-      .raki-dialog-image{max-height:calc(100dvh - 96px)}
+      .raki-dialog-stage{height:calc(100dvh - 72px);padding:8px}
+      .raki-dialog-image{max-width:calc(100vw - 32px);max-height:calc(100dvh - 96px)}
+      .raki-dialog-image.is-poster{max-width:calc(100vw - 32px);max-height:calc(100dvh - 96px)}
       .case-meta div,.case-block{padding:18px}
     }
     @media(prefers-reduced-motion:reduce){.raki-piece img{transition:none}}
@@ -255,8 +259,8 @@
           <figcaption><strong>Sello principal</strong><span>La pieza que une visualmente todas las aplicaciones de la marca.</span></figcaption>
         </figure>
 
-        <figure class="raki-piece wide">
-          <button type="button" data-raki-image="https://rakidistribuidora.cl/assets/sabhumo2.webp" data-raki-title="Pieza informativa · Sab-Humo">
+        <figure class="raki-piece wide raki-piece--poster">
+          <button type="button" data-raki-image="https://rakidistribuidora.cl/assets/sabhumo2.webp" data-raki-title="Pieza informativa · Sab-Humo" data-raki-fit="poster">
             <img src="https://rakidistribuidora.cl/assets/sabhumo2.webp" alt="Afiche informativo Sab-Humo de Distribuidora Raki" />
           </button>
           <figcaption><strong>Pieza informativa · Sab-Humo</strong><span>Una pieza más informativa, donde la marca acompaña la explicación del producto y su uso.</span></figcaption>
@@ -327,6 +331,7 @@
         const label = button.getAttribute('data-raki-title') || 'Raki';
         image.src = source;
         image.alt = button.querySelector('img')?.alt || label;
+        image.classList.toggle('is-poster', button.getAttribute('data-raki-fit') === 'poster');
         title.textContent = label;
         dialog.showModal();
         close.focus();
