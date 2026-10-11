@@ -7,6 +7,7 @@
   <meta name="description" content="Caso de estudio de Pagana Circular: inventario de contenido, arquitectura de información, análisis heurístico, reorganización de navegación y prototipado UX/UI para un e-commerce de moda circular." />
   <link rel="stylesheet" href="../css/variables.css" />
   <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,300,0,-25&family=Roboto:wght@300;400;500;700&display=swap" />
   <style>
     .case-hero{padding:92px 0 62px}
     .case-hero h1{font-size:clamp(4rem,10vw,8.5rem);line-height:.82;letter-spacing:-.075em;text-transform:uppercase;margin:0 0 24px}
@@ -36,9 +37,40 @@
     .comparison .case-card:first-child{box-shadow:7px 7px 0 var(--red)}
     .comparison .case-card:last-child{box-shadow:7px 7px 0 var(--yellow)}
     .note{font-size:.92rem;color:var(--muted)}
+    .uikit-board{margin-top:28px;padding:26px;background:#dedede;color:#111;border:3px solid #111;box-shadow:9px 9px 0 #0f6f7b}
+    .uikit-board h3{color:#111}
+    .uikit-board p{color:#454545}
+    .uikit-top{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}
+    .uikit-panel{background:#f4f4f4;border:2px solid #111;padding:20px;min-width:0}
+    .uikit-logo{display:flex;align-items:center;justify-content:center;min-height:150px;background:#e7e7e7;margin-top:14px;padding:18px}
+    .uikit-logo img{display:block;width:min(360px,100%);height:auto;object-fit:contain}
+    .uikit-icons{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .uikit-icon{width:48px;height:48px;border-radius:11px;background:#2b94a6;color:#fff;display:grid;place-items:center;font-weight:900}
+    .uikit-icon.neutral{background:transparent;color:#111;border:2px solid #111;border-radius:50%}
+    .uikit-icon.danger{background:#ff4444}
+    .uikit-components{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;margin-top:20px}
+    .component-stack{display:grid;gap:11px;margin-top:14px}
+    .component-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .kit-input{flex:1;min-width:180px;border:0;border-radius:999px;background:#fff;padding:13px 18px;font:500 .84rem Roboto,sans-serif;color:#666}
+    .kit-button{border:0;border-radius:999px;padding:13px 22px;font:700 .78rem Roboto,sans-serif;cursor:default}
+    .kit-button.teal{background:#2b94a6;color:#fff}
+    .kit-button.black{background:#050505;color:#fff}
+    .kit-button.wide{width:100%}
+    .kit-cta{margin-top:14px;background:#6faeb8;color:#fff;padding:13px 18px;text-align:center;font:500 .68rem Roboto,sans-serif}
+    .uikit-palette{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;margin-top:14px}
+    .swatch{min-height:72px;border:1px solid rgba(0,0,0,.18);padding:8px;display:flex;align-items:flex-end;font:700 .65rem Roboto,sans-serif}
+    .swatch.dark{color:#fff}
+    .uikit-type{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+    .type-sample{background:#f4f4f4;border:2px solid #111;padding:22px}
+    .type-sample .sample-name{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:900;margin-bottom:16px}
+    .type-sample.roboto .sample-display{font-family:Roboto,sans-serif;font-size:clamp(2.2rem,5vw,4.6rem);font-weight:300;line-height:.95}
+    .type-sample.sf .sample-display{font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;font-size:clamp(2rem,4.5vw,4rem);font-weight:600;line-height:.95}
+    .type-sample p{margin:14px 0 0;font-family:Roboto,sans-serif}
+    .uikit-source{margin-top:18px;padding-top:16px;border-top:1px solid #999;font-size:.83rem}
     @media(max-width:900px){
-      .case-meta,.case-grid,.case-grid.three,.findings,.comparison{grid-template-columns:1fr}
+      .case-meta,.case-grid,.case-grid.three,.findings,.comparison,.uikit-top,.uikit-components,.uikit-type{grid-template-columns:1fr}
       .process-line{grid-template-columns:1fr 1fr}
+      .uikit-palette{grid-template-columns:repeat(2,minmax(0,1fr))}
     }
     @media(max-width:620px){
       .case-hero{padding-top:70px}
@@ -218,9 +250,100 @@
     </div>
   </section>
 
+  <section class="case-section" id="ui-kit">
+    <div class="container">
+      <p class="eyebrow dark">06 · UI Kit</p>
+      <h2>El rediseño también necesitaba un sistema visual consistente</h2>
+      <p class="lead case-intro">
+        El UI kit de Pagana documenta la marca, iconografía, botones, campos, llamadas a la acción, paleta y criterios tipográficos. Lo incorporé al caso porque esta capa explica cómo las decisiones de UX se traducen en una interfaz coherente y reutilizable.
+      </p>
+
+      <div class="uikit-board">
+        <div class="uikit-top">
+          <div class="uikit-panel">
+            <h3>Marca</h3>
+            <p>Logotipo principal y símbolo usados como punto de partida del sistema.</p>
+            <div class="uikit-logo">
+              <img src="https://katarsispazos.github.io/pagana/assets/img/Logopagana.png" alt="Logotipo de Pagana Moda Circular" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="uikit-panel">
+            <h3>Iconografía</h3>
+            <p>Una familia simple para navegación, cuenta, compra, etiquetas y acciones de sistema.</p>
+            <div class="uikit-icons" aria-label="Ejemplos de iconos del UI kit">
+              <span class="uikit-icon">f</span>
+              <span class="uikit-icon">◎</span>
+              <span class="uikit-icon">𝕏</span>
+              <span class="uikit-icon">in</span>
+              <span class="uikit-icon neutral material-symbols-outlined">search</span>
+              <span class="uikit-icon neutral material-symbols-outlined">shopping_cart</span>
+              <span class="uikit-icon neutral material-symbols-outlined">account_circle</span>
+              <span class="uikit-icon neutral material-symbols-outlined">sell</span>
+              <span class="uikit-icon danger material-symbols-outlined">delete</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="uikit-components">
+          <div class="uikit-panel">
+            <h3>Componentes de interacción</h3>
+            <p>Los formatos del kit se adaptaron aquí a un layout responsive para que puedan leerse sin deformarse en desktop o móvil.</p>
+            <div class="component-stack">
+              <div class="component-row">
+                <div class="kit-input">Escribe tu email aquí</div>
+                <button class="kit-button teal" type="button">ENVIAR</button>
+              </div>
+              <button class="kit-button black wide" type="button">Añadir al carrito</button>
+              <button class="kit-button teal wide" type="button">Ir al Carrito de Compras</button>
+              <div class="component-row">
+                <div class="kit-input">Buscar</div>
+                <button class="kit-button black" type="button">Aplicar</button>
+              </div>
+              <button class="kit-button black wide" type="button">Pagar →</button>
+            </div>
+            <div class="kit-cta">No te pierdas nada. Desbloquea el acceso exclusivo a ofertas solo para Members de Pagana.</div>
+          </div>
+
+          <div class="uikit-panel">
+            <h3>Paleta</h3>
+            <p>El sistema mezcla neutros oscuros con azules y verdes asociados a denim, circularidad y sostenibilidad.</p>
+            <div class="uikit-palette" aria-label="Muestra de colores del sistema">
+              <div class="swatch" style="background:#e9f3f5">#E9F3F5</div>
+              <div class="swatch" style="background:#badddf">#BAD DDF</div>
+              <div class="swatch" style="background:#96cbd0">#96CBD0</div>
+              <div class="swatch dark" style="background:#6faeb8">#6FAEB8</div>
+              <div class="swatch dark" style="background:#2b94a6">#2B94A6</div>
+              <div class="swatch dark" style="background:#0f6f7b">#0F6F7B</div>
+              <div class="swatch dark" style="background:#1e2832">#1E2832</div>
+              <div class="swatch dark" style="background:#333333">#333333</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="uikit-type">
+          <div class="type-sample roboto">
+            <div class="sample-name">Roboto · UI / lectura</div>
+            <div class="sample-display">Aa</div>
+            <p>Tipografía funcional para cuerpos de texto, controles y contenido de interfaz por su legibilidad y neutralidad.</p>
+          </div>
+          <div class="type-sample sf">
+            <div class="sample-name">SF Pro Semibold · jerarquía</div>
+            <div class="sample-display">Pagana</div>
+            <p>Un peso más marcado para títulos, llamados a la acción y elementos donde la jerarquía debe ser inmediata.</p>
+          </div>
+        </div>
+
+        <p class="uikit-source">
+          El UI kit original fue desarrollado como una lámina de sistema visual y exportado desde Adobe Illustrator. Para el portafolio lo reinterpreté en componentes web responsivos, manteniendo la lógica visual del documento original en lugar de mostrar una captura reducida difícil de leer.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <section class="case-section">
     <div class="container">
-      <p class="eyebrow dark">06 · Resultado</p>
+      <p class="eyebrow dark">07 · Resultado</p>
       <h2>Un caso de UX con fundamento, no una plantilla</h2>
       <div class="case-grid">
         <div class="case-card">
@@ -238,7 +361,7 @@
       </div>
 
       <p class="note" style="margin-top:20px">
-        Nota: el archivo histórico de Figma que trabajé para Pagana no aparece hoy con un enlace recuperable en las fuentes conectadas, pero el registro del proyecto conserva el proceso de inventario, card sorting, wireframes y prototipo de mediana resolución.
+        El archivo histórico del prototipo en Figma no conserva hoy un enlace directo recuperable, pero el proyecto sí mantiene la documentación de investigación, card sorting, wireframes y el UI kit original que definió marca, iconografía, componentes, color y tipografía.
       </p>
 
       <div class="cta-row" style="margin-top:26px">
