@@ -1,19 +1,337 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raki | Diego Pazos</title>
-    <link rel="stylesheet" href="../css/variables.css" />
-    <link rel="stylesheet" href="../css/main.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="../index.html">DIEGO PAZOS</a>
-        <nav class="main-nav"><a href="../index.html#proyectos">Volver</a></nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raki | Caso de estudio | Diego Pazos</title>
+  <meta name="description" content="Caso de estudio Raki: identidad visual, sistema de etiquetas, piezas promocionales y aplicación web para una distribuidora de productos del sur de Chile." />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    .case-hero{padding:90px 0 58px}
+    .case-hero h1{font-size:clamp(4rem,10vw,9rem);line-height:.82;letter-spacing:-.08em;text-transform:uppercase;margin:0 0 26px}
+    .case-kicker{max-width:900px}
+    .case-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:36px}
+    .case-meta div,.case-block{border:3px solid var(--line);background:#0b0b0b;padding:20px;box-shadow:7px 7px 0 var(--yellow)}
+    .case-meta strong{display:block;color:var(--red);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+    .case-section{padding:66px 0;border-top:3px solid var(--line)}
+    .case-section h2{font-size:clamp(2.2rem,5vw,4.8rem);line-height:.9;letter-spacing:-.06em;text-transform:uppercase;margin:0 0 26px}
+    .case-section h3{font-size:1.35rem;text-transform:uppercase;margin:0 0 12px}
+    .case-section p,.case-section li{color:var(--muted);line-height:1.72}
+    .case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .case-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .case-block ul{padding-left:18px;margin-bottom:0}
+    .case-number{font-size:3rem;font-weight:1000;color:var(--yellow);line-height:1;margin-bottom:15px}
+    .decision{border-left:8px solid var(--red);padding-left:22px}
+    .case-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+    .case-tags span{border:2px solid var(--line);padding:8px 10px;font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+    .raki-hero-image{margin-top:38px;border:3px solid var(--line);background:#f1ece3;box-shadow:10px 10px 0 var(--red);overflow:hidden}
+    .raki-hero-image img{display:block;width:100%;height:auto}
+    .visual-system{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:stretch}
+    .brand-mark{display:flex;align-items:center;justify-content:center;min-height:420px;padding:35px;background:#050505;border:3px solid var(--line);box-shadow:8px 8px 0 var(--yellow)}
+    .brand-mark img{display:block;width:min(100%,520px);height:auto}
+    .raki-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:28px}
+    .raki-piece{margin:0;border:3px solid var(--line);background:#0b0b0b;box-shadow:8px 8px 0 var(--yellow);overflow:hidden}
+    .raki-piece button{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/3;padding:24px;border:0;border-bottom:3px solid var(--line);background:#f3f0e9;cursor:zoom-in;overflow:hidden}
+    .raki-piece img{display:block;width:100%;height:100%;object-fit:contain;transition:transform .25s ease}
+    .raki-piece button:hover img{transform:scale(1.025)}
+    .raki-piece figcaption{padding:18px 20px}
+    .raki-piece figcaption strong{display:block;text-transform:uppercase;margin-bottom:6px}
+    .raki-piece figcaption span{color:var(--muted);font-size:.9rem;line-height:1.5}
+    .raki-piece.wide{grid-column:1/-1}
+    .raki-piece.wide button{aspect-ratio:16/9;padding:0;background:#111}
+    .raki-piece.wide img{object-fit:cover}
+    .raki-dialog{width:min(1120px,calc(100% - 24px));max-height:calc(100dvh - 24px);padding:0;border:3px solid var(--yellow);background:#0b0b0b;color:var(--ink)}
+    .raki-dialog::backdrop{background:rgba(0,0,0,.9)}
+    .raki-dialog-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:2px solid var(--line)}
+    .raki-dialog-bar strong{text-transform:uppercase}
+    .raki-dialog-close{border:2px solid var(--yellow);background:var(--yellow);color:#111;padding:9px 12px;font:inherit;font-weight:900;cursor:pointer}
+    .raki-dialog-image{display:block;width:100%;height:min(75dvh,820px);object-fit:contain;background:#f3f0e9}
+    .next-steps{margin-top:28px}
+    @media(max-width:850px){
+      .case-meta,.case-grid,.case-grid.three,.visual-system,.raki-gallery{grid-template-columns:1fr}
+      .raki-piece.wide{grid-column:auto}
+      .brand-mark{min-height:320px}
+    }
+    @media(max-width:620px){
+      .case-hero{padding-top:70px}
+      .raki-piece button{padding:14px}
+      .raki-piece.wide button{aspect-ratio:4/3}
+      .raki-piece.wide img{object-fit:contain}
+      .case-meta div,.case-block{padding:18px}
+    }
+    @media(prefers-reduced-motion:reduce){.raki-piece img{transition:none}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html"><span>DIEGO PAZOS</span></a>
+    <nav class="main-nav" aria-label="Navegación del caso">
+      <a href="../index.html#proyectos">Casos</a>
+      <a href="#estudio">Estudio</a>
+      <a href="#galeria">Galería</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="case-hero">
+    <div class="container">
+      <p class="eyebrow">Caso de estudio · Identidad visual / Packaging / Web</p>
+      <h1>Raki</h1>
+      <p class="lead case-kicker">
+        Construcción de una identidad visual para una distribuidora de productos del sur de Chile.
+        El proyecto busca trasladar origen, cercanía y carácter artesanal a un sistema reconocible:
+        marca, etiquetas, piezas promocionales y una presencia digital coherente.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href="https://rakidistribuidora.cl/" target="_blank" rel="noreferrer">Ver sitio</a>
+        <a class="button ghost" href="#galeria">Ver galería</a>
       </div>
-    </header>
-    <main class="section"><div class="container narrow"><p class="eyebrow dark">Proyecto</p><h1>Raki</h1><p class="lead">Diseño de producto y experiencia digital con enfoque visual y claro.</p><a class="button ghost" href="../index.html">Volver al portfolio</a></div></main>
-  </body>
+
+      <div class="case-meta">
+        <div><strong>Rol</strong>Diseño gráfico · Identidad · Dirección visual</div>
+        <div><strong>Proyecto</strong>Distribuidora de productos del sur de Chile</div>
+        <div><strong>Alcance</strong>Marca · Etiquetas · Promoción · Web</div>
+        <div><strong>Enfoque</strong>Origen territorial · Artesanal · Cercanía</div>
+      </div>
+
+      <div class="case-tags">
+        <span>Branding</span><span>Packaging</span><span>Dirección de arte</span>
+        <span>Fotografía</span><span>Diseño web</span><span>Responsive</span>
+      </div>
+
+      <figure class="raki-hero-image">
+        <img src="../assets/images/raki/raki-mockup.webp" alt="Mockup de identidad y etiquetado de Raki aplicado a productos del sur de Chile" />
+      </figure>
+    </div>
+  </section>
+
+  <section class="case-section" id="estudio">
+    <div class="container">
+      <p class="eyebrow dark">01 · Contexto</p>
+      <h2>Una marca que debía hablar desde el origen</h2>
+      <div class="case-grid">
+        <div class="case-block">
+          <h3>El punto de partida</h3>
+          <p>
+            Raki trabaja con productos vinculados al sur de Chile. La identidad necesitaba transmitir
+            procedencia, confianza y cercanía sin depender solamente de fotografías de producto.
+            El desafío fue construir una voz visual que pudiera repetirse en distintas piezas y seguir
+            sintiéndose parte de una misma marca.
+          </p>
+        </div>
+        <div class="case-block decision">
+          <h3>Problema de diseño</h3>
+          <p>
+            En una distribuidora conviven formatos, categorías y tamaños distintos. Una etiqueta puede
+            funcionar bien aislada y fallar al pasar a otro envase o a una pieza digital. Por eso el foco
+            estuvo en diseñar un sistema flexible, no una única composición cerrada.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">02 · Objetivo</p>
+      <h2>Convertir territorio en lenguaje de marca</h2>
+      <div class="case-grid three">
+        <div class="case-block">
+          <div class="case-number">01</div>
+          <h3>Reconocimiento</h3>
+          <p>Conservar un sello fuerte y fácil de identificar en etiquetas, publicaciones y aplicaciones digitales.</p>
+        </div>
+        <div class="case-block">
+          <div class="case-number">02</div>
+          <h3>Origen</h3>
+          <p>Incorporar paisaje y referencias del sur como parte del relato, evitando que funcionen como simple decoración.</p>
+        </div>
+        <div class="case-block">
+          <div class="case-number">03</div>
+          <h3>Consistencia</h3>
+          <p>Establecer una lógica visual capaz de adaptarse a distintos productos sin perder identidad ni legibilidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">03 · Sistema visual</p>
+      <h2>Un sello central y una familia de aplicaciones</h2>
+      <div class="visual-system">
+        <div class="brand-mark">
+          <img src="../assets/images/raki/raki-logo.webp" alt="Logo circular de Distribuidora Raki" />
+        </div>
+        <div class="case-block">
+          <h3>Decisiones de identidad</h3>
+          <ul>
+            <li>El sello circular concentra nombre, categoría y procedencia en una sola unidad visual.</li>
+            <li>La paleta cálida se apoya en naranjos, tierras y tonos asociados a materia prima y origen.</li>
+            <li>Las fotografías de paisaje refuerzan el vínculo territorial y funcionan como fondo narrativo.</li>
+            <li>Las etiquetas ovaladas crean una forma reconocible y adaptable a distintas composiciones.</li>
+            <li>La mezcla tipográfica busca equilibrar carácter artesanal con información comercial legible.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">04 · Proceso</p>
+      <h2>De la referencia territorial a la aplicación</h2>
+      <div class="case-grid three">
+        <div class="case-block">
+          <div class="case-number">01</div>
+          <h3>Exploración</h3>
+          <p>Revisión de imágenes, productos y referencias territoriales para identificar qué elementos podían sostener el relato de marca.</p>
+        </div>
+        <div class="case-block">
+          <div class="case-number">02</div>
+          <h3>Composición</h3>
+          <p>Pruebas de sello, jerarquía tipográfica, bordes, paisajes y mensajes hasta obtener piezas que mantuvieran una lectura inmediata.</p>
+        </div>
+        <div class="case-block">
+          <div class="case-number">03</div>
+          <h3>Aplicación</h3>
+          <p>Traslado del sistema a etiquetas, mockups y comunicación digital para comprobar que la identidad funcionara fuera de una sola pieza.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" id="galeria">
+    <div class="container">
+      <p class="eyebrow dark">05 · Galería</p>
+      <h2>Marca, etiquetas y territorio</h2>
+      <p class="lead case-kicker">
+        La galería muestra cómo una misma lógica visual se adapta a diferentes mensajes y fotografías
+        sin perder el sello de Raki.
+      </p>
+
+      <div class="raki-gallery">
+        <figure class="raki-piece wide">
+          <button type="button" data-raki-image="../assets/images/raki/raki-mockup.webp" data-raki-title="Aplicación de marca">
+            <img src="../assets/images/raki/raki-mockup.webp" alt="Mockup de Raki aplicado a etiqueta y productos" />
+          </button>
+          <figcaption><strong>Aplicación de marca</strong><span>Mockup general del sistema visual en contexto de producto.</span></figcaption>
+        </figure>
+
+        <figure class="raki-piece">
+          <button type="button" data-raki-image="../assets/images/raki/etiqueta-puente-1.webp" data-raki-title="Etiqueta · Puente">
+            <img src="../assets/images/raki/etiqueta-puente-1.webp" alt="Etiqueta ovalada Raki con fotografía de puente" />
+          </button>
+          <figcaption><strong>Etiqueta · Puente</strong><span>Versión centrada en procedencia, paisaje y cercanía.</span></figcaption>
+        </figure>
+
+        <figure class="raki-piece">
+          <button type="button" data-raki-image="../assets/images/raki/etiqueta-volcan.webp" data-raki-title="Etiqueta · Volcán">
+            <img src="../assets/images/raki/etiqueta-volcan.webp" alt="Etiqueta ovalada Raki con volcán y lago" />
+          </button>
+          <figcaption><strong>Etiqueta · Volcán</strong><span>Aplicación con un mensaje directo sobre tradición y sabor del sur.</span></figcaption>
+        </figure>
+
+        <figure class="raki-piece">
+          <button type="button" data-raki-image="../assets/images/raki/etiqueta-puente-2.webp" data-raki-title="Etiqueta · Variante">
+            <img src="../assets/images/raki/etiqueta-puente-2.webp" alt="Segunda variante de etiqueta Raki con puente" />
+          </button>
+          <figcaption><strong>Etiqueta · Variante</strong><span>Otra composición dentro del mismo sistema de forma, color y fotografía.</span></figcaption>
+        </figure>
+
+        <figure class="raki-piece">
+          <button type="button" data-raki-image="../assets/images/raki/raki-logo.webp" data-raki-title="Sello principal">
+            <img src="../assets/images/raki/raki-logo.webp" alt="Logo circular de Distribuidora Raki" />
+          </button>
+          <figcaption><strong>Sello principal</strong><span>Elemento de reconocimiento que articula las distintas aplicaciones.</span></figcaption>
+        </figure>
+
+        <figure class="raki-piece wide">
+          <button type="button" data-raki-image="../assets/images/raki/puente-carlos-ibanez.webp" data-raki-title="Referencia fotográfica">
+            <img src="../assets/images/raki/puente-carlos-ibanez.webp" alt="Fotografía de puente utilizada como referencia territorial para las etiquetas de Raki" />
+          </button>
+          <figcaption><strong>Referencia fotográfica</strong><span>Imagen de origen utilizada para construir una de las aplicaciones de etiqueta.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">06 · Resultado</p>
+      <h2>Una identidad capaz de vivir en distintos soportes</h2>
+      <div class="case-grid">
+        <div class="case-block">
+          <h3>Resultado visual</h3>
+          <p>
+            El proyecto consolida una dirección visual reconocible: sello, paleta, fotografía y forma de
+            etiqueta trabajan como un conjunto. Esto permite que las piezas cambien de contenido sin perder
+            la relación con la marca.
+          </p>
+        </div>
+        <div class="case-block">
+          <h3>Aprendizaje</h3>
+          <p>
+            El valor del caso está en pasar de una marca aislada a un sistema aplicable. Diseñar las piezas
+            en contexto permitió detectar qué elementos debían mantenerse constantes y cuáles podían variar.
+          </p>
+        </div>
+      </div>
+
+      <div class="case-block next-steps">
+        <h3>Próximos pasos</h3>
+        <p>
+          Profundizar la biblioteca de plantillas para nuevas categorías de producto, documentar reglas de uso
+          de marca y seguir alineando la experiencia web con el lenguaje desarrollado para packaging y promoción.
+        </p>
+      </div>
+
+      <div class="cta-row">
+        <a class="button primary" href="../index.html#proyectos">Volver a casos</a>
+        <a class="button ghost" href="https://rakidistribuidora.cl/" target="_blank" rel="noreferrer">Visitar Raki</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog class="raki-dialog" aria-labelledby="raki-dialog-title">
+  <div class="raki-dialog-bar">
+    <strong id="raki-dialog-title">Raki</strong>
+    <button class="raki-dialog-close" type="button">Cerrar</button>
+  </div>
+  <img class="raki-dialog-image" src="" alt="" />
+</dialog>
+
+<footer class="site-footer"><div class="container"><p>© 2026 Diego Pazos · Raki</p></div></footer>
+
+<script>
+  (() => {
+    const dialog = document.querySelector('.raki-dialog');
+    const image = dialog.querySelector('.raki-dialog-image');
+    const title = dialog.querySelector('#raki-dialog-title');
+    const close = dialog.querySelector('.raki-dialog-close');
+    document.querySelectorAll('[data-raki-image]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const source = button.getAttribute('data-raki-image');
+        const label = button.getAttribute('data-raki-title') || 'Raki';
+        image.src = source;
+        image.alt = button.querySelector('img')?.alt || label;
+        title.textContent = label;
+        dialog.showModal();
+        close.focus();
+      });
+    });
+    close.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      if (event.target !== dialog) return;
+      const rect = dialog.getBoundingClientRect();
+      const inside = event.clientX >= rect.left && event.clientX <= rect.right && event.clientY >= rect.top && event.clientY <= rect.bottom;
+      if (!inside) dialog.close();
+    });
+  })();
+</script>
+</body>
 </html>
