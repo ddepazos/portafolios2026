@@ -1245,6 +1245,9 @@ body {
 
 @media (max-width: 880px) {
   .hero-grid,
+  .split-layout,
+  .feature-panel,
+  .services-showcase,
   .three-up,
   .portfolio-grid,
   .contact-box {
@@ -1281,5 +1284,58 @@ body {
 
   .button {
     width: 100%;
+  }
+}
+
+/* Let mobile content reflow within its column, including enlarged text. */
+@media (max-width: 880px) {
+  .split-layout > *,
+  .feature-panel > *,
+  .service-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .services-showcase {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 620px) {
+  .about h2,
+  .feature-copy h3 {
+    font-size: clamp(2rem, 8.5vw, 3rem);
+    line-height: 1;
+  }
+
+  .about-copy > p {
+    margin: 0;
+  }
+
+  .service-card {
+    padding: 24px 20px;
+  }
+
+  .service-card h4 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    line-height: 1;
+  }
+
+  .service-list li {
+    max-width: 100%;
+  }
+
+  .stats-grid {
+    gap: 10px;
+  }
+
+  .stat-box {
+    min-width: 0;
+    padding: 16px 8px;
+  }
+
+  .stat-box span {
+    letter-spacing: 0.06em;
+    overflow-wrap: anywhere;
   }
 }
