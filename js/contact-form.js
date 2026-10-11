@@ -12,16 +12,65 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!statusMessage) return;
     statusMessage.textContent = text;
     statusMessage.classList.remove('is-success', 'is-error');
+
     if (type) {
       statusMessage.classList.add(type === 'success' ? 'is-success' : 'is-error');
     }
+  };
+
+  const getFieldValue = (name) => {
+    const field = form.elements.namedItem(name);
+    return field && typeof field.value === 'string' ? field.value.trim() : '';
+  };
+
+  const buildTemplateParams = () => {
+    const name = getFieldValue('name');
+    const email = getFieldValue('email');
+    const subject = getFieldValue('subject');
+    const message = getFieldValue('message');
+
+    // Se envían alias en español, inglés y los nombres más comunes de EmailJS.
+    // Así el formulario sigue funcionando aunque la plantilla haya sido creada
+    // con los nombres antiguos (nombre/proyecto/mensaje) o con los actuales.
+    return {
+      name,
+      nombre: name,
+      from_name: name,
+      user_name: name,
+
+      email,
+      from_email: email,
+      reply_to: email,
+      user_email: email,
+
+      subject,
+      proyecto: subject,
+      title: subject,
+
+      message,
+      mensaje: message
+    };
+  };
+
+  const getReadableError = (error) => {
+    const status = Number(error?.status || 0);
+
+    if (status === 401 || status === 403) {
+      return 'El formulario no pudo validar la conexión de correo. Intenta nuevamente más tarde.';
+    }
+
+    if (status === 412) {
+      return 'La conexión del correo necesita ser renovada. Intenta nuevamente más tarde.';
+    }
+
+    return 'No se pudo enviar el mensaje. Intenta nuevamente en unos segundos.';
   };
 
   if (window.emailjs) {
     emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
   }
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     if (!form.checkValidity()) {
@@ -44,28 +93,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setStatus('', '');
 
-    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
-      .then(() => {
-        form.reset();
-        setStatus('success', 'Mensaje enviado. Te responderé pronto.');
-        if (submitButton) {
-          submitButton.textContent = 'Enviado';
-        }
-      })
-      .catch((error) => {
-        console.error('EmailJS error:', error);
-        setStatus('error', 'No se pudo enviar el mensaje. Probá de nuevo en unos segundos.');
-        if (submitButton) {
-          submitButton.textContent = 'Reintentar';
-        }
-      })
-      .finally(() => {
-        if (submitButton) {
-          setTimeout(() => {
-            submitButton.disabled = false;
-            submitButton.textContent = originalText;
-          }, 2200);
-        }
+    try {
+      const templateParams = buildTemplateParams();
+
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams
+      );
+
+      form.reset();
+      setStatus('success', 'Mensaje enviado. Te responderé pronto.');
+
+      if (submitButton) {
+        submitButton.textContent = 'Enviado';
+      }
+    } catch (error) {
+      console.error('EmailJS error:', {
+        status: error?.status,
+        text: error?.text,
+        origin: window.location.origin
       });
+
+      setStatus('error', getReadableError(error));
+
+      if (submitButton) {
+        submitButton.textContent = 'Reintentar';
+      }
+    } finally {
+      if (submitButton) {
+        window.setTimeout(() => {
+          submitButton.disabled = false;
+          submitButton.textContent = originalText;
+        }, 2200);
+      }
+    }
   });
 });
