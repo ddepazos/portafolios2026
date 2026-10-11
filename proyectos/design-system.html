@@ -90,6 +90,9 @@
     .resource-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
     .resource-actions a{margin:0}
     .resource-source-note{font-size:.75rem;color:#9f9f9f;margin-top:12px}
+    .case-mini-result{margin-top:18px;padding:14px 16px;border-left:5px solid var(--yellow);background:#151515}
+    .case-mini-result strong{display:block;color:var(--yellow);font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
+    .case-mini-result p{margin:0;color:var(--muted);line-height:1.6}
 
     .callout{border-left:8px solid var(--yellow);padding:20px 22px;background:#111}
     .callout p{margin-bottom:0}
@@ -293,10 +296,10 @@
 
   <section class="ds-section" id="referencias">
     <div class="container">
-      <p class="eyebrow dark">07 · Referencias y documentación</p>
-      <h2>Fundamentos y material de apoyo</h2>
+      <p class="eyebrow dark">07 · Casos y fundamentos aplicados</p>
+      <h2>Cómo traduzco principios de sistema a decisiones concretas</h2>
       <p class="lead ds-intro">
-        Esta sección toma información directamente de los documentos que tengo organizados en Drive. Cada tarjeta resume qué contiene el archivo, qué parte aporta al sistema y permite desplegar más detalle sin salir de la página.
+        Cada tarjeta reúne un frente de trabajo distinto: análisis de interfaces, selección de herramientas, construcción de componentes y definición de reglas de interacción. La idea es mostrar cómo esos criterios se convierten en decisiones que puedo aplicar en proyectos reales.
       </p>
 
       <div class="resource-grid">
@@ -306,25 +309,23 @@
               <div class="resource-icon" aria-hidden="true"><span class="material-symbols-outlined">description</span></div>
               <span class="resource-toggle">Ver detalle <span class="material-symbols-outlined">expand_more</span></span>
             </div>
-            <span class="resource-type">Documento de trabajo</span>
+            <span class="resource-type">Caso aplicado · Evaluación de interfaz</span>
             <h3>Análisis de Front-End</h3>
-            <p>Revisión de navegación, coherencia gráfica, responsive, accesibilidad, feedback, modularidad y mantenimiento aplicada a una interfaz administrativa.</p>
+            <p>Evaluación de una interfaz administrativa enfocada en navegación, coherencia visual, comportamiento responsive, accesibilidad, retroalimentación y mantenimiento.</p>
             <div class="resource-meta">
-              <span>Google Docs</span><span>17 KB</span><span>09 MAY 2025</span>
+              <span>Usabilidad</span><span>Accesibilidad</span><span>Responsive</span>
             </div>
           </summary>
           <div class="resource-detail">
-            <strong>Qué aporta al sistema</strong>
+            <strong>Decisiones que se desprenden del análisis</strong>
             <ul>
-              <li>Consistencia de navegación y estructura visual.</li>
-              <li>Estados de confirmación, error y retroalimentación.</li>
-              <li>Accesibilidad: contraste, ARIA y navegación por teclado.</li>
-              <li>Responsive, modularidad y criterios de mantenimiento.</li>
+              <li>Estructurar menús y secciones para que la navegación sea clara incluso para usuarios no técnicos.</li>
+              <li>Mantener identidad visual consistente entre interfaz principal y administración.</li>
+              <li>Dar feedback visible al guardar, eliminar o completar acciones.</li>
+              <li>Trabajar contraste, etiquetas, foco y navegación por teclado como parte del sistema.</li>
+              <li>Construir módulos que puedan mantenerse y evolucionar sin rehacer toda la interfaz.</li>
             </ul>
-            <div class="resource-actions">
-              <a class="button ghost" href="https://docs.google.com/document/d/1ZjA_MAxBz7w2dhkcLrWd73-dTSmXTSkm9YBhxQ9Ee10/edit" target="_blank" rel="noreferrer">Abrir documento</a>
-            </div>
-            <p class="resource-source-note">Datos y síntesis extraídos del documento guardado en Drive.</p>
+            <div class="case-mini-result"><strong>Resultado</strong><p>El análisis funciona como una pauta práctica para revisar si una interfaz es coherente, entendible, accesible y sostenible en el tiempo.</p></div>
           </div>
         </details>
 
@@ -334,25 +335,24 @@
               <div class="resource-icon" aria-hidden="true"><span class="material-symbols-outlined">table_chart</span></div>
               <span class="resource-toggle">Ver detalle <span class="material-symbols-outlined">expand_more</span></span>
             </div>
-            <span class="resource-type">Planilla de recursos</span>
+            <span class="resource-type">Sistema de trabajo · UX/UI</span>
             <h3>Kit de herramientas UX/UI</h3>
-            <p>Inventario de herramientas y referencias de investigación, prototipado, documentación, pruebas y sistemas de diseño.</p>
+            <p>Selección organizada de herramientas para investigación, arquitectura de información, prototipado, testing, documentación y desarrollo de interfaces.</p>
             <div class="resource-meta">
-              <span>Google Sheets</span><span>1.16 MB</span><span>09 NOV 2024</span>
+              <span>Research</span><span>Prototipado</span><span>Testing</span>
             </div>
           </summary>
           <div class="resource-detail">
-            <strong>Herramientas registradas</strong>
+            <strong>Cómo organizo el stack de trabajo</strong>
             <ul>
-              <li>Figma, Miro, Optimal Workshop y Maze.</li>
-              <li>Notion y Trello para documentación y seguimiento.</li>
-              <li>Material Design 3, Carbon y Atlassian Design como referencias de sistemas.</li>
-              <li>VS Code y recursos front-end para implementación.</li>
+              <li>Figma para wireframes, componentes y prototipos.</li>
+              <li>Miro para síntesis, ideación, mapas y trabajo colaborativo.</li>
+              <li>Optimal Workshop y Maze para validar arquitectura y usabilidad.</li>
+              <li>Notion y Trello para documentación, backlog y seguimiento.</li>
+              <li>Material Design 3, Carbon y Atlassian Design como referencias de sistemas consolidados.</li>
+              <li>VS Code para llevar las decisiones visuales a implementación front-end.</li>
             </ul>
-            <div class="resource-actions">
-              <a class="button ghost" href="https://docs.google.com/spreadsheets/d/1YXmvN4QvwKCQ-IyJhYVU6sgEN-s5VUzSNr5W_-QL7eQ/edit" target="_blank" rel="noreferrer">Abrir planilla</a>
-            </div>
-            <p class="resource-source-note">Selección tomada del inventario de herramientas disponible en Drive.</p>
+            <div class="case-mini-result"><strong>Resultado</strong><p>La herramienta cambia según la etapa; el sistema mantiene la continuidad entre investigar, diseñar, validar, documentar e implementar.</p></div>
           </div>
         </details>
 
@@ -362,25 +362,23 @@
               <div class="resource-icon" aria-hidden="true"><span class="material-symbols-outlined">design_services</span></div>
               <span class="resource-toggle">Ver detalle <span class="material-symbols-outlined">expand_more</span></span>
             </div>
-            <span class="resource-type">Material de formación</span>
+            <span class="resource-type">Caso aplicado · Construcción UI</span>
             <h3>Diseño de interfaz con Figma</h3>
-            <p>Ejercicio centrado en frames, guías, grillas, pantallas y creación de componentes básicos para mantener consistencia.</p>
+            <p>Construcción de una interfaz a partir de frames, grillas y componentes reutilizables, priorizando orden visual y consistencia entre pantallas.</p>
             <div class="resource-meta">
-              <span>PDF</span><span>7.32 MB</span><span>03 MAY 2024</span>
+              <span>Frames</span><span>Grillas</span><span>Componentes</span>
             </div>
           </summary>
           <div class="resource-detail">
-            <strong>Contenido relevante</strong>
+            <strong>Proceso aplicado</strong>
             <ul>
-              <li>Configuración de frames para móvil o web.</li>
-              <li>Uso de guías y grillas para diagramación.</li>
-              <li>Diseño de varias pantallas dentro de un mismo sistema.</li>
-              <li>Creación y reutilización de componentes, especialmente botones.</li>
+              <li>Definir el frame según el dispositivo y el contexto de uso.</li>
+              <li>Organizar contenido con guías y grillas antes de trabajar el detalle visual.</li>
+              <li>Diseñar varias pantallas manteniendo la misma lógica de jerarquía.</li>
+              <li>Convertir botones y elementos repetidos en componentes reutilizables.</li>
+              <li>Comprobar que los cambios globales no rompan la coherencia del sistema.</li>
             </ul>
-            <div class="resource-actions">
-              <a class="button ghost" href="https://drive.google.com/file/d/1565RyXVJv3j0O90xSobnRgh25XFYVKbR/view" target="_blank" rel="noreferrer">Abrir material</a>
-            </div>
-            <p class="resource-source-note">Síntesis basada en el PDF de diseño de interfaz con Figma guardado en Drive.</p>
+            <div class="case-mini-result"><strong>Resultado</strong><p>La interfaz deja de depender de decisiones aisladas y pasa a trabajar con reglas que pueden repetirse y escalar.</p></div>
           </div>
         </details>
 
@@ -390,25 +388,23 @@
               <div class="resource-icon" aria-hidden="true"><span class="material-symbols-outlined">touch_app</span></div>
               <span class="resource-toggle">Ver detalle <span class="material-symbols-outlined">expand_more</span></span>
             </div>
-            <span class="resource-type">Material de formación</span>
+            <span class="resource-type">Caso aplicado · Interacción</span>
             <h3>Diseño de interfaz e interacción</h3>
-            <p>Estados de componentes, claridad, consistencia, feedback, affordances, accesibilidad, grillas y comportamiento responsive.</p>
+            <p>Definición de estados, feedback, affordances, accesibilidad y comportamiento responsive para que los componentes comuniquen claramente qué puede hacer el usuario.</p>
             <div class="resource-meta">
-              <span>PDF</span><span>10.37 MB</span><span>02 MAY 2024</span>
+              <span>Estados</span><span>Feedback</span><span>Responsive</span>
             </div>
           </summary>
           <div class="resource-detail">
-            <strong>Contenido relevante</strong>
+            <strong>Reglas de interacción</strong>
             <ul>
-              <li>Estados default, hover, focus y active.</li>
-              <li>Affordances y feedback como señales de interacción.</li>
-              <li>Accesibilidad, reducción de carga cognitiva y predictibilidad.</li>
-              <li>Layouts fluidos, adaptativos y responsive, además de grillas de 12 columnas.</li>
+              <li>Definir estados default, hover, focus, active y disabled para componentes interactivos.</li>
+              <li>Usar feedback inmediato para confirmar acciones y mostrar el estado del sistema.</li>
+              <li>Diseñar affordances claras para reducir la carga cognitiva.</li>
+              <li>Trabajar foco y navegación por teclado como parte de la accesibilidad.</li>
+              <li>Adaptar layout y prioridad de contenido según breakpoints y tamaño de pantalla.</li>
             </ul>
-            <div class="resource-actions">
-              <a class="button ghost" href="https://drive.google.com/file/d/15x8YT_A5VcI7KmN9666kBSpF9kM3Lb-j/view" target="_blank" rel="noreferrer">Abrir material</a>
-            </div>
-            <p class="resource-source-note">Síntesis basada en el PDF de diseño de interfaz e interacción guardado en Drive.</p>
+            <div class="case-mini-result"><strong>Resultado</strong><p>Los componentes no solo comparten una estética: también mantienen un comportamiento predecible y consistente.</p></div>
           </div>
         </details>
       </div>
