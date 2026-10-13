@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chile bajo la piel | Investigación, patrimonio y diseño editorial | Diego Pazos</title>
+  <meta name="description" content="Caso de estudio de Chile bajo la piel: investigación sobre el tatuaje en Chile desde 1990, memoria oral y visual, trabajo territorial, entrevistas, archivo y propuesta editorial." />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    .case-hero{padding:92px 0 62px}
+    .case-hero h1{font-size:clamp(4.2rem,11vw,9.4rem);line-height:.78;letter-spacing:-.08em;text-transform:uppercase;margin:0 0 28px;max-width:1050px}
+    .case-intro{max-width:940px}
+    .case-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:34px}
+    .case-meta div,.case-card{border:3px solid var(--line);background:#0b0b0b;padding:20px;box-shadow:7px 7px 0 var(--yellow)}
+    .case-meta strong{display:block;color:var(--red);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+    .case-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+    .case-tags span{border:2px solid var(--line);padding:8px 10px;font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+    .case-section{padding:66px 0;border-top:3px solid var(--line)}
+    .case-section h2{font-size:clamp(2.2rem,5vw,4.7rem);line-height:.9;letter-spacing:-.06em;text-transform:uppercase;margin:0 0 26px}
+    .case-section h3{font-size:1.25rem;text-transform:uppercase;margin:0 0 12px}
+    .case-section p,.case-section li{color:var(--muted);line-height:1.72}
+    .case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .case-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .case-grid.five{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .case-card ul{padding-left:18px;margin-bottom:0}
+    .case-number{font-size:3rem;font-weight:1000;color:var(--yellow);line-height:1;margin-bottom:14px}
+    .territory{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px}
+    .territory article{border:3px solid var(--line);min-height:190px;padding:20px;background:#101010;display:flex;flex-direction:column;justify-content:space-between}
+    .territory span{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:var(--yellow);font-weight:900}
+    .territory strong{font-size:clamp(1.6rem,3.3vw,3.2rem);line-height:.9;text-transform:uppercase;letter-spacing:-.05em}
+    .territory .accent{background:var(--yellow);color:#111}
+    .territory .accent span{color:#111}
+    .territory .red{background:var(--red);color:#111}
+    .process-line{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:26px}
+    .process-line article{border:2px solid var(--line);padding:17px;background:#0d0d0d}
+    .process-line span{display:block;color:var(--red);font-size:.68rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+    .process-line strong{display:block;text-transform:uppercase;line-height:1.12;margin-bottom:8px}
+    .team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .team-role{display:block;color:var(--yellow);font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin:8px 0 12px}
+    .archive-map{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:stretch}
+    .archive-stack{display:grid;gap:12px}
+    .archive-stack div{border:2px solid var(--line);padding:16px;background:#0d0d0d}
+    .archive-stack strong{display:block;color:var(--yellow);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+    .visual-panel{border:3px solid var(--line);background:#111;padding:24px;display:grid;gap:18px;box-shadow:7px 7px 0 var(--yellow)}
+    .dot-sample{min-height:270px;position:relative;overflow:hidden;border:2px solid var(--line);background:
+      radial-gradient(circle at 20% 25%,var(--yellow) 0 2px,transparent 3px),
+      radial-gradient(circle at 50% 55%,var(--red) 0 2px,transparent 3px),
+      radial-gradient(circle at 78% 32%,#fff 0 2px,transparent 3px),
+      #080808;background-size:18px 18px,22px 22px,26px 26px,auto}
+    .dot-sample::after{content:"TRAMA / MEMORIA / CUERPO";position:absolute;left:18px;bottom:16px;font-size:clamp(1.2rem,2.6vw,2.4rem);font-weight:1000;letter-spacing:-.05em;max-width:70%;line-height:.9}
+    .gantt{display:grid;grid-template-columns:160px repeat(4,1fr);border:3px solid var(--line);margin-top:24px}
+    .gantt div{padding:12px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-height:48px}
+    .gantt .head{background:var(--yellow);color:#111;font-weight:900;text-transform:uppercase;font-size:.68rem;letter-spacing:.07em}
+    .gantt .label{font-weight:900;text-transform:uppercase;font-size:.72rem}
+    .gantt .bar{background:var(--red);color:#111;font-weight:900}
+    .gantt .bar.yellow{background:var(--yellow)}
+    .note-box{margin-top:24px;border-left:8px solid var(--yellow);padding:18px 20px;background:#101010}
+    .status-strip{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+    .status-strip article{border:3px solid var(--line);padding:22px;background:#0b0b0b}
+    .status-strip strong{display:block;color:var(--yellow);text-transform:uppercase;font-size:.76rem;letter-spacing:.08em;margin-bottom:8px}
+    @media(max-width:1050px){
+      .case-grid.five,.process-line{grid-template-columns:repeat(3,minmax(0,1fr))}
+    }
+    @media(max-width:900px){
+      .case-meta,.case-grid,.case-grid.three,.team-grid,.territory,.archive-map,.status-strip{grid-template-columns:1fr 1fr}
+      .gantt{grid-template-columns:120px repeat(4,1fr);font-size:.8rem}
+    }
+    @media(max-width:620px){
+      .case-hero{padding-top:72px}
+      .case-meta,.case-grid,.case-grid.three,.case-grid.five,.team-grid,.territory,.archive-map,.process-line,.status-strip{grid-template-columns:1fr}
+      .case-meta div,.case-card{padding:18px}
+      .gantt{display:block;border:0}
+      .gantt div{border:2px solid var(--line);margin-bottom:7px}
+      .gantt .head{display:none}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html"><span>DIEGO PAZOS</span></a>
+    <nav class="main-nav" aria-label="Navegación del caso">
+      <a href="../index.html#proyectos">Casos</a>
+      <a href="#metodologia">Metodología</a>
+      <a href="#archivo">Archivo</a>
+      <a href="#gestion">Gestión</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="case-hero">
+    <div class="container">
+      <p class="eyebrow">Caso de estudio · Investigación / Patrimonio / Diseño editorial</p>
+      <h1>Chile bajo<br>la piel</h1>
+      <p class="lead case-intro">
+        Investigación sobre la historia y transformación del tatuaje en Chile desde 1990 hasta la actualidad. El proyecto combina memoria oral y visual, trabajo territorial, entrevistas, archivo, diseño editorial y creación gráfica para construir un registro cultural desde quienes han vivido y sostenido la escena.
+      </p>
+
+      <div class="case-meta">
+        <div><strong>Mi rol</strong>Investigación · gestión · dirección visual</div>
+        <div><strong>Periodo estudiado</strong>1990 — actualidad</div>
+        <div><strong>Territorios</strong>RM · Valparaíso · Concepción</div>
+        <div><strong>Estado</strong>Postulación presentada · evaluación pendiente</div>
+      </div>
+
+      <div class="case-tags">
+        <span>UX Research</span><span>Memoria oral</span><span>Patrimonio cultural</span>
+        <span>Diseño editorial</span><span>Archivo visual</span><span>Entrevistas</span><span>Gestión cultural</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">01 · Contexto y problema</p>
+      <h2>Una historia construida en cuerpos, talleres y escenas.</h2>
+      <div class="case-grid">
+        <article class="case-card">
+          <h3>El punto de partida</h3>
+          <p>
+            La historia reciente del tatuaje en Chile no vive únicamente en documentos formales. Gran parte de ella está distribuida entre experiencias personales, fotografías, estudios, ferias, aprendizajes informales y relatos de quienes participaron de la escena desde los años noventa.
+          </p>
+        </article>
+        <article class="case-card">
+          <h3>El desafío de diseño</h3>
+          <p>
+            El proyecto debía transformar un conjunto heterogéneo de voces, imágenes y experiencias en un sistema de investigación comprensible, verificable y editorialmente legible, sin borrar las diferencias entre generaciones, territorios y formas de ejercer el oficio.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">02 · Alcance territorial</p>
+      <h2>Tres territorios para observar una escena que nunca fue una sola.</h2>
+      <div class="territory">
+        <article>
+          <span>Territorio 01</span>
+          <strong>Región Metropolitana</strong>
+          <p>Escenas urbanas, estudios, circuitos comerciales, espacios underground y transformaciones del oficio en Santiago.</p>
+        </article>
+        <article class="accent">
+          <span>Territorio 02</span>
+          <strong>Valparaíso</strong>
+          <p>Una escena portuaria con identidad propia, cruces artísticos y trayectorias que amplían la lectura centralista del fenómeno.</p>
+        </article>
+        <article class="red">
+          <span>Territorio 03</span>
+          <strong>Concepción</strong>
+          <p>Memoria local, redes culturales y relatos que permiten contrastar procesos de profesionalización y comunidad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">03 · Ejes de investigación</p>
+      <h2>Cinco capas que ordenan el archivo y las entrevistas.</h2>
+      <div class="case-grid five">
+        <article class="case-card"><div class="case-number">01</div><h3>Transformación cultural</h3><p>Del circuito underground de los noventa a la normalización y expansión contemporánea del tatuaje.</p></article>
+        <article class="case-card"><div class="case-number">02</div><h3>Cuerpo e identidad</h3><p>El cuerpo como soporte de memoria, pertenencia, biografía y transformación personal.</p></article>
+        <article class="case-card"><div class="case-number">03</div><h3>Oficio y aprendizaje</h3><p>Formas de aprender, enseñar, trabajar y construir legitimidad dentro de la escena.</p></article>
+        <article class="case-card"><div class="case-number">04</div><h3>Archivo oral y visual</h3><p>Relatos, fotografías, documentos y piezas que permiten conservar una memoria dispersa.</p></article>
+        <article class="case-card"><div class="case-number">05</div><h3>Traducción editorial</h3><p>Cómo convertir investigación y testimonios en libro, archivo visual, retratos y futura expansión web.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" id="metodologia">
+    <div class="container">
+      <p class="eyebrow dark">04 · Metodología</p>
+      <h2>Entrevistar, registrar, devolver y volver a revisar.</h2>
+      <p class="lead case-intro">
+        La metodología se construyó para que la participación no terminara cuando se apaga la grabadora. El proyecto contempla entre 15 y 20 entrevistas semiestructuradas durante un año, con registro de audio, transcripción asistida, revisión y devolución a las personas participantes.
+      </p>
+      <div class="process-line">
+        <article><span>01</span><strong>Selección</strong><p>Identificación de voces, trayectorias, generaciones y territorios relevantes.</p></article>
+        <article><span>02</span><strong>Entrevista</strong><p>Guion semiestructurado para permitir comparación sin eliminar la experiencia personal.</p></article>
+        <article><span>03</span><strong>Registro</strong><p>Audio, notas de campo y, cuando corresponde, materiales visuales asociados a cada historia.</p></article>
+        <article><span>04</span><strong>Transcripción</strong><p>Apoyo de IA para acelerar el primer levantamiento, seguido de revisión humana y edición.</p></article>
+        <article><span>05</span><strong>Devolución</strong><p>Revisión con participantes antes de consolidar testimonios y resultados editoriales.</p></article>
+      </div>
+      <div class="note-box">
+        <strong>Consentimiento informado</strong>
+        <p>El sistema de entrevistas incluye consentimiento y protocolo de trabajo para definir uso de voz, imagen, documentación y devolución de resultados antes de la publicación.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">05 · Equipo</p>
+      <h2>Tres perfiles, un mismo archivo.</h2>
+      <div class="team-grid">
+        <article class="case-card">
+          <h3>Diego Pazos</h3>
+          <span class="team-role">Tatuador · investigador · gestor</span>
+          <p>Dirección del proyecto, investigación, vínculo con la escena, producción visual, entrevistas y coordinación general.</p>
+        </article>
+        <article class="case-card">
+          <h3>Pamela Esther Mella</h3>
+          <span class="team-role">Edición · redacción</span>
+          <p>Edición y construcción del texto principal, coherencia narrativa y apoyo en la traducción del material investigativo al formato editorial.</p>
+        </article>
+        <article class="case-card">
+          <h3>Jorge Luis Robledo Zúñiga</h3>
+          <span class="team-role">Participación · vinculación</span>
+          <p>Investigación periodística, participación ciudadana y articulación comunitaria, con foco territorial y apoyo en trabajo de campo.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" id="archivo">
+    <div class="container">
+      <p class="eyebrow dark">06 · Arquitectura de información</p>
+      <h2>El archivo necesita estructura antes de necesitar una interfaz.</h2>
+      <div class="archive-map">
+        <div class="archive-stack">
+          <div><strong>Personas</strong>Entrevistados, trayectorias, estudios, generaciones y redes.</div>
+          <div><strong>Territorios</strong>RM, Valparaíso y Concepción como capas comparables, no como anexos.</div>
+          <div><strong>Tiempo</strong>Décadas, hitos, cambios técnicos, sanitarios, culturales y comerciales.</div>
+          <div><strong>Material visual</strong>Fotografía, gráfica, archivos personales, espacios, herramientas y obra.</div>
+          <div><strong>Temas</strong>Cuerpo, identidad, oficio, comunidad, legalidad, salud, aprendizaje y memoria.</div>
+        </div>
+        <article class="case-card">
+          <h3>Decisión de diseño</h3>
+          <p>
+            La web se plantea como expansión futura y no como punto de partida. Primero se organiza el contenido como archivo: relaciones entre personas, lugares, periodos, imágenes y temas. Esa estructura puede después traducirse a libro, sitio web, cronología o navegación temática sin rehacer la investigación.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">07 · Estrategia editorial y visual</p>
+      <h2>La investigación también necesita una voz gráfica.</h2>
+      <div class="case-grid">
+        <article class="visual-panel">
+          <div class="dot-sample" aria-label="Exploración gráfica basada en trama de puntos"></div>
+          <div>
+            <h3>Retratos y tramas</h3>
+            <p>La propuesta visual trabaja retratos construidos mediante puntos y tramas inspiradas en procesos de serigrafía y reproducción gráfica. No busca ilustrar literalmente las entrevistas, sino crear una segunda capa de memoria visual.</p>
+          </div>
+        </article>
+        <article class="case-card">
+          <h3>Libro y archivo como núcleo</h3>
+          <p>
+            El proyecto prioriza un libro y un archivo organizado como soportes centrales. La publicación combina texto, testimonios, imágenes y obra gráfica; la web queda planteada como una expansión capaz de ampliar navegación, acceso y actualización.
+          </p>
+          <h3 style="margin-top:24px">Lenguaje editorial</h3>
+          <p>
+            El diseño debe sostener material histórico, conversación oral y obra contemporánea sin volver el proyecto una revista de tendencias. La prioridad es que cada pieza visual tenga relación con el contenido investigado.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" id="gestion">
+    <div class="container">
+      <p class="eyebrow dark">08 · Planificación y gestión</p>
+      <h2>Investigar también es diseñar un sistema de trabajo.</h2>
+      <p class="lead case-intro">
+        La planificación combina terreno, entrevistas, transcripción, edición, producción visual, diseño editorial y divulgación. La Carta Gantt permite que investigación y producción no compitan entre sí y que cada etapa alimente a la siguiente.
+      </p>
+      <div class="gantt" aria-label="Síntesis de fases de trabajo">
+        <div class="head">Fase</div><div class="head">Inicio</div><div class="head">Investigación</div><div class="head">Edición</div><div class="head">Salida</div>
+        <div class="label">Preparación</div><div class="bar yellow">●</div><div></div><div></div><div></div>
+        <div class="label">Terreno</div><div></div><div class="bar">●</div><div></div><div></div>
+        <div class="label">Archivo</div><div></div><div class="bar">●</div><div class="bar yellow">●</div><div></div>
+        <div class="label">Libro</div><div></div><div></div><div class="bar">●</div><div class="bar yellow">●</div>
+        <div class="label">Divulgación</div><div></div><div></div><div></div><div class="bar">●</div>
+      </div>
+      <div class="status-strip">
+        <article><strong>Gestión</strong><p>Presupuesto, viajes, impresión, honorarios, lanzamiento, cartas de compromiso, consentimiento y documentación de postulación se integraron en un mismo plan de ejecución.</p></article>
+        <article><strong>Criterio</strong><p>El presupuesto se entiende como parte del diseño del proyecto: cada gasto debe corresponder a una actividad, un responsable y un resultado verificable.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">09 · Entregables</p>
+      <h2>Una investigación pensada para permanecer y circular.</h2>
+      <div class="case-grid three">
+        <article class="case-card"><h3>Libro</h3><p>Publicación editorial que reúne investigación, testimonios, imágenes y creación visual como primera salida consolidada.</p></article>
+        <article class="case-card"><h3>Archivo oral y visual</h3><p>Organización de entrevistas, transcripciones, documentación e imágenes para sostener consulta y preservación.</p></article>
+        <article class="case-card"><h3>Retratos / obra</h3><p>Serie visual desarrollada mediante tramas y puntillismo como interpretación contemporánea del archivo.</p></article>
+        <article class="case-card"><h3>Divulgación</h3><p>Presentación pública y devolución de resultados para que el material vuelva a las comunidades que participaron.</p></article>
+        <article class="case-card"><h3>Web</h3><p>Expansión futura del archivo para navegación por territorios, personas, periodos y temas.</p></article>
+        <article class="case-card"><h3>Metodología documentada</h3><p>Guiones, protocolos, consentimientos y estructura de trabajo reutilizable en futuras etapas de investigación.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">10 · Estado actual</p>
+      <h2>El caso muestra el diseño antes de que exista el resultado final.</h2>
+      <div class="case-grid">
+        <article class="case-card">
+          <h3>Postulación presentada</h3>
+          <p>Chile bajo la piel fue presentado al Fondo del Patrimonio Cultural 2026 y se encuentra a la espera de evaluación. El caso documenta el proceso de construcción del proyecto, no resultados de una ejecución que aún no comienza.</p>
+        </article>
+        <article class="case-card">
+          <h3>Aprendizaje</h3>
+          <p>El principal aprendizaje fue tratar investigación, presupuesto, participación, archivo y diseño editorial como partes de un mismo sistema. La calidad del resultado depende tanto de las preguntas como de cómo se organiza todo lo que ocurre después de hacerlas.</p>
+        </article>
+      </div>
+      <div class="cta-row">
+        <a class="button primary" href="../index.html#proyectos">Volver a casos</a>
+        <a class="button ghost" href="../index.html#proceso">Ver proceso de trabajo</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><p>© 2026 Diego Pazos · Chile bajo la piel</p></div></footer>
+<script src="../js/analytics-config.js?v=20261011-1"></script>
+<script src="../js/analytics.js?v=20261011-1"></script>
+</body>
+</html>
