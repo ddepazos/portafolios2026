@@ -64,12 +64,12 @@ window.PORTFOLIO_PROJECTS = [
     live: '#'
   },
   {
-    slug: 'portfolio-antiguo',
-    title: 'Portfolio Antiguo',
-    category: 'Portfolio / Personal Brand',
-    summary: 'Versión previa del portafolio personal con identidad propia, estructura editorial y una presencia digital más cercana a la marca.',
-    detail: 'https://katarsispazos.github.io/pazos/',
-    live: 'https://katarsispazos.github.io/pazos/'
+    slug: 'chile-bajo-la-piel',
+    title: 'Chile bajo la piel',
+    category: 'Research / Editorial / Cultura',
+    summary: 'Investigación sobre el tatuaje en Chile desde 1990: memoria oral y visual, entrevistas, archivo, diseño editorial y proyección web.',
+    detail: 'proyectos/chile-bajo-la-piel.html',
+    live: '#'
   },
   {
     slug: 'portfolio-2025',
