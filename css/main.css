@@ -979,15 +979,13 @@ body {
 .portfolio-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 30px;
-  align-items: stretch;
 }
 
 .project-card {
-  padding: 18px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  min-height: 0;
+  gap: 16px;
   background: #0b0b0b;
 }
 
@@ -1004,17 +1002,10 @@ body {
 
 .project-card h4 {
   margin: 0;
-  font-size: 1.72rem;
-  line-height: .96;
+  font-size: 1.9rem;
+  line-height: 1;
   text-transform: uppercase;
-  letter-spacing: -0.055em;
-}
-
-.project-card > p {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  letter-spacing: -0.06em;
 }
 
 .project-card .project-actions {
@@ -1022,7 +1013,7 @@ body {
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 8px;
+  margin-top: auto;
 }
 
 .link-button {
