@@ -35,6 +35,19 @@
     .plc-shot.plc-wide img{max-height:none}
     .plc-shot a:focus-visible{outline:4px solid var(--red);outline-offset:3px}
     @media(max-width:700px){.plc-gallery{grid-template-columns:1fr}.case-hero h1{letter-spacing:-.055em}.case-hero{padding-top:40px}.nav-wrap{gap:14px;flex-wrap:wrap;padding-block:12px}.main-nav{gap:12px}.plc-shot{box-shadow:4px 4px 0 var(--yellow)}}
+
+    /* Carruseles compactos: recorrido secuencial y exploraciones visuales */
+    .plc-gallery{display:flex;gap:18px;margin-top:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--yellow) #171717;padding:6px 8px 16px 2px;overscroll-behavior-x:contain}
+    .plc-gallery .plc-shot,.plc-gallery .plc-shot.plc-wide{flex:0 0 min(100%,780px);width:min(100%,780px);grid-column:auto;scroll-snap-align:start;box-shadow:4px 4px 0 var(--yellow)}
+    .plc-gallery .plc-shot img,.plc-gallery .plc-shot.plc-wide img{height:clamp(240px,43vw,450px);max-height:450px;object-fit:contain}
+    .plc-gallery .plc-shot a{display:flex;align-items:center;justify-content:center;min-height:clamp(240px,43vw,450px)}
+    .plc-carousel-controls{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap;margin:14px 0 4px}
+    .plc-carousel-controls button{background:#111;color:#fff;border:2px solid var(--yellow);font:inherit;font-weight:900;min-width:48px;min-height:44px;cursor:pointer}
+    .plc-carousel-controls button:hover,.plc-carousel-controls button:focus-visible{background:var(--yellow);color:#000}
+    .plc-carousel-controls button:disabled{opacity:.35;cursor:not-allowed}
+    .plc-carousel-count{color:#eee;font-weight:800;font-variant-numeric:tabular-nums}
+    @media(max-width:700px){.plc-gallery .plc-shot,.plc-gallery .plc-shot.plc-wide{flex-basis:calc(100% - 8px);width:calc(100% - 8px)}.plc-gallery .plc-shot img,.plc-gallery .plc-shot.plc-wide img{height:280px}.plc-gallery .plc-shot a{min-height:280px}}
+    @media(prefers-reduced-motion:reduce){.plc-gallery{scroll-behavior:auto}}
   </style>
 </head>
 <body>
@@ -122,4 +135,57 @@
 <footer class="site-footer"><div class="container"><p>© 2026 Diego Pazos · Proletarian Coin</p></div></footer>
   <script src="../js/analytics-config.js?v=20261011-1"></script>
   <script src="../js/analytics.js?v=20261011-1"></script>
+
+  <script>
+  document.querySelectorAll('.plc-gallery').forEach((gallery, index) => {
+    const slides = Array.from(gallery.querySelectorAll('.plc-shot'));
+    if (!slides.length) return;
+    gallery.setAttribute('role', 'region');
+    gallery.setAttribute('aria-roledescription', 'carrusel');
+    gallery.setAttribute('aria-label', ['Flujo de la billetera PLC', 'Exploraciones de interfaz PLC', 'Ilustraciones y recursos gráficos PLC'][index] || 'Galería PLC');
+    gallery.setAttribute('tabindex', '0');
+    const controls = document.createElement('div');
+    controls.className = 'plc-carousel-controls';
+    const prev = document.createElement('button');
+    const next = document.createElement('button');
+    const count = document.createElement('span');
+    prev.type = next.type = 'button';
+    prev.textContent = '← Anterior';
+    next.textContent = 'Siguiente →';
+    count.className = 'plc-carousel-count';
+    count.setAttribute('aria-live', 'polite');
+    controls.append(prev, count, next);
+    gallery.before(controls);
+    let current = 0;
+    const update = () => {
+      count.textContent = (current + 1) + ' / ' + slides.length;
+      prev.disabled = current === 0;
+      next.disabled = current === slides.length - 1;
+    };
+    const go = (i) => {
+      current = Math.max(0, Math.min(slides.length - 1, i));
+      slides[current].scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'nearest', inline: 'start'});
+      update();
+    };
+    prev.addEventListener('click', () => go(current - 1));
+    next.addEventListener('click', () => go(current + 1));
+    gallery.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); go(current + (e.key === 'ArrowRight' ? 1 : -1)); }
+    });
+    let raf = 0;
+    gallery.addEventListener('scroll', () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const left = gallery.scrollLeft;
+        let closest = 0, distance = Infinity;
+        slides.forEach((slide, i) => {
+          const d = Math.abs(slide.offsetLeft - slides[0].offsetLeft - left);
+          if (d < distance) {distance = d; closest = i;}
+        });
+        current = closest; update();
+      });
+    }, {passive:true});
+    update();
+  });
+  </script>
 </body></html>
