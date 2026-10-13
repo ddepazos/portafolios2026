@@ -39,3 +39,33 @@
   });
 })();
 
+(() => {
+  const dialog = document.querySelector('.jabones-dialog');
+  const opener = document.querySelector('[data-jabones-open]');
+  if (!dialog || !opener) return;
+  const close = dialog.querySelector('.jabones-close');
+
+  opener.addEventListener('click', () => {
+    dialog.showModal();
+    document.body.classList.add('jabones-viewing');
+    close?.focus();
+  });
+
+  close?.addEventListener('click', () => dialog.close());
+
+  dialog.addEventListener('click', (event) => {
+    if (event.target !== dialog) return;
+    const bounds = dialog.getBoundingClientRect();
+    const outside =
+      event.clientX < bounds.left ||
+      event.clientX > bounds.right ||
+      event.clientY < bounds.top ||
+      event.clientY > bounds.bottom;
+    if (outside) dialog.close();
+  });
+
+  dialog.addEventListener('close', () => {
+    document.body.classList.remove('jabones-viewing');
+    opener.focus();
+  });
+})();
