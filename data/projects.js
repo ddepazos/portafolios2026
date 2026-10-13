@@ -32,6 +32,14 @@ window.PORTFOLIO_PROJECTS = [
     live: 'https://katarsispazos.github.io/pagana/'
   },
   {
+    slug: 'nota-negra',
+    title: 'Nota Negra',
+    category: 'Editorial / UX/UI / Web',
+    summary: 'Diario independiente abordado como sistema editorial digital: jerarquía de información, arquitectura de contenidos, lectura responsive e identidad aplicada a una experiencia web.',
+    detail: 'proyectos/nota-negra.html',
+    live: '#'
+  },
+  {
     slug: 'raki',
     title: 'Raki',
     category: 'Branding / Packaging / Web',
