@@ -66,17 +66,9 @@ window.PORTFOLIO_PROJECTS = [
   {
     slug: 'chile-bajo-la-piel',
     title: 'Chile bajo la piel',
-    category: 'Research / Editorial / Cultura',
-    summary: 'Investigación sobre el tatuaje en Chile desde 1990: memoria oral y visual, entrevistas, archivo, diseño editorial y proyección web.',
+    category: 'Investigación / Patrimonio / Diseño editorial',
+    summary: 'Caso de investigación sobre el tatuaje en Chile desde 1990: memoria oral y visual, trabajo territorial, entrevistas, archivo, gestión cultural y una estrategia editorial que articula libro, obra gráfica y expansión web.',
     detail: 'proyectos/chile-bajo-la-piel.html',
     live: '#'
-  },
-  {
-    slug: 'portfolio-2025',
-    title: 'Portfolio 2025',
-    category: 'Portfolio / UX/UI / Brand / Front-end',
-    summary: 'Caso de evolución de marca personal: estructura editorial, UX/UI, diseño gráfico y front-end en una versión previa del portfolio que sirvió de base para Portafolios 2026.',
-    detail: 'proyectos/portfolio-2025.html',
-    live: 'https://diegopazos1984.github.io/paginamainstream/'
   },
 ];
