@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nota Negra | Diseño editorial y experiencia digital | Diego Pazos</title>
+  <meta name="description" content="Caso de Nota Negra, diario independiente: enfoque de diseño editorial, jerarquía de información, sistema de contenidos y experiencia digital responsive." />
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+  <style>
+    .case-hero{padding:92px 0 62px}
+    .case-hero h1{font-size:clamp(4.5rem,12vw,10rem);line-height:.78;letter-spacing:-.085em;text-transform:uppercase;margin:0 0 28px}
+    .case-intro{max-width:900px}
+    .case-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:34px}
+    .case-meta div,.case-card{border:3px solid var(--line);background:#0b0b0b;padding:20px;box-shadow:7px 7px 0 var(--yellow)}
+    .case-meta strong{display:block;color:var(--red);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
+    .case-section{padding:66px 0;border-top:3px solid var(--line)}
+    .case-section h2{font-size:clamp(2.25rem,5vw,4.8rem);line-height:.9;letter-spacing:-.06em;text-transform:uppercase;margin:0 0 26px}
+    .case-section h3{font-size:1.3rem;text-transform:uppercase;margin:0 0 12px}
+    .case-section p,.case-section li{color:var(--muted);line-height:1.72}
+    .case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .case-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .case-card ul{padding-left:18px;margin-bottom:0}
+    .case-number{font-size:3rem;font-weight:1000;color:var(--yellow);line-height:1;margin-bottom:14px}
+    .case-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+    .case-tags span{border:2px solid var(--line);padding:8px 10px;font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em}
+    .editorial-strip{display:grid;grid-template-columns:1.5fr .8fr .8fr;gap:12px;margin-top:26px}
+    .editorial-block{min-height:180px;border:3px solid var(--line);background:#111;padding:20px;display:flex;flex-direction:column;justify-content:space-between}
+    .editorial-block strong{font-size:clamp(1.4rem,2.8vw,2.7rem);line-height:.92;text-transform:uppercase;letter-spacing:-.05em}
+    .editorial-block small{color:var(--yellow);font-size:.66rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+    .editorial-block.accent{background:var(--yellow);color:#111}
+    .editorial-block.accent small{color:#111}
+    .editorial-block.red{background:var(--red);color:#111}
+    .flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:24px}
+    .flow div{border:2px solid var(--line);padding:18px;background:#0d0d0d}
+    .flow span{display:block;color:var(--red);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+    .flow strong{display:block;text-transform:uppercase;line-height:1.1}
+    .note-box{margin-top:24px;border-left:8px solid var(--yellow);padding:18px 20px;background:#101010}
+    @media(max-width:900px){
+      .case-meta,.case-grid,.case-grid.four,.editorial-strip,.flow{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:620px){
+      .case-hero{padding-top:72px}
+      .case-meta,.case-grid,.case-grid.four,.editorial-strip,.flow{grid-template-columns:1fr}
+      .case-meta div,.case-card{padding:18px}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="../index.html"><span>DIEGO PAZOS</span></a>
+    <nav class="main-nav" aria-label="Navegación del caso">
+      <a href="../index.html#proyectos">Casos</a>
+      <a href="#enfoque">Enfoque</a>
+      <a href="#sistema">Sistema</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="case-hero">
+    <div class="container">
+      <p class="eyebrow">Caso editorial · UX/UI / Diseño de información / Web</p>
+      <h1>Nota<br>Negra</h1>
+      <p class="lead case-intro">
+        Nota Negra es un diario independiente. El proyecto amplía mi trabajo hacia el diseño editorial digital: cómo ordenar noticias, jerarquizar contenidos y construir una experiencia de lectura clara sin perder una identidad reconocible.
+      </p>
+      <div class="case-meta">
+        <div><strong>Rol</strong>Diseño editorial · UX/UI · Web</div>
+        <div><strong>Tipo</strong>Diario independiente</div>
+        <div><strong>Enfoque</strong>Jerarquía · lectura · sistema de contenidos</div>
+        <div><strong>Estado</strong>Caso en desarrollo</div>
+      </div>
+      <div class="case-tags">
+        <span>Diseño editorial</span><span>Arquitectura de información</span><span>Jerarquía visual</span>
+        <span>Responsive</span><span>UX/UI</span><span>Web</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" id="enfoque">
+    <div class="container">
+      <p class="eyebrow dark">01 · Contexto</p>
+      <h2>Diseñar información antes que decorar páginas</h2>
+      <div class="case-grid">
+        <article class="case-card">
+          <h3>El desafío</h3>
+          <p>
+            Un medio independiente necesita publicar distintos tipos de contenido sin convertir la portada en una masa de titulares que compiten entre sí. El trabajo parte desde esa tensión: dar prioridad a lo importante, mantener ritmo de lectura y permitir que cada contenido encuentre su lugar.
+          </p>
+        </article>
+        <article class="case-card">
+          <h3>La oportunidad</h3>
+          <p>
+            El diseño editorial aporta herramientas que también son propias de UX/UI: jerarquía, consistencia, agrupación, contraste, navegación y lectura progresiva. Nota Negra permite aplicar esas decisiones a un sistema de información que debe crecer sin perder claridad.
+          </p>
+        </article>
+      </div>
+
+      <div class="editorial-strip" aria-label="Principios visuales del proyecto">
+        <div class="editorial-block"><small>Jerarquía</small><strong>Una noticia principal no puede pesar lo mismo que una secundaria.</strong></div>
+        <div class="editorial-block accent"><small>Ritmo</small><strong>Leer sin perderse.</strong></div>
+        <div class="editorial-block red"><small>Identidad</small><strong>Reconocer el medio.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section" id="sistema">
+    <div class="container">
+      <p class="eyebrow dark">02 · Sistema editorial</p>
+      <h2>Un lenguaje que pueda repetirse sin volverse monótono</h2>
+      <div class="case-grid four">
+        <article class="case-card"><div class="case-number">01</div><h3>Titulares</h3><p>Niveles tipográficos claros para separar apertura, noticias destacadas, contenidos secundarios y apoyos.</p></article>
+        <article class="case-card"><div class="case-number">02</div><h3>Metadatos</h3><p>Categoría, fecha, autor y contexto deben acompañar la lectura sin competir con el contenido principal.</p></article>
+        <article class="case-card"><div class="case-number">03</div><h3>Módulos</h3><p>Bloques reutilizables permiten sostener consistencia mientras cambia el volumen y el tipo de noticias.</p></article>
+        <article class="case-card"><div class="case-number">04</div><h3>Contraste</h3><p>Color, escala y espacio ayudan a distinguir urgencia, profundidad editorial y navegación.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">03 · Arquitectura</p>
+      <h2>La portada es una ruta, no una pared de contenido</h2>
+      <p class="lead case-intro">
+        La estructura se trabaja como una secuencia de lectura. Primero debe quedar claro qué está pasando; después, qué temas existen y dónde profundizar. Esa lógica permite trasladar el contenido a escritorio y móvil sin depender de una composición rígida.
+      </p>
+      <div class="flow">
+        <div><span>01</span><strong>Portada</strong><p>Prioridad editorial y acceso a contenidos principales.</p></div>
+        <div><span>02</span><strong>Secciones</strong><p>Agrupación temática para reducir búsqueda y repetición.</p></div>
+        <div><span>03</span><strong>Artículo</strong><p>Lectura extensa con jerarquía, contexto y continuidad.</p></div>
+        <div><span>04</span><strong>Archivo</strong><p>Acceso a contenido anterior sin sobrecargar la portada.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">04 · Responsive</p>
+      <h2>La jerarquía debe sobrevivir al cambio de pantalla</h2>
+      <div class="case-grid">
+        <article class="case-card">
+          <h3>Escritorio</h3>
+          <p>
+            La amplitud permite trabajar con relaciones entre columnas, noticias simultáneas y cambios de escala más evidentes. La prioridad no es llenar el ancho disponible, sino usarlo para construir una lectura editorial.
+          </p>
+        </article>
+        <article class="case-card">
+          <h3>Móvil</h3>
+          <p>
+            En pantallas pequeñas la estructura se vuelve secuencial. La jerarquía se conserva mediante orden, tamaño, contraste y espaciado, evitando que una versión responsive sea simplemente una reducción del desktop.
+          </p>
+        </article>
+      </div>
+      <div class="note-box">
+        <strong>Estado del caso</strong>
+        <p>
+          Esta página documenta el enfoque de diseño del proyecto sin presentar métricas, resultados o piezas que todavía no estén verificadas. A medida que el trabajo visual y el prototipo se consoliden, el caso puede incorporar pantallas y evidencia de proceso sin alterar esta estructura.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="container">
+      <p class="eyebrow dark">05 · Aporte al portafolio</p>
+      <h2>Diseño de información como parte de una práctica más amplia</h2>
+      <p class="lead case-intro">
+        Nota Negra suma una dimensión editorial a un portafolio centrado en UX/UI, identidad y web. El objetivo no es abrir una línea separada, sino demostrar que las mismas decisiones de estructura, jerarquía y sistema también pueden sostener un medio de comunicación.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href="../index.html#proyectos">Volver a casos</a>
+        <a class="button ghost" href="../index.html#diseno">Ver selección visual</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="container"><p>© 2026 Diego Pazos · Nota Negra</p></div></footer>
+<script src="../js/analytics-config.js?v=20261011-1"></script>
+<script src="../js/analytics.js?v=20261011-1"></script>
+</body>
+</html>
