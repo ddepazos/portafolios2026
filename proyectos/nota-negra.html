@@ -36,12 +36,25 @@
     .flow span{display:block;color:var(--red);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
     .flow strong{display:block;text-transform:uppercase;line-height:1.1}
     .note-box{margin-top:24px;border-left:8px solid var(--yellow);padding:18px 20px;background:#101010}
+    .hero-asset{margin:34px 0 0;border:3px solid var(--line);background:#080808;box-shadow:8px 8px 0 var(--yellow);overflow:hidden}
+    .hero-asset img{display:block;width:100%;height:auto;max-height:520px;object-fit:cover}
+    .media-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:28px}
+    .media-card{margin:0;border:3px solid var(--line);background:#0b0b0b;overflow:hidden}
+    .media-card--wide{grid-column:1/-1}
+    .media-frame{display:grid;place-items:center;min-height:260px;background:#050505;border-bottom:2px solid var(--line);overflow:hidden}
+    .media-frame img{display:block;width:100%;height:auto;max-height:560px;object-fit:contain}
+    .media-card figcaption{padding:16px 18px}
+    .media-card figcaption strong{display:block;color:var(--yellow);font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;margin-bottom:7px}
+    .media-card figcaption span{display:block;color:var(--muted);line-height:1.55}
+    .authorship-note{margin-top:22px;padding:17px 18px;border:2px solid var(--line);background:#111}
+    .authorship-note strong{color:var(--red);text-transform:uppercase;font-size:.72rem;letter-spacing:.08em}
     @media(max-width:900px){
-      .case-meta,.case-grid,.case-grid.four,.editorial-strip,.flow{grid-template-columns:1fr 1fr}
+      .case-meta,.case-grid,.case-grid.four,.editorial-strip,.flow,.media-grid{grid-template-columns:1fr 1fr}
     }
     @media(max-width:620px){
       .case-hero{padding-top:72px}
-      .case-meta,.case-grid,.case-grid.four,.editorial-strip,.flow{grid-template-columns:1fr}
+      .case-meta,.case-grid,.case-grid.four,.editorial-strip,.flow,.media-grid{grid-template-columns:1fr}
+      .media-card--wide{grid-column:auto}
       .case-meta div,.case-card{padding:18px}
     }
   </style>
@@ -53,6 +66,7 @@
     <nav class="main-nav" aria-label="Navegación del caso">
       <a href="../index.html#proyectos">Casos</a>
       <a href="#enfoque">Enfoque</a>
+      <a href="#piezas">Piezas</a>
       <a href="#sistema">Sistema</a>
     </nav>
   </div>
@@ -70,12 +84,15 @@
         <div><strong>Rol</strong>Diseño editorial · UX/UI · Web</div>
         <div><strong>Tipo</strong>Diario independiente</div>
         <div><strong>Enfoque</strong>Jerarquía · lectura · sistema de contenidos</div>
-        <div><strong>Estado</strong>Caso en desarrollo</div>
+        <div><strong>Estado</strong>Identidad y motion documentados</div>
       </div>
       <div class="case-tags">
         <span>Diseño editorial</span><span>Arquitectura de información</span><span>Jerarquía visual</span>
-        <span>Responsive</span><span>UX/UI</span><span>Web</span>
+        <span>Responsive</span><span>UX/UI</span><span>Web</span><span>Motion</span>
       </div>
+      <figure class="hero-asset">
+        <img src="../assets/projects/nota-negra/nota-negra-banner.gif" alt="Banner animado de la identidad visual de Nota Negra." decoding="async">
+      </figure>
     </div>
   </section>
 
@@ -106,9 +123,71 @@
     </div>
   </section>
 
+  <section class="case-section" id="piezas">
+    <div class="container">
+      <p class="eyebrow dark">02 · Identidad visual + Motion</p>
+      <h2>La identidad también vive en movimiento</h2>
+      <p class="lead case-intro">
+        Nota Negra no se resuelve únicamente desde la grilla editorial. El proyecto incluye desarrollo de logotipo, exploraciones tipográficas y piezas animadas creadas para extender la identidad a formatos digitales. Estas piezas forman parte de mi trabajo gráfico dentro del proyecto.
+      </p>
+
+      <div class="media-grid" aria-label="Piezas gráficas y animadas de Nota Negra">
+        <figure class="media-card media-card--wide">
+          <div class="media-frame">
+            <img src="../assets/projects/nota-negra/nota-negra-logo.png" alt="Exploración de logotipo e identidad visual de Nota Negra." loading="lazy" decoding="async">
+          </div>
+          <figcaption>
+            <strong>Identidad / Logotipo</strong>
+            <span>Exploración estática de la marca y de su construcción gráfica.</span>
+          </figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <div class="media-frame">
+            <img src="../assets/projects/nota-negra/nota-negra-motion-01.gif" alt="Exploración animada de identidad para Nota Negra." loading="lazy" decoding="async">
+          </div>
+          <figcaption><strong>Motion 01</strong><span>Animación de identidad aplicada a comunicación digital.</span></figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <div class="media-frame">
+            <img src="../assets/projects/nota-negra/nota-negra-motion-02.gif" alt="Segunda exploración animada de identidad para Nota Negra." loading="lazy" decoding="async">
+          </div>
+          <figcaption><strong>Motion 02</strong><span>Variación animada del lenguaje gráfico del medio.</span></figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <div class="media-frame">
+            <img src="../assets/projects/nota-negra/nota-negra-motion-03.gif" alt="Tercera pieza animada desarrollada para Nota Negra." loading="lazy" decoding="async">
+          </div>
+          <figcaption><strong>Motion 03</strong><span>Exploración de ritmo, composición y presencia de marca.</span></figcaption>
+        </figure>
+
+        <figure class="media-card">
+          <div class="media-frame">
+            <img src="../assets/projects/nota-negra/nota-negra-motion-04.gif" alt="Cuarta pieza animada desarrollada para Nota Negra." loading="lazy" decoding="async">
+          </div>
+          <figcaption><strong>Motion 04</strong><span>Aplicación animada pensada para soportes y difusión digital.</span></figcaption>
+        </figure>
+
+        <figure class="media-card media-card--wide">
+          <div class="media-frame">
+            <img src="../assets/projects/nota-negra/nota-negra-motion-05.gif" alt="Quinta pieza animada desarrollada para Nota Negra." loading="lazy" decoding="async">
+          </div>
+          <figcaption><strong>Motion 05</strong><span>Variación de cierre que amplía el sistema visual de Nota Negra.</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="authorship-note">
+        <strong>Autoría visual</strong>
+        <p>Los logotipos y las piezas GIF mostradas en esta sección fueron desarrollados por Diego Pazos como parte del trabajo gráfico de Nota Negra.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="case-section" id="sistema">
     <div class="container">
-      <p class="eyebrow dark">02 · Sistema editorial</p>
+      <p class="eyebrow dark">03 · Sistema editorial</p>
       <h2>Un lenguaje que pueda repetirse sin volverse monótono</h2>
       <div class="case-grid four">
         <article class="case-card"><div class="case-number">01</div><h3>Titulares</h3><p>Niveles tipográficos claros para separar apertura, noticias destacadas, contenidos secundarios y apoyos.</p></article>
@@ -121,7 +200,7 @@
 
   <section class="case-section">
     <div class="container">
-      <p class="eyebrow dark">03 · Arquitectura</p>
+      <p class="eyebrow dark">04 · Arquitectura</p>
       <h2>La portada es una ruta, no una pared de contenido</h2>
       <p class="lead case-intro">
         La estructura se trabaja como una secuencia de lectura. Primero debe quedar claro qué está pasando; después, qué temas existen y dónde profundizar. Esa lógica permite trasladar el contenido a escritorio y móvil sin depender de una composición rígida.
@@ -137,7 +216,7 @@
 
   <section class="case-section">
     <div class="container">
-      <p class="eyebrow dark">04 · Responsive</p>
+      <p class="eyebrow dark">05 · Responsive</p>
       <h2>La jerarquía debe sobrevivir al cambio de pantalla</h2>
       <div class="case-grid">
         <article class="case-card">
@@ -156,7 +235,7 @@
       <div class="note-box">
         <strong>Estado del caso</strong>
         <p>
-          Esta página documenta el enfoque de diseño del proyecto sin presentar métricas, resultados o piezas que todavía no estén verificadas. A medida que el trabajo visual y el prototipo se consoliden, el caso puede incorporar pantallas y evidencia de proceso sin alterar esta estructura.
+          El caso ya incorpora piezas reales de identidad y motion. La parte editorial y de interfaz sigue en desarrollo, por lo que no se presentan métricas ni resultados de uso que todavía no estén documentados.
         </p>
       </div>
     </div>
@@ -164,7 +243,7 @@
 
   <section class="case-section">
     <div class="container">
-      <p class="eyebrow dark">05 · Aporte al portafolio</p>
+      <p class="eyebrow dark">06 · Aporte al portafolio</p>
       <h2>Diseño de información como parte de una práctica más amplia</h2>
       <p class="lead case-intro">
         Nota Negra suma una dimensión editorial a un portafolio centrado en UX/UI, identidad y web. El objetivo no es abrir una línea separada, sino demostrar que las mismas decisiones de estructura, jerarquía y sistema también pueden sostener un medio de comunicación.
