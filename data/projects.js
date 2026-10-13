@@ -74,9 +74,9 @@ window.PORTFOLIO_PROJECTS = [
   {
     slug: 'portfolio-2025',
     title: 'Portfolio 2025',
-    category: 'Brand / Web',
-    summary: 'Referencia previa de la identidad digital y presencia profesional, con foco en la evolución de la marca y la experiencia de portfolio personal.',
-    detail: 'https://diegopazos1984.github.io/cv/',
-    live: 'https://diegopazos1984.github.io/cv/'
+    category: 'Portfolio / UX/UI / Brand / Front-end',
+    summary: 'Caso de evolución de marca personal: estructura editorial, UX/UI, diseño gráfico y front-end en una versión previa del portfolio que sirvió de base para Portafolios 2026.',
+    detail: 'proyectos/portfolio-2025.html',
+    live: 'https://diegopazos1984.github.io/paginamainstream/'
   },
 ];
