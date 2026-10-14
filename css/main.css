@@ -1429,3 +1429,12 @@ a.panel-feature:focus-visible{outline:3px solid var(--yellow);outline-offset:5px
 .chile-cover-art:hover .chile-cover-title{transform:translateY(-2px);transition:transform .2s ease}
 @media(max-width:540px){.chile-cover-art{min-height:240px;padding:20px}.chile-cover-title{font-size:clamp(3.4rem,15vw,5.7rem)}}
 @media(prefers-reduced-motion:reduce){.chile-cover-art:hover .chile-cover-title{transform:none}}
+
+/* Evitar solapamiento de las líneas en la portada de Chile bajo la piel */
+.chile-cover-art{container-type:inline-size;justify-content:space-between;gap:14px}
+.chile-cover-title{width:100%;font-size:clamp(2.4rem,13cqw,5.4rem);line-height:1.04;letter-spacing:-.045em;gap:0;transform:none}
+.chile-cover-title>span{line-height:1.04;white-space:nowrap}
+.chile-cover-title>span:nth-child(2){margin:0;color:#f50076}
+.chile-cover-title i{font-size:.65em;vertical-align:baseline}
+.chile-cover-caption{margin-top:8px}
+@media(max-width:540px){.chile-cover-title{font-size:clamp(2.3rem,13cqw,5.4rem)}}
