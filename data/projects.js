@@ -69,6 +69,6 @@ window.PORTFOLIO_PROJECTS = [
     category: 'Investigación / Patrimonio / Diseño editorial',
     summary: 'Caso de investigación sobre el tatuaje en Chile desde 1990: memoria oral y visual, trabajo territorial, entrevistas, archivo, gestión cultural y una estrategia editorial que articula libro, obra gráfica y expansión web.',
     detail: 'proyectos/chile-bajo-la-piel.html',
-    live: '#'
+    live: 'https://ddepazos.github.io/CHILE_BAJO_LA_PIEL/'
   },
 ];
