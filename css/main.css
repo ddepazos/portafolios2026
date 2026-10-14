@@ -135,7 +135,8 @@ body {
   width: 170px;
   height: 170px;
   transform-style: preserve-3d;
-  animation: rubikSpin 14s linear infinite;
+  animation: none;
+  transform: rotateX(-25deg) rotateY(-30deg);
 }
 
 .face {
@@ -1355,8 +1356,8 @@ body {
 .rubik-scene{perspective:1000px;-webkit-perspective:1000px}
 .rubik-cube{transform-style:preserve-3d;-webkit-transform-style:preserve-3d;will-change:transform}
 .rubik-cube .face{backface-visibility:hidden;-webkit-backface-visibility:hidden}
-.rubik-cube.rubik-animate{animation:rubikSpin 14s linear infinite!important;transform-style:preserve-3d}
-.rubik-cube.rubik-paused{animation:none!important;transform:rotateX(-25deg) rotateY(-30deg)}
+.rubik-cube.rubik-animate{animation:rubikSpin 14s linear infinite;transform-style:preserve-3d}
+.rubik-cube.rubik-paused{animation:none;transform:rotateX(-25deg) rotateY(-30deg)}
 .rubik-toggle{display:block;margin:10px 0 16px auto;padding:8px 14px;border:2px solid var(--line);background:#0b0b0b;color:#fff;font:inherit;font-size:.75rem;font-weight:800;cursor:pointer;box-shadow:4px 4px 0 var(--yellow)}
 .rubik-toggle:hover{background:#242424}
 .rubik-toggle:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
