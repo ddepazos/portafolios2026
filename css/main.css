@@ -1444,3 +1444,11 @@ a.panel-feature:focus-visible{outline:3px solid var(--yellow);outline-offset:5px
 .chile-cover-title>span{letter-spacing:0.015em;line-height:1.08}
 .chile-cover-title>span:nth-child(2){letter-spacing:0}
 .chile-cover-title i{margin-left:.12em}
+
+/* Portada Chile bajo la piel: escala legible y caracteres separados */
+.chile-cover-art{container-type:inline-size;min-height:270px}
+.chile-cover-art .chile-cover-title{font-family:"Arial Black",Arial,Helvetica,sans-serif;font-weight:900;font-stretch:normal;font-size:clamp(3rem,19cqw,5.7rem);line-height:1.02;letter-spacing:.025em;width:100%;font-kerning:normal}
+.chile-cover-art .chile-cover-title>span{line-height:1.02;letter-spacing:.025em;white-space:nowrap}
+.chile-cover-art .chile-cover-title>span:nth-child(2){letter-spacing:.012em}
+.chile-cover-art .chile-cover-title i{font-size:.6em;margin-left:.1em}
+@media(max-width:540px){.chile-cover-art .chile-cover-title{font-size:clamp(2.8rem,18cqw,5.3rem)}}
