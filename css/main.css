@@ -1409,4 +1409,5 @@ a.panel-feature:focus-visible{outline:3px solid var(--yellow);outline-offset:5px
 .rubik-cube.rubik-animate{animation:rubikSpin 14s linear infinite}
 .rubik-cube.rubik-paused{animation:none;transform:rotateX(-25deg) rotateY(-30deg)}
 @media(max-width:440px){.rubik-scene{height:245px;min-height:245px}}
-@media(prefers-reduced-motion:reduce){.rubik-cube.rubik-animate{animation:none;transform:rotateX(-25deg) rotateY(-30deg)}}
+
+\n/* Animación Rubik: giro visible al cargar; el control permite pausarlo */\n.rubik-cube.rubik-animate{animation:rubikSpin 10s linear infinite!important}\n
