@@ -1455,3 +1455,7 @@ a.panel-feature:focus-visible{outline:3px solid var(--yellow);outline-offset:5px
 
 /* Legibilidad de la bajada editorial en la portada Chile bajo la piel */
 .chile-cover-art .chile-cover-caption{font-size:clamp(.85rem,3.6cqw,1.05rem);line-height:1.45;letter-spacing:.015em;font-weight:700;margin-top:14px}
+
+/* Portada original WebP: proporciones intactas, sin tipografía reconstruida */
+.chile-cover-image-link{display:block;overflow:hidden;border-radius:8px;background:#efebe3;line-height:0;text-decoration:none}
+.chile-cover-image{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;aspect-ratio:583/577}
