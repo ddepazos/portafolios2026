@@ -1459,3 +1459,8 @@ a.panel-feature:focus-visible{outline:3px solid var(--yellow);outline-offset:5px
 /* Portada original WebP: proporciones intactas, sin tipografía reconstruida */
 .chile-cover-image-link{display:block;overflow:hidden;border-radius:8px;background:#efebe3;line-height:0;text-decoration:none}
 .chile-cover-image{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;aspect-ratio:583/577}
+
+/* Hero: evitar el vacío superior causado por alinear la columna izquierda al fondo */
+.hero-grid{align-items:start}
+.hero-copy{align-self:start}
+.hero-panel{align-self:start}
