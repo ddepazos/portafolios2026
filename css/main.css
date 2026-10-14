@@ -1452,3 +1452,6 @@ a.panel-feature:focus-visible{outline:3px solid var(--yellow);outline-offset:5px
 .chile-cover-art .chile-cover-title>span:nth-child(2){letter-spacing:.012em}
 .chile-cover-art .chile-cover-title i{font-size:.6em;margin-left:.1em}
 @media(max-width:540px){.chile-cover-art .chile-cover-title{font-size:clamp(2.8rem,18cqw,5.3rem)}}
+
+/* Legibilidad de la bajada editorial en la portada Chile bajo la piel */
+.chile-cover-art .chile-cover-caption{font-size:clamp(.85rem,3.6cqw,1.05rem);line-height:1.45;letter-spacing:.015em;font-weight:700;margin-top:14px}
