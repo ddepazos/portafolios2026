@@ -1418,3 +1418,14 @@ a.panel-feature:focus-visible{outline:3px solid var(--yellow);outline-offset:5px
 }
 .rubik-cube.rubik-animate { animation: rubikRotation 9s linear infinite !important; }
 .rubik-cube.rubik-paused { animation: none !important; }
+
+/* Portada editorial Chile bajo la piel: composición tipográfica de referencia */
+.chile-cover-art{display:flex;flex-direction:column;justify-content:center;align-items:stretch;min-height:270px;padding:20px 22px 18px;background:#efebe3;color:#101015;text-decoration:none;overflow:hidden;border-radius:8px}
+.chile-cover-title{display:flex;flex-direction:column;align-items:flex-start;font-family:Impact,"Arial Narrow",Arial,sans-serif;font-stretch:condensed;font-weight:1000;font-size:clamp(3.7rem,7.2vw,6.6rem);line-height:.78;letter-spacing:-.055em}
+.chile-cover-title>span{display:block;white-space:nowrap}
+.chile-cover-title>span:nth-child(2){color:#f50076;margin:.09em 0}
+.chile-cover-title i{color:#f50076;font-family:Arial,sans-serif;font-style:normal;font-size:.72em;font-weight:400;vertical-align:middle;letter-spacing:0}
+.chile-cover-caption{display:block;margin-top:25px;font:700 .65rem/1.4 "Courier New",monospace;letter-spacing:.025em}
+.chile-cover-art:hover .chile-cover-title{transform:translateY(-2px);transition:transform .2s ease}
+@media(max-width:540px){.chile-cover-art{min-height:240px;padding:20px}.chile-cover-title{font-size:clamp(3.4rem,15vw,5.7rem)}}
+@media(prefers-reduced-motion:reduce){.chile-cover-art:hover .chile-cover-title{transform:none}}
