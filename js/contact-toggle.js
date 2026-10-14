@@ -6,9 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!contactPanel || triggers.length === 0) return;
 
   let returnFocusTo = null;
+  let focusTimer = null;
 
   const setOpenState = (isOpen) => {
+    if (focusTimer !== null) { window.clearTimeout(focusTimer); focusTimer = null; }
     contactPanel.classList.toggle('is-open', isOpen);
+    contactPanel.inert = !isOpen;
     contactPanel.setAttribute('aria-hidden', String(!isOpen));
 
     triggers.forEach((button) => {
@@ -23,7 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const focusContactForm = () => {
     const firstField = contactPanel.querySelector('input, textarea, button');
     if (firstField) {
-      window.setTimeout(() => firstField.focus(), 180);
+      focusTimer = window.setTimeout(() => {
+        if (isPanelOpen()) firstField.focus();
+        focusTimer = null;
+      }, 180);
     }
   };
 
@@ -40,7 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!willOpen && returnFocusTo) returnFocusTo.focus();
 
       if (willOpen && contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        contactSection.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
         focusContactForm();
       }
     });
@@ -53,7 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const clickedTrigger = triggers.some((button) => button.contains(event.target));
 
     if (!clickedInsidePanel && !clickedTrigger) {
+      const focusWasInside = contactPanel.contains(document.activeElement);
       setOpenState(false);
+      if (focusWasInside && returnFocusTo) returnFocusTo.focus();
     }
   });
 
