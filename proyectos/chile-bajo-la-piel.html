@@ -78,6 +78,7 @@
       .gantt{grid-template-columns:120px repeat(4,1fr);font-size:.8rem}
     }
     @media(max-width:620px){
+      .case-card:has(> img[src*="chile-bajo-la-piel-portada"]){grid-template-columns:1fr!important}
       .case-hero{padding-top:72px}
       .case-meta,.case-grid,.case-grid.three,.case-grid.five,.team-grid,.territory,.archive-map,.process-line,.status-strip{grid-template-columns:1fr}
       .case-meta div,.case-card{padding:18px}
@@ -367,9 +368,18 @@
           <p>El principal aprendizaje fue tratar investigación, presupuesto, participación, archivo y diseño editorial como partes de un mismo sistema. La calidad del resultado depende tanto de las preguntas como de cómo se organiza todo lo que ocurre después de hacerlas.</p>
         </article>
       </div>
+      <div class="case-card" style="margin-top:30px;margin-bottom:24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,250px);gap:22px;align-items:center">
+        <div>
+          <p class="eyebrow">Artefacto HTML · Sistema de diseño</p>
+          <h3>UI Kit · Chile bajo la piel</h3>
+          <p>Explora la identidad editorial del proyecto, su paleta negra, marfil y fucsia, los criterios tipográficos, componentes de interfaz y el recorrido metodológico desde la entrevista hasta el archivo.</p>
+          <a class="button ghost" href="../chile-bajo-la-piel-ui-kit.html">Explorar UI Kit ↗</a>
+        </div>
+        <img src="../assets/chile-bajo-la-piel-portada.webp" alt="Portada gráfica de Chile bajo la piel" width="583" height="577" loading="lazy" style="width:100%;height:auto;border-radius:5px" />
+      </div>
       <div class="cta-row">
         <a class="button primary" href="../index.html#proyectos">Volver a casos</a>
-        <a class="button ghost" href="../index.html#proceso">Ver proceso de trabajo</a>
+        <a class="button ghost" href="../chile-bajo-la-piel-ui-kit.html" aria-label="Explorar UI Kit de Chile bajo la piel">Explorar UI Kit</a>
         <a class="button ghost" href="https://ddepazos.github.io/CHILE_BAJO_LA_PIEL/" target="_blank" rel="noopener noreferrer">Ver sitio web</a>
       </div>
     </div>
