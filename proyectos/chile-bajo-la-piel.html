@@ -11,6 +11,12 @@
     .case-hero{padding:92px 0 62px}
     .case-hero h1{font-size:clamp(4.2rem,11vw,9.4rem);line-height:.78;letter-spacing:-.08em;text-transform:uppercase;margin:0 0 28px;max-width:1050px}
     .case-intro{max-width:940px}
+    .case-hero-brand{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);gap:clamp(22px,4vw,56px);align-items:center;margin:16px 0 28px}
+    .case-hero-brand__copy{min-width:0}
+    .case-hero-brand__copy h1{font-size:clamp(3.6rem,7.5vw,8.5rem);margin:0;overflow-wrap:normal}
+    .case-hero-brand__art{margin:0;min-width:0}
+    .case-hero-brand__art img{display:block;width:100%;height:auto;aspect-ratio:583/577;object-fit:contain;border-radius:6px}
+    @media(max-width:760px){.case-hero-brand{grid-template-columns:1fr}.case-hero-brand__art{max-width:430px}.case-hero-brand__copy h1{font-size:clamp(3.6rem,12vw,7rem)}}
     .case-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:34px}
     .case-meta div,.case-card{border:3px solid var(--line);background:#0b0b0b;padding:20px;box-shadow:7px 7px 0 var(--yellow)}
     .case-meta strong{display:block;color:var(--red);font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}
@@ -98,7 +104,14 @@
   <section class="case-hero">
     <div class="container">
       <p class="eyebrow">Caso de estudio · Investigación / Patrimonio / Diseño editorial</p>
-      <h1>Chile bajo<br>la piel</h1>
+      <div class="case-hero-brand">
+        <div class="case-hero-brand__copy">
+          <h1>Chile bajo<br>la piel</h1>
+        </div>
+        <figure class="case-hero-brand__art">
+          <img src="../assets/chile-bajo-la-piel-portada.webp" alt="Portada gráfica de Chile bajo la piel: composición editorial negra y fucsia sobre fondo marfil" width="583" height="577" decoding="async" fetchpriority="high" />
+        </figure>
+      </div>
       <p class="lead case-intro">
         Investigación sobre la historia y transformación del tatuaje en Chile desde 1990 hasta la actualidad. El proyecto combina memoria oral y visual, trabajo territorial, entrevistas, archivo, diseño editorial y creación gráfica para construir un registro cultural desde quienes han vivido y sostenido la escena.
       </p>
