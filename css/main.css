@@ -1346,3 +1346,7 @@ body {
 #destacados .project-card>a:first-child{display:block;margin-bottom:1rem}
 #destacados .project-card .project-actions{display:flex;flex-wrap:wrap;gap:.75rem}
 @media(max-width:700px){#destacados .card-grid{grid-template-columns:1fr}#destacados .featured-thumb{height:auto;max-height:240px;aspect-ratio:16/9;object-fit:contain}#destacados .section-header{gap:1rem;flex-wrap:wrap}}
+
+/* Accesibilidad: foco visible y preferencia de movimiento reducido */
+:where(a,button,input,textarea,select):focus-visible{outline:3px solid #e3b935;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
