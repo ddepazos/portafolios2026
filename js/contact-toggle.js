@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!contactPanel || triggers.length === 0) return;
 
+  let returnFocusTo = null;
+
   const setOpenState = (isOpen) => {
     contactPanel.classList.toggle('is-open', isOpen);
     contactPanel.setAttribute('aria-hidden', String(!isOpen));
@@ -33,7 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
       event.stopPropagation();
 
       const willOpen = !isPanelOpen();
+      if (willOpen) returnFocusTo = button;
       setOpenState(willOpen);
+      if (!willOpen && returnFocusTo) returnFocusTo.focus();
 
       if (willOpen && contactSection) {
         contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -56,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && isPanelOpen()) {
       setOpenState(false);
+      if (returnFocusTo) returnFocusTo.focus();
     }
   });
 });
