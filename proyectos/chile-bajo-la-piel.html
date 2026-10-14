@@ -32,6 +32,12 @@
     .territory .accent{background:var(--yellow);color:#111}
     .territory .accent span{color:#111}
     .territory .red{background:var(--red);color:#111}
+    /* Alto contraste en tarjetas territoriales claras: prevalece sobre reglas globales de párrafos */
+    .territory article.accent,.territory article.red{color:#111}
+    .territory article.accent p,.territory article.red p{color:#111!important;opacity:1;font-weight:500}
+    .territory article.accent span,.territory article.red span{color:#111!important;opacity:1}
+    .territory article.accent strong,.territory article.red strong{color:#111}
+
     .process-line{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:26px}
     .process-line article{border:2px solid var(--line);padding:17px;background:#0d0d0d}
     .process-line span{display:block;color:var(--red);font-size:.68rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
