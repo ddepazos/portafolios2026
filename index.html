@@ -132,6 +132,7 @@
                 </div>
               </div>
             </div>
+            <button type="button" class="rubik-toggle" aria-pressed="false" aria-label="Pausar animación del cubo Rubik">Pausar cubo</button>
             <div class="panel-box">
               <span class="panel-label">Especialidad</span>
               <strong>Experiencias digitales con carácter</strong>
@@ -738,6 +739,23 @@
       </div>
     </footer>
 
+    <script>
+      (() => {
+        const cube = document.querySelector('.rubik-cube');
+        const toggle = document.querySelector('.rubik-toggle');
+        if (!cube || !toggle) return;
+        let playing = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        function update() {
+          cube.classList.toggle('rubik-animate', playing);
+          cube.classList.toggle('rubik-paused', !playing);
+          toggle.textContent = playing ? 'Pausar cubo' : 'Girar cubo';
+          toggle.setAttribute('aria-pressed', String(playing));
+          toggle.setAttribute('aria-label', playing ? 'Pausar animación del cubo Rubik' : 'Activar animación del cubo Rubik');
+        }
+        toggle.addEventListener('click', () => { playing = !playing; update(); });
+        update();
+      })();
+    </script>
     <script src="data/projects.js?v=20261013-4"></script>
     <script src="js/projects.js?v=20261014-2"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
