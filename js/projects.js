@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     liveLink.target = hasExternalLive ? '_blank' : '_self';
     liveLink.rel = hasExternalLive ? 'noreferrer' : '';
     liveLink.className = 'link-button primary';
-    liveLink.textContent = hasExternalLive ? 'Live' : 'Ver caso';
+    liveLink.textContent = hasExternalLive ? 'Ver sitio web' : 'Ver caso';
 
     actions.append(detailLink, liveLink);
     card.append(tag, title, summary, actions);
