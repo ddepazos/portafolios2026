@@ -22,17 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailLink = document.createElement('a');
     detailLink.href = project.detail;
     detailLink.className = 'link-button';
-    detailLink.textContent = 'Detalle';
+    detailLink.textContent = 'Ver caso';
 
     const liveLink = document.createElement('a');
     const hasExternalLive = Boolean(project.live && project.live !== '#' && project.live.startsWith('http'));
     liveLink.href = hasExternalLive ? project.live : project.detail;
     liveLink.target = hasExternalLive ? '_blank' : '_self';
-    liveLink.rel = hasExternalLive ? 'noreferrer' : '';
+    liveLink.rel = hasExternalLive ? 'noopener noreferrer' : '';
     liveLink.className = 'link-button primary';
-    liveLink.textContent = hasExternalLive ? 'Ver sitio web' : 'Ver caso';
+    liveLink.textContent = hasExternalLive ? (project.slug === 'proletarian-coin' ? 'Ver demo' : 'Ver sitio') : 'Ver caso';
 
-    actions.append(detailLink, liveLink);
+    actions.append(detailLink);
+    if (hasExternalLive) actions.append(liveLink);
     card.append(tag, title, summary, actions);
     grid.appendChild(card);
   });
