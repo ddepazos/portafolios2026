@@ -1362,3 +1362,21 @@ body {
 .rubik-toggle:hover{background:#242424}
 .rubik-toggle:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
 @media(prefers-reduced-motion:reduce){.rubik-cube:not(.rubik-animate){animation:none!important}}
+
+
+/* Tarjetas hero: contenido real, navegación y microinteracciones */
+a.panel-feature{position:relative;display:flex;align-items:center;gap:14px;overflow:hidden;text-decoration:none;color:inherit;isolation:isolate;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;min-height:175px}
+.panel-feature__copy{position:relative;z-index:2;display:flex;flex-direction:column;align-items:flex-start;flex:1;min-width:0}
+.panel-feature__description{display:block;font-size:.79rem;line-height:1.45;margin-top:12px;max-width:28ch;color:#c9c9c9}
+.panel-feature--projects .panel-feature__description{color:#292929}
+.panel-feature__action{display:inline-flex;gap:9px;align-items:center;margin-top:14px;font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em;border-bottom:2px solid currentColor;padding-bottom:4px}
+.panel-feature__action span{font-size:1.15rem;transition:transform .25s ease}
+.panel-feature__image{width:34%;max-width:120px;max-height:140px;object-fit:contain;align-self:center;flex-shrink:0;filter:grayscale(1) contrast(1.12);opacity:.78;transition:transform .35s ease,filter .35s ease,opacity .35s ease}
+.panel-feature--projects .panel-feature__image{transform:rotate(5deg);box-shadow:5px 6px 0 #111;max-height:125px;object-fit:cover}
+a.panel-feature:hover{transform:translate(-3px,-4px);box-shadow:12px 13px 0 var(--yellow)}
+a.panel-feature--projects:hover{box-shadow:12px 13px 0 #fff}
+a.panel-feature:hover .panel-feature__image{filter:grayscale(0);opacity:1;transform:scale(1.06) rotate(-3deg)}
+a.panel-feature:hover .panel-feature__action span{transform:translate(3px,-3px)}
+a.panel-feature:focus-visible{outline:3px solid var(--yellow);outline-offset:5px}
+@media(max-width:440px){a.panel-feature{padding:18px 16px;gap:10px}.panel-feature__image{width:28%;max-width:90px}.panel-feature__description{font-size:.73rem}}
+@media(prefers-reduced-motion:reduce){a.panel-feature,.panel-feature__image,.panel-feature__action span{transition:none}}
