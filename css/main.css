@@ -1380,3 +1380,17 @@ a.panel-feature:hover .panel-feature__action span{transform:translate(3px,-3px)}
 a.panel-feature:focus-visible{outline:3px solid var(--yellow);outline-offset:5px}
 @media(max-width:440px){a.panel-feature{padding:18px 16px;gap:10px}.panel-feature__image{width:28%;max-width:90px}.panel-feature__description{font-size:.73rem}}
 @media(prefers-reduced-motion:reduce){a.panel-feature,.panel-feature__image,.panel-feature__action span{transition:none}}
+
+/* Mosaicos de obras reales en tarjetas del hero */
+.panel-feature__mosaic{position:relative;flex:0 0 36%;height:138px;min-width:0;align-self:center;display:block;perspective:600px}
+.panel-feature__mosaic img{position:absolute;display:block;width:72%;height:82%;object-fit:cover;border:2px solid currentColor;background:#171717;box-shadow:4px 5px 0 rgba(0,0,0,.55);transition:transform .32s ease,filter .32s ease;filter:grayscale(.75) contrast(1.1)}
+.panel-feature__mosaic img:first-child{top:3%;left:0;transform:rotate(-11deg);z-index:1}
+.panel-feature__mosaic img:nth-child(2){top:15%;right:0;transform:rotate(9deg);z-index:2}
+.panel-feature__mosaic img:nth-child(3){top:32%;left:18%;transform:rotate(-2deg);z-index:3}
+.panel-feature--specialty .panel-feature__mosaic img{width:78%;height:85%}
+.panel-feature:hover .panel-feature__mosaic img:first-child{transform:translate(-7px,-5px) rotate(-15deg)}
+.panel-feature:hover .panel-feature__mosaic img:nth-child(2){transform:translate(5px,-8px) rotate(13deg)}
+.panel-feature:hover .panel-feature__mosaic img:nth-child(3){transform:translate(1px,5px) rotate(2deg)}
+.panel-feature:hover .panel-feature__mosaic img{filter:grayscale(0)}
+@media(max-width:440px){.panel-feature__mosaic{flex-basis:29%;height:115px}.panel-feature__mosaic img{width:90%;height:76%}}
+@media(prefers-reduced-motion:reduce){.panel-feature__mosaic img{transition:none}}
