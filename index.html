@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/variables.css?v=20261011-2" />
-    <link rel="stylesheet" href="css/main.css?v=20261014-6" />
+    <link rel="stylesheet" href="css/main.css?v=20261014-7" />
     <link rel="stylesheet" href="css/design.css?v=20261013-2" />
   </head>
   <body>
@@ -63,7 +63,7 @@
           <aside class="hero-panel" aria-label="Cubo Rubik y resumen profesional">
             <div class="rubik-stage" aria-hidden="true">
               <div class="rubik-scene">
-                <div class="rubik-cube">
+                <div class="rubik-cube rubik-animate">
                   <div class="face front">
                     <span class="tile red"></span>
                     <span class="tile red"></span>
@@ -762,7 +762,7 @@
         const cube = document.querySelector('.rubik-cube');
         const toggle = document.querySelector('.rubik-toggle');
         if (!cube || !toggle) return;
-        let playing = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let playing = true;
         function update() {
           cube.classList.toggle('rubik-animate', playing);
           cube.classList.toggle('rubik-paused', !playing);
