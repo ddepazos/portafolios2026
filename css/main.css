@@ -1438,3 +1438,9 @@ a.panel-feature:focus-visible{outline:3px solid var(--yellow);outline-offset:5px
 .chile-cover-title i{font-size:.65em;vertical-align:baseline}
 .chile-cover-caption{margin-top:8px}
 @media(max-width:540px){.chile-cover-title{font-size:clamp(2.3rem,13cqw,5.4rem)}}
+
+/* Ajuste tipográfico: tracking de la portada, sin letras fusionadas */
+.chile-cover-title{font-family:Impact,"Arial Narrow",sans-serif;font-kerning:normal;letter-spacing:0.015em;font-size:clamp(2.25rem,12cqw,5.1rem);line-height:1.08}
+.chile-cover-title>span{letter-spacing:0.015em;line-height:1.08}
+.chile-cover-title>span:nth-child(2){letter-spacing:0}
+.chile-cover-title i{margin-left:.12em}
