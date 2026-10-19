@@ -13,7 +13,7 @@ window.PORTFOLIO_PROJECTS = [
     category: 'Brand / UX',
     summary: 'Rediseño de marca y experiencia digital para un sistema más claro y con mayor presencia.',
     detail: 'proyectos/triad.html',
-    live: 'https://katarsispazos.github.io/pazos/'
+    live: 'https://diegopazos1984.github.io/paginamainstream/'
   },
   {
     slug: 'corpus-tattoo',
