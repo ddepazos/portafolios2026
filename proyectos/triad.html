@@ -27,6 +27,26 @@
         <h2>Análisis UX/UI del sitio</h2>
         <p>La página utiliza <strong>Poppins</strong> como familia principal, acentos rojos (<strong>#FF4444</strong>), textos azul grisáceo (<strong>#2C3E50</strong>) y un lenguaje visual basado en tarjetas, botones, modales y fondos fotográficos. La navegación reúne servicios, proceso, galería y contacto.</p>
         <div class="triad-case-note"><strong>Fortalezas:</strong> propuesta de servicios visible, ampliación de información mediante modales, proceso de trabajo en tres etapas y galería de proyectos. <strong>Oportunidades:</strong> mejorar contraste sobre fondos fotográficos, simplificar jerarquías y llamadas a la acción, revisar la accesibilidad de modales y consolidar reglas CSS repetidas. Son observaciones de análisis del código, no resultados de pruebas de usuarios.</div>
+        <section aria-labelledby="triad-arquitectura">
+          <h2 id="triad-arquitectura">Arquitectura de información</h2>
+          <p>La experiencia se organiza alrededor de una ruta comercial: descubrir los servicios, conocer el proceso, revisar trabajos y llegar al contacto. Las secciones de benchmarking, UX/UI, diseño gráfico y marketing funcionan como puntos de entrada a la oferta.</p>
+          <ol>
+            <li><strong>Descubrimiento:</strong> presentación inicial de la propuesta y acceso a servicios.</li>
+            <li><strong>Evaluación:</strong> detalles de servicios, etapas del proceso, galería y planes.</li>
+            <li><strong>Acción:</strong> botones de consulta y acceso al contacto.</li>
+          </ol>
+          <p>Este recorrido describe la estructura publicada; no representa un flujo validado mediante pruebas con usuarios.</p>
+        </section>
+        <section aria-labelledby="triad-criterios">
+          <h2 id="triad-criterios">Criterios de evaluación UX/UI</h2>
+          <p>Para una siguiente iteración, las prioridades son reducir llamadas a la acción redundantes, reforzar el contraste de textos sobre imágenes y comprobar que los modales tengan foco visible, cierre por teclado y etiquetas comprensibles.</p>
+          <p>En pantallas pequeñas conviene verificar la lectura de las tarjetas, el tamaño de los controles táctiles y la ausencia de desplazamiento horizontal. Estas mejoras quedan identificadas como trabajo de revisión, no como cambios ya implementados en el sitio de Triad.</p>
+        </section>
+        <section aria-labelledby="triad-sistema">
+          <h2 id="triad-sistema">Sistema visual y desarrollo</h2>
+          <p>El lenguaje gráfico combina la tipografía Poppins, el rojo de acento #FF4444 y el tono de texto #2C3E50. Las tarjetas de servicio, los botones y las ventanas modales son patrones recurrentes que deben mantener consistencia en estados, espaciados y comportamiento responsive.</p>
+          <p>El sitio se construye con HTML, CSS y JavaScript. El UI Kit documenta sus elementos visuales para facilitar mantenimiento y futuras iteraciones.</p>
+        </section>
         <div class="triad-uikit"><div><h2>UI Kit · Triad Design</h2><p>Identidad visual, logotipo original, paleta cromática, tipografía Poppins, componentes y análisis UX/UI del sitio.</p></div><a class="button ghost" href="../triad-ui-kit.html">Explorar UI Kit ↗</a></div>
         <h2>Estado y evidencia</h2>
         <p>Este caso documenta el enfoque y las decisiones del proyecto. La página enlazada es una referencia publicada; no se presentan métricas de conversión sin mediciones verificables.</p>
