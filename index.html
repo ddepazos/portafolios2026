@@ -214,7 +214,7 @@
               <span class="tag">UX/UI · Identidad visual · Desarrollo web</span>
               <h3>LAB — Generative Design Studio</h3>
               <p>Aplicación de diseño generativo 2D/3D: arquitectura UX/UI, sistema de componentes, lenguaje visual, tipografía, color y criterios de marca. Herramientas creativas, animación y exportación en evolución.</p>
-              <div class="project-actions"><a class="link-button primary" href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer">Explorar aplicación</a><a class="link-button" href="https://github.com/ddepazos/lab" target="_blank" rel="noopener noreferrer">Ver desarrollo</a></div>
+              <div class="project-actions"><button type="button" class="link-button primary" data-lab-open aria-haspopup="dialog" aria-controls="lab-case-modal">Ver caso UX/UI</button><a class="link-button" href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer">Explorar aplicación</a></div>
             </article>
             <article class="project-card">
               <a href="proyectos/proletarian-coin.html" aria-label="Ver caso Proletarian Coin"><img src="assets/plc/proletarian_coin_dashboard_01_-_Dashboard.png" alt="Pantalla de dashboard del proyecto Proletarian Coin" loading="lazy" decoding="async" class="featured-thumb"></a>
@@ -820,6 +820,60 @@
         }
         toggle.addEventListener('click', () => { playing = !playing; update(); });
         update();
+      })();
+    </script>
+
+    <style>
+      .lab-case-dialog{width:min(1000px,calc(100% - 28px));max-height:90dvh;overflow:auto;border:1px solid #f05a30;background:#141414;color:#f5f5f5;padding:0;box-shadow:0 20px 80px #000b}
+      .lab-case-dialog::backdrop{background:rgba(0,0,0,.84);backdrop-filter:blur(5px)}
+      .lab-case-inner{padding:clamp(22px,4vw,52px)}
+      .lab-case-top{display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid #555;padding-bottom:20px}
+      .lab-case-kicker{color:#f05a30;font-size:12px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+      .lab-case-close{background:transparent;border:1px solid #aaa;color:white;min-width:42px;min-height:42px;font-size:24px;cursor:pointer}
+      .lab-case-dialog h2{font-size:clamp(34px,6vw,68px);line-height:1.05;margin:25px 0 14px;color:white}
+      .lab-case-dialog h3{color:#fff;font-size:22px;margin:0 0 12px}
+      .lab-case-dialog p,.lab-case-dialog li{color:#dedede;line-height:1.7}
+      .lab-case-lead{font-size:clamp(17px,2.4vw,22px);max-width:760px}
+      .lab-case-hero{min-height:230px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(circle at 74% 50%,#f05a30 0 7%,transparent 7.4%),repeating-radial-gradient(circle at 74% 50%,transparent 0 18px,#f05a30a8 19px 20px,transparent 21px 37px),#211e1f;padding:25px;margin:28px 0;color:#fff}
+      .lab-case-hero strong{font-size:clamp(65px,11vw,115px);line-height:1;letter-spacing:-.08em}
+      .lab-case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0 32px}
+      .lab-case-panel{padding:24px;border:1px solid #555;background:#202020}
+      .lab-case-panel small{display:block;color:#f05a30;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;font-weight:800}
+      .lab-case-panel ul{padding-left:20px;margin-bottom:0}
+      .lab-case-tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}
+      .lab-case-tags span{border:1px solid #777;padding:7px 11px;font-size:12px}
+      .lab-case-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+      .lab-case-actions a{display:inline-flex;align-items:center;min-height:44px;padding:12px 20px;background:#f05a30;color:#111;font-weight:800;text-decoration:none}
+      .lab-case-actions a+ a{background:transparent;color:white;border:1px solid #888}
+      @media(max-width:650px){.lab-case-grid{grid-template-columns:1fr}.lab-case-dialog{max-height:94dvh}.lab-case-inner{padding:20px}}
+    </style>
+    <dialog id="lab-case-modal" class="lab-case-dialog" aria-labelledby="lab-case-title">
+      <div class="lab-case-inner">
+        <div class="lab-case-top"><span class="lab-case-kicker">Caso de estudio · UX/UI · 2026</span><button type="button" class="lab-case-close" data-lab-close aria-label="Cerrar caso LAB">×</button></div>
+        <h2 id="lab-case-title">LAB — Generative Design Studio</h2>
+        <p class="lab-case-lead">Del lenguaje visual a una herramienta creativa: diseño de experiencia, interfaz modular, identidad y arquitectura de una aplicación web de generación gráfica 2D/3D.</p>
+        <div class="lab-case-hero" role="img" aria-label="Identidad visual LAB: tipografía blanca, naranja técnico y retícula geométrica sobre fondo oscuro"><span class="lab-case-kicker">Generative Design Studio</span><strong>LAB<span style="color:#f05a30">.</span></strong><span>CREATE / EXPLORE / ANIMATE</span></div>
+        <div class="lab-case-tags"><span>Diseño de producto</span><span>UX/UI</span><span>React + TypeScript</span><span>2D / 3D</span><span>Motion design</span><span>Design system</span></div>
+        <div class="lab-case-grid">
+          <section class="lab-case-panel"><small>01 / Problema y objetivo</small><h3>Una experiencia creativa integrada</h3><p>Reunir composición generativa, edición por capas, animación y exportación en una interfaz coherente, con espacio útil para el lienzo y controles contextuales.</p></section>
+          <section class="lab-case-panel"><small>02 / UX y arquitectura de información</small><h3>Flujo de trabajo modular</h3><p>Biblioteca de módulos → lienzo 2D/3D → inspector de propiedades → capas → línea de tiempo → exportación. El usuario puede alternar herramientas sin abandonar su composición.</p></section>
+          <section class="lab-case-panel"><small>03 / UI y componentes</small><h3>Herramientas consistentes</h3><p>Barra de herramientas, paneles configurables, controles numéricos, deslizadores, selectores de color, capas, presets y controles de reproducción. Diseño pensado para escritorio y navegador.</p></section>
+          <section class="lab-case-panel"><small>04 / Identidad y manual de marca</small><h3>Geometría como lenguaje</h3><p>Dirección visual de alto contraste: carbón, blanco y naranja técnico; tipografía sans serif, retículas, líneas paramétricas y composiciones generativas. La trama de doble embudo se estudia como símbolo distintivo.</p></section>
+          <section class="lab-case-panel"><small>05 / Arquitectura técnica</small><h3>Web primero</h3><p>Interfaz React, TypeScript y Vite; estado de edición con Zustand; gráficos vectoriales SVG y escenas Three.js. Integración de exportación de imagen y vídeo; renderizado remoto con Cloudflare y FFmpeg en desarrollo y validación.</p></section>
+          <section class="lab-case-panel"><small>06 / Aplicaciones y adaptación</small><h3>Web, móvil y escritorio</h3><p><strong>Web:</strong> editor principal publicado. <strong>Móvil:</strong> adaptación responsiva y experiencia táctil como línea de diseño, no una app nativa publicada. <strong>Windows:</strong> integración de escritorio prevista después de completar la web.</p></section>
+          <section class="lab-case-panel"><small>07 / Diseño de interacción</small><h3>Movimiento y respuesta</h3><p>Animación por capas, presets, interpolaciones y línea de tiempo. Continuidad espacial «Repetir» incorporada al código; se mantiene una validación funcional progresiva.</p></section>
+          <section class="lab-case-panel"><small>08 / Estado y evolución</small><h3>Producto en desarrollo activo</h3><p>La versión web está desplegada. Continúan pendientes la edición individual de patrones, múltiples objetos 3D superpuestos, el preset paramétrico de doble embudo y la verificación completa del render remoto.</p></section>
+        </div>
+        <div class="lab-case-actions"><a href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer">Abrir aplicación web</a><a href="https://github.com/ddepazos/lab" target="_blank" rel="noopener noreferrer">Ver repositorio y arquitectura</a></div>
+      </div>
+    </dialog>
+    <script>
+      (() => {
+        const modal=document.getElementById('lab-case-modal');
+        if(!modal)return;
+        document.querySelectorAll('[data-lab-open]').forEach(button=>button.addEventListener('click',()=>{if(typeof modal.showModal==='function')modal.showModal();else modal.setAttribute('open','');}));
+        modal.querySelector('[data-lab-close]')?.addEventListener('click',()=>modal.close());
+        modal.addEventListener('click',event=>{if(event.target===modal)modal.close()});
       })();
     </script>
     <script src="data/projects.js?v=20261013-4"></script>
