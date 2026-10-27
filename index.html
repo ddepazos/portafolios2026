@@ -864,6 +864,18 @@
           <section class="lab-case-panel"><small>07 / Diseño de interacción</small><h3>Movimiento y respuesta</h3><p>Animación por capas, presets, interpolaciones y línea de tiempo. Continuidad espacial «Repetir» incorporada al código; se mantiene una validación funcional progresiva.</p></section>
           <section class="lab-case-panel"><small>08 / Estado y evolución</small><h3>Producto en desarrollo activo</h3><p>La versión web está desplegada. Continúan pendientes la edición individual de patrones, múltiples objetos 3D superpuestos, el preset paramétrico de doble embudo y la verificación completa del render remoto.</p></section>
         </div>
+        <section class="lab-roadmap" aria-labelledby="lab-roadmap-title" style="margin-top:12px;padding-top:28px;border-top:1px solid #555">
+          <span class="lab-case-kicker">09 / Roadmap de integraciones</span>
+          <h3 id="lab-roadmap-title" style="font-size:clamp(26px,4vw,38px);margin:12px 0">Un núcleo creativo, múltiples entornos</h3>
+          <p>La estrategia mantiene React como núcleo común. Cloudflare publica la web y proporciona servicios remotos; GitHub conserva el código y el historial. Tauri y LAB Bridge reutilizarán las funciones estables, sin duplicar motores.</p>
+          <div class="lab-case-grid" style="margin-top:22px">
+            <article class="lab-case-panel"><small>01 / Web · publicado / por completar</small><h3>LAB Web</h3><p>Consolidar edición individual 2D, múltiples objetos 3D, continuidad espacial, animaciones, línea de tiempo y exportación fiable.</p><p><strong>Salida:</strong> editor web estable y validado.</p></article>
+            <article class="lab-case-panel"><small>02 / Cloudflare · integración pendiente</small><h3>Workers + R2 + FFmpeg</h3><p>Validar autenticación, carga a R2, ejecución del render remoto, seguimiento de trabajos y descarga de MP4/4K. Conservar GitHub como repositorio; reducir workflows redundantes.</p><p><strong>Salida:</strong> flujo de render remoto comprobado.</p></article>
+            <article class="lab-case-panel"><small>03 / Windows · posterior</small><h3>LAB Desktop / Tauri</h3><p>Reutilizar la interfaz React, incorporar acceso local a archivos, empaquetar instalador y probar memoria, rendimiento y uso sin conexión en Windows.</p><p><strong>Salida:</strong> instalador probado en equipo real.</p></article>
+            <article class="lab-case-panel"><small>04 / Illustrator · integración futura</small><h3>LAB 3D Bridge</h3><p>Script JSX para exportar SVG desde Illustrator, servicio local opcional con Python/FastAPI, conversión a geometría Three.js y salida GLB/GLTF o vídeo. Medir rendimiento antes de adoptar el puente.</p><p><strong>Salida:</strong> flujo Illustrator → LAB verificado.</p></article>
+          </div>
+          <p style="border-left:3px solid #f05a30;padding:10px 16px;background:#24201e"><strong>Regla de implementación:</strong> una integración a la vez; verificar compilación, despliegue y funcionamiento antes de avanzar. Sin ramas nuevas ni cambios sobre herramientas estables.</p>
+        </section>
         <div class="lab-case-actions"><a href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer">Abrir aplicación web</a><a href="https://github.com/ddepazos/lab" target="_blank" rel="noopener noreferrer">Ver repositorio y arquitectura</a></div>
       </div>
     </dialog>
