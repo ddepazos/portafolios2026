@@ -1,0 +1,49 @@
+/* Portafolio 2026 · Art direction refresh / additive, non-destructive */
+:root{--bg:#090b0f;--bg-2:#10141a;--panel:#171c23;--panel-2:#1e2530;--ink:#f4f2ec;--muted:#b7c0cb;--line:rgba(231,237,246,.18);--red:#ff654e;--yellow:#f4c95d;--green:#7bd9bd;--shadow:8px 8px 0 rgba(244,201,93,.78);--radius:12px;--max:1240px;--content-max:1240px}
+html{scroll-padding-top:100px}
+body{font-family:"DM Sans","Segoe UI",sans-serif;font-size:16px;line-height:1.65;background:#090b0f;background-image:radial-gradient(ellipse at 75% 5%,rgba(67,93,133,.12),transparent 35%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:auto,32px 32px,32px 32px;color:var(--ink);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4,.brand,.main-nav,.eyebrow,.artifact-visual strong{font-family:"Space Grotesk","DM Sans",sans-serif}
+h1,h2,h3{font-optical-sizing:auto;text-wrap:balance}
+p{overflow-wrap:break-word}
+:where(a,button,input,textarea,select,summary):focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
+::selection{background:var(--yellow);color:#141414}
+.site-header{background:rgba(9,11,15,.94);border-bottom:1px solid var(--line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.nav-wrap{min-height:80px;gap:18px}
+.brand{border:0;padding:8px 0;gap:12px;letter-spacing:.1em;font-size:.85rem}
+.brand img{width:45px;height:45px;border:1px solid var(--line);border-radius:10px;padding:4px}
+.main-nav{gap:clamp(9px,1.4vw,20px);align-items:center}
+.main-nav a{font-family:"DM Sans",sans-serif;font-size:.72rem;font-weight:750;letter-spacing:.035em;text-transform:none;line-height:1.3;position:relative;padding:10px 0;transition:color .2s ease}
+.main-nav a:hover{color:var(--yellow)}
+.main-nav a::after{content:"";position:absolute;left:0;right:100%;bottom:5px;height:2px;background:var(--yellow);transition:right .2s ease}
+.main-nav a:hover::after,.main-nav a:focus-visible::after{right:0}
+.hero{background:radial-gradient(ellipse at 75% 35%,rgba(255,101,78,.1),transparent 42%),transparent;padding-top:clamp(66px,8vw,115px);padding-bottom:clamp(70px,8vw,110px)}
+.hero-grid{gap:clamp(24px,4vw,64px);align-items:center}
+.hero-copy h1{font-size:clamp(3.1rem,6.7vw,7.3rem);font-weight:700;line-height:.98;letter-spacing:-.073em;text-transform:none;max-width:800px}
+.hero-copy .lead{font-size:clamp(1.05rem,1.55vw,1.25rem);font-weight:450;line-height:1.7;max-width:590px;color:#c8d0da}
+.eyebrow{font-family:"DM Sans",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.15em;color:var(--yellow)}
+.section{border-top:1px solid var(--line);padding:clamp(68px,8vw,112px) 0}
+.section-header h2,.design-heading h2,.artifact-gallery h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.45rem,4.8vw,5.2rem);font-weight:700;line-height:1.04;letter-spacing:-.065em;text-transform:none}
+.section-header,.design-heading{margin-bottom:34px}
+.project-card,.design-card,.artifact-card{border:1px solid rgba(224,233,246,.18);border-radius:14px;overflow:hidden;background:#151a21;box-shadow:none;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.project-card:hover,.design-card:hover,.artifact-card:hover{transform:translateY(-4px);border-color:rgba(244,201,93,.65);box-shadow:0 18px 44px rgba(0,0,0,.22)}
+.project-card h3,.design-caption h3,.artifact-body h3{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.045em;line-height:1.14}
+.project-card p,.design-caption p,.artifact-body p{line-height:1.7}
+.featured-thumb{width:100%;object-fit:cover}
+.button,.link-button,.artifact-links a{border-radius:8px;transition:background .2s ease,color .2s ease,transform .2s ease}
+.button:hover,.link-button:hover,.artifact-links a:hover{transform:translateY(-2px)}
+.artifact-gallery{background:linear-gradient(155deg,#111720,#0d1118 65%,#16151a);border-top:1px solid var(--line)}
+.artifact-grid{gap:24px}
+.artifact-visual{height:225px}
+.artifact-visual strong{font-weight:700;letter-spacing:-.07em}
+.artifact-body{padding:25px}
+.artifact-body p{color:#bfc9d4}
+.artifact-status{border-color:#59616d;color:#dce3ea}
+.artifact-links a{border-color:#697381}
+.rubik-stage,.feature-panel,.stat-box{border-color:var(--line);box-shadow:7px 7px 0 rgba(244,201,93,.7)}
+.design-preview{border-bottom:1px solid var(--line)}
+.design-card{box-shadow:none}
+.design-caption{padding:26px}
+.hero-meta{color:#c5cdd6}
+@media(max-width:1000px){.nav-wrap{flex-wrap:wrap;padding:12px 0}.main-nav{width:100%;justify-content:flex-start;gap:10px 20px}.hero-grid{gap:30px}}
+@media(max-width:700px){.hero-copy h1{font-size:clamp(2.75rem,11vw,4.5rem)}.main-nav a{font-size:.72rem}.artifact-visual{height:195px}.section{padding:60px 0}.brand{font-size:.8rem}}
+@media(prefers-reduced-motion:reduce){.project-card,.design-card,.artifact-card,.main-nav a,.main-nav a::after,.button,.link-button{transition:none!important;transform:none!important}}
