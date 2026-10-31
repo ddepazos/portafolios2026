@@ -74,3 +74,26 @@ p{overflow-wrap:break-word}
 .hero-copy h1,.section-header h2,.design-heading h2,.artifact-gallery h2,.project-card h3,.artifact-body h3,.about h2,.feature-copy h3{font-family:"Sora","DM Sans",sans-serif}
 .hero-copy h1{letter-spacing:-.045em;line-height:1.05}
 @media(max-width:700px){.hero-copy .hero-manifesto{margin-top:30px}.hero-manifesto h2{font-size:1.35rem}}
+
+/* A4 poster-inspired visual identity · homepage only; UI Kits untouched */
+:root{--bg:#08090b;--bg-2:#101114;--panel:#151619;--panel-2:#1b1c20;--ink:#f5f5f3;--muted:#bcbec2;--line:rgba(245,245,243,.2);--red:#ff572b;--yellow:#ff572b;--green:#ff572b;--shadow:7px 7px 0 rgba(255,87,43,.55);--radius:0}
+body{background-color:#08090b;background-image:linear-gradient(rgba(255,255,255,.016) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.016) 1px,transparent 1px);background-size:40px 40px,40px 40px;color:var(--ink)}
+.site-header{background:rgba(8,9,11,.96);border-bottom:1px solid #303135}
+.brand img,.project-card,.design-card,.artifact-card,.button,.link-button,.artifact-links a,.rubik-stage,.feature-panel,.stat-box,.artifact-status,.cta-collapsible,.hero-panel,.panel-feature,.expertise-item,.design-preview{border-radius:0!important}
+.project-card,.design-card,.artifact-card{background:#141519;border-color:#34363b;box-shadow:none}
+.project-card:hover,.design-card:hover,.artifact-card:hover{border-color:#ff572b;box-shadow:none}
+.hero{background:transparent}
+.hero-copy h1{letter-spacing:-.055em}
+.eyebrow,.artifact-gallery .eyebrow,.hero-manifesto .eyebrow{color:#ff572b}
+.artifact-gallery{background:#101114}
+.artifact-visual--studio{background:linear-gradient(125deg,#141414,#40221c)}
+.artifact-visual--genre{background:linear-gradient(125deg,#121319,#27202c)}
+.artifact-visual--suite{background:linear-gradient(125deg,#101715,#202a25)}
+.artifact-visual--arte{background:linear-gradient(125deg,#141317,#2d2429)}
+.artifact-visual--bridge{background:linear-gradient(125deg,#171410,#32231b)}
+.artifact-visual::after{border-radius:50%;box-shadow:none;opacity:.18}
+.rubik-stage,.feature-panel,.stat-box{box-shadow:5px 5px 0 rgba(255,87,43,.6)}
+.main-nav a:hover{color:#ff572b}
+.main-nav a::after{background:#ff572b}
+:where(a,button,input,textarea,select,summary):focus-visible{outline-color:#ff572b}
+::selection{background:#ff572b;color:#08090b}
