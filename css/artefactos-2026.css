@@ -23,3 +23,9 @@
 .artifact-links a{display:inline-flex;padding:10px 14px;border:1px solid #767982;border-radius:6px;color:white;text-decoration:none;font-weight:650;font-size:13px}
 .artifact-links a:hover,.artifact-links a:focus-visible{background:#fff;color:#111}
 @media(max-width:720px){.artifact-grid{grid-template-columns:1fr}.artifact-visual{height:190px}.artifact-gallery{padding:54px 0}}
+
+/* Clickable artifact previews */
+a.artifact-visual{display:flex;text-decoration:none;color:#fff;transition:filter .18s ease,transform .18s ease}
+a.artifact-visual:hover{filter:brightness(1.16)}
+a.artifact-visual:focus-visible{outline:3px solid #ff8c62;outline-offset:-3px}
+@media(prefers-reduced-motion:reduce){a.artifact-visual{transition:none}}
