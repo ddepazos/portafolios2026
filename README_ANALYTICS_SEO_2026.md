@@ -259,3 +259,15 @@ Consulta directa de la propiedad GA4 `558310718` a través de Windsor.ai, perío
 - [ ] Conectar la propiedad correspondiente de Search Console y consultar cobertura, consultas, impresiones, clics y estado del sitemap.
 - [ ] Verificar en GA4 que `generate_lead` esté marcado como evento clave y realizar una prueba real posterior.
 - [ ] No confundir eventos con usuarios o leads únicos.
+
+## 18. Search Console conectada y primera lectura — 31 de octubre de 2026
+
+- [x] Conector Windsor.ai `searchconsole` habilitado para la propiedad `https://diegopazos.pages.dev/`.
+- [x] Consulta 01–30 de octubre, desglose por página: portada `https://diegopazos.pages.dev/`, **9 clics**, **18 impresiones**, **CTR 50 %**, **posición media 7,9444**. La consulta no devolvió otras páginas; esto **no demuestra** que estén desindexadas.
+- [x] Desglose de consultas visible: `rakidistribuidora.cl` (2 impresiones, 0 clics, posición 10); `site:pages.dev dashboard` (1 impresión, 0 clics, posición 46); `site:pages.dev portfolio` (2 impresiones, 0 clics, posición 21). Los totales de consultas visibles no equivalen a los agregados de páginas por filtrado y privacidad.
+- [x] Lectura del conjunto de sitemaps de 19–29 de octubre: devuelve `submitted=0`, `errors=0`, `warnings=0`, `last_submitted=null`. **No inferir** que el sitemap actualizado el 31 de octubre haya sido procesado, ni que no existan errores de cobertura; el conector puede no exponer el estado completo del sitemap.
+- [ ] Abrir la propiedad de Search Console y verificar **Sitemaps**: enviar o reenviar `https://diegopazos.pages.dev/sitemap.xml` si no está registrado.
+- [ ] Consultar **Indexación → Páginas** e inspeccionar individualmente las URLs de casos de estudio.
+- [ ] Volver a medir después de que Google procese el sitemap y los cambios de canonical.
+
+No se han modificado archivos de código en esta etapa.
