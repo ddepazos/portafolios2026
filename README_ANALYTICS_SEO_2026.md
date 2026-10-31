@@ -271,3 +271,15 @@ Consulta directa de la propiedad GA4 `558310718` a través de Windsor.ai, perío
 - [ ] Volver a medir después de que Google procese el sitemap y los cambios de canonical.
 
 No se han modificado archivos de código en esta etapa.
+
+## 19. Continuación SEO — metadescripciones y verificación Search Console
+
+- [x] `proyectos/triad.html`: añadida metadescripción única (commit `de6fcbe2a50db21d37b9ff3ea278d67f753eff9a`).
+- [x] `proyectos/corpus-tattoo.html`: añadida metadescripción única (commit `21595a71ce9180f15ee8cd2ba3935c4a1f420aeb`).
+- [x] Cloudflare Pages reporta la versión `21595a71ce9180f15ee8cd2ba3935c4a1f420aeb` como **active**.
+- [ ] Search Console/Windsor.ai devuelve `path=null`, `last_downloaded=null`, `last_submitted=null`, `submitted=0` en la consulta de sitemap del 15–31 de octubre. No hay evidencia suficiente para afirmar que Google haya recibido o procesado el sitemap de 12 URLs.
+- [ ] La consulta HTTP externa a sitemap y página Triad no fue accesible desde las herramientas de esta sesión. Pendiente validar respuesta y contenido en navegador con acceso.
+- [ ] Revisar en la interfaz de Search Console el apartado **Sitemaps** y **Indexación → Páginas**; el conector disponible no proporciona inspección de URL ni estados de cobertura individuales.
+- [ ] Probar EmailJS con interacción real controlada y sin producir leads falsos.
+
+No se alteraron estilos ni UI Kits.
