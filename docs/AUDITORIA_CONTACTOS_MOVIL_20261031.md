@@ -24,3 +24,22 @@ Portada comprobada a 390×844 sin desbordamiento horizontal. Se mantuvo ocre #c8
 
 ## Visibilidad externa
 README del repositorio enlaza al dominio Cloudflare principal y el pie enlaza al perfil GitHub confirmado. Dos borradores y enlaces UTM en DIFUSION_PORTAFOLIO_20261031.md. No se publicaron mensajes ni se modificaron biografías de LinkedIn/Behance. Falta resolver y confirmar sus perfiles exactos antes de editarlos.
+
+## Verificación posterior al despliegue
+Informe móvil posterior (31/10/2026 20:20 America/Santiago):
+https://pagespeed.web.dev/analysis/https-diegopazos-pages-dev/aoflx2kd1c?form_factor=mobile
+
+| Métrica | Antes | Después |
+| --- | --- | --- |
+| Rendimiento | 99 | 99 |
+| Accesibilidad | 98 | 100 |
+| Recomendaciones | 100 | 100 |
+| SEO | 100 | 100 |
+| LCP | 1,7 s | 1,7 s |
+| CLS | 0,007 | 0,007 |
+| TBT | 40 ms | 60 ms |
+| Carga útil de red de la prueba | 7.157 KiB | 3.249 KiB |
+
+La carga útil medida bajó aproximadamente un 54,6%; no implica que toda visita descargue exactamente ese peso. El TBT subió 20 ms y sigue bajo; no se afirma mejora en todas las métricas. Ambas pruebas son de laboratorio y no sustituyen CrUX/INP reales.
+
+QA publicada: formulario abre y valida tres campos obligatorios vacíos sin enviar; acento #c8b16b; inputs a 16 px; sin desbordamiento horizontal en 390, 768 y 1440 px. Foco móvil separado del encabezado fijo. Color carbón unificado en contacto y diálogos de galería. Scripts y seis fuentes WebP confirmados en el HTML publicado.
