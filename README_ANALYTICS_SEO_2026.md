@@ -223,3 +223,15 @@ Se inspeccionaron directamente en la rama `main` los siguientes archivos: `proye
 - [ ] Resolver si la ruta de UI Kit es raíz o subcarpeta: `proyectos/raki-ui-kit.html` no existe en `main`; **no** modificar el UI Kit.
 
 **Resultado:** no se realizaron cambios de código en esta etapa; únicamente se añadió evidencia de auditoría al informe.
+
+## 15. SEO técnico — Canonical de siete casos de estudio
+
+Se añadieron URLs canónicas absolutas apuntando a Cloudflare Pages en: `proyectos/triad.html`, `raki.html`, `pagana-circular.html`, `corpus-tattoo.html`, `recorrido.html`, `portfolio-2025.html` y `design-system.html`.
+
+- [x] Cambios enviados a `main` mediante siete commits independientes; último: `0ca2ad98b3414da2a65016ed02b4e8a9523ce2c9`.
+- [x] Cloudflare Pages reportó la última versión como **active**, rama `main`, commit `0ca2ad98b3414da2a65016ed02b4e8a9523ce2c9` (31-10-2026, 18:51:47 UTC).
+- [ ] Comprobar respuesta HTTP, HTML servido y canonical efectivo de cada URL.
+- [ ] Revisar sitemap y cobertura en Search Console; las etiquetas canonical no obligan a Google a indexar la URL preferida.
+- [ ] Evaluar redirecciones desde GitHub Pages después de revisar dependencias y enlaces; **no se han aplicado redirecciones**.
+
+No se alteraron estilos, UI Kits ni componentes funcionales.
