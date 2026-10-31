@@ -235,3 +235,14 @@ Se añadieron URLs canónicas absolutas apuntando a Cloudflare Pages en: `proyec
 - [ ] Evaluar redirecciones desde GitHub Pages después de revisar dependencias y enlaces; **no se han aplicado redirecciones**.
 
 No se alteraron estilos, UI Kits ni componentes funcionales.
+
+## 16. Sitemap ampliado — 31 de octubre de 2026
+
+- [x] `sitemap.xml` pasó de 5 a **12 URLs**: se añadieron los siete casos de estudio con canonical ya configurado (Triad, Raki, Pagana Circular, Corpus Tattoo, Recorrido, Portfolio 2025 y Design System).
+- [x] Commit: `1143dff7b40b0c8a05464b089b9ca9733b76b73d`.
+- [x] Cloudflare Pages indicó despliegue **active** de ese commit en `main` (31-10-2026, 18:55:42 UTC).
+- [ ] Validar HTTP 200 y contenido de `/sitemap.xml` y las 12 URLs en un navegador externo: la consulta HTTP directa desde este entorno no fue accesible.
+- [ ] Consultar estado de envío, lectura y cobertura en Google Search Console: no se ha confirmado acceso a datos de Search Console.
+- [ ] Comprobar otras páginas públicas no incluidas en el sitemap antes de declararlo completo.
+
+**Nota:** el estado activo de Cloudflare no equivale a confirmación de indexación en Google. No se cambiaron UI Kits ni código de diseño.
