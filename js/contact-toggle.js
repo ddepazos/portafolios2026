@@ -41,7 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
       event.stopPropagation();
 
       const willOpen = !isPanelOpen();
-      if (willOpen) returnFocusTo = button;
+      if (willOpen) {
+        returnFocusTo = button;
+        window.trackPortfolioEvent?.('contact_open', {event_category: 'contact', form_name: 'portfolio_contact'});
+      }
       setOpenState(willOpen);
       if (!willOpen && returnFocusTo) returnFocusTo.focus();
 

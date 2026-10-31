@@ -1,5 +1,9 @@
 # Diego Pazos | Portafolio 2026
 
+**Portafolio principal:** https://diegopazos.pages.dev/
+
+Diseñador UX/UI y gráfico en Santiago de Chile. Casos de estudio, identidad visual, diseño web y aplicaciones creativas.
+
 Portafolio personal de Diego Pazos, centrado en diseño gráfico, branding, UX/UI y experiencias digitales con una estética brutalista, clara y distintiva.
 
 ## Objetivo
@@ -16,7 +20,7 @@ Presentar la identidad profesional de manera directa, con una estructura de info
 - Mejora de textos y contenidos para coherencia del portafolio
 - Ajuste de referencias de proyectos y enlaces públicos
 - Layout responsive con media queries
-- Publicación actualizada en GitHub Pages
+- Sitio principal publicado en Cloudflare Pages; GitHub aloja el código fuente
 
 ## Trabajo realizado durante estas horas
 

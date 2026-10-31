@@ -3,6 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!form) return;
 
+  let submitting = false;
+  let started = false;
+  form.addEventListener('input', () => {
+    if (started) return;
+    started = true;
+    window.trackPortfolioEvent?.('contact_form_start', {form_name: 'portfolio_contact'});
+  });
+
   const statusMessage = form.querySelector('.form-status');
   const EMAILJS_PUBLIC_KEY = 'MxxrOLdRiz3tV9i51';
   const EMAILJS_SERVICE_ID = 'service_v1mpuv5';
@@ -78,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
+    if (submitting) return;
 
     if (!form.checkValidity()) {
       form.reportValidity();
@@ -92,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
+    submitting = true;
     if (submitButton) {
       submitButton.disabled = true;
       submitButton.textContent = 'Enviando...';
@@ -111,16 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
       window.trackPortfolioEvent?.('generate_lead', {
         event_category: 'contact',
         form_name: 'portfolio_contact',
-        project_type: templateParams.subject || 'Sin especificar'
+        contact_method: 'form',
+        lead_source: 'emailjs_confirmed'
       });
 
       form.reset();
+      started = false;
       setStatus('success', 'Mensaje enviado. Te responderé pronto.');
 
       if (submitButton) {
         submitButton.textContent = 'Enviado';
       }
     } catch (error) {
+      window.trackPortfolioEvent?.('contact_form_error', {form_name: 'portfolio_contact', error_code: String(Number(error?.status) || 0)});
       console.error('EmailJS error:', {
         status: error?.status,
         text: error?.text,
@@ -133,8 +146,10 @@ document.addEventListener('DOMContentLoaded', () => {
         submitButton.textContent = 'Reintentar';
       }
     } finally {
+      if (!submitButton) submitting = false;
       if (submitButton) {
         window.setTimeout(() => {
+          submitting = false;
           submitButton.disabled = false;
           submitButton.textContent = originalText;
         }, 2200);

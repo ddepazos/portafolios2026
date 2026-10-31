@@ -8,6 +8,8 @@
     window.gtag('event', eventName, params);
   };
 
+  if (['localhost', '127.0.0.1', '[::1]'].includes(window.location.hostname)) return;
+
   if (!valid) {
     console.info('Google Analytics: pendiente ID de medición GA4 (G-...).');
     return;
@@ -27,15 +29,6 @@
   document.head.appendChild(script);
 
   document.addEventListener('click', (event) => {
-    const contactTrigger = event.target.closest('[data-contact-trigger]');
-    if (contactTrigger) {
-      window.trackPortfolioEvent('contact_open', {
-        event_category: 'engagement',
-        event_label: contactTrigger.textContent.trim()
-      });
-      return;
-    }
-
     const designItem = event.target.closest('[data-design-index]');
     if (designItem) {
       const card = designItem.closest('.design-card');
@@ -50,19 +43,25 @@
     if (!link) return;
     const href = link.getAttribute('href') || '';
 
+    const contactMethod = /^mailto:/i.test(href) ? 'email' : /^tel:/i.test(href) ? 'phone' : /^https?:\/\/(wa\.me|api\.whatsapp\.com)\//i.test(href) ? 'whatsapp' : '';
+    if (contactMethod) {
+      window.trackPortfolioEvent(`contact_${contactMethod}_click`, {event_category: 'contact', contact_method: contactMethod});
+      return;
+    }
+
     if (/proyectos\//i.test(href)) {
       window.trackPortfolioEvent('project_open', {
         event_category: 'portfolio',
-        link_url: href,
+        link_url: new URL(href, window.location.href).origin + new URL(href, window.location.href).pathname,
         link_text: link.textContent.trim()
       });
     }
 
-    const external = /^https?:\/\//i.test(href) && !href.includes(window.location.hostname);
+    const external = /^https?:\/\//i.test(href) && new URL(href, window.location.href).hostname !== window.location.hostname;
     if (external) {
       window.trackPortfolioEvent('outbound_click', {
         event_category: 'navigation',
-        link_url: href,
+        link_url: new URL(href, window.location.href).origin + new URL(href, window.location.href).pathname,
         link_text: link.textContent.trim()
       });
     }

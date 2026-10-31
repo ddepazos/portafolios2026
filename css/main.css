@@ -204,7 +204,7 @@ body {
 }
 
 .about h2,
-.feature-copy h3,
+.feature-copy h2,
 .hero-copy h1,
 .section-header h2,
 .manifesto h2,
@@ -223,7 +223,7 @@ body {
 
 .manifesto h2,
 .about h2,
-.feature-copy h3,
+.feature-copy h2,
 .section-header h2,
 .contact h2 {
   font-size: clamp(2.3rem, 4vw, 4rem);
@@ -293,7 +293,7 @@ body {
   box-shadow: 10px 10px 0 var(--yellow);
 }
 
-.feature-copy h3 {
+.feature-copy h2 {
   margin: 0 0 16px;
 }
 
@@ -786,7 +786,7 @@ body {
   gap: 4px;
 }
 
-.card-title-wrap h4 {
+.card-title-wrap h3 {
   margin: 0;
   font-size: clamp(1.4rem, 1.8vw, 2.1rem);
   line-height: 0.95;
@@ -964,7 +964,7 @@ body {
     font-size: 1rem;
   }
 
-  .card-title-wrap h4 {
+  .card-title-wrap h3 {
     font-size: 1.5rem;
   }
 
@@ -1304,7 +1304,7 @@ body {
 
 @media (max-width: 620px) {
   .about h2,
-  .feature-copy h3 {
+  .feature-copy h2 {
     font-size: clamp(2rem, 8.5vw, 3rem);
     line-height: 1;
   }
