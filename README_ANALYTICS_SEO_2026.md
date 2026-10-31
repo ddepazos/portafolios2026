@@ -189,3 +189,24 @@ Son **eventos**, no usuarios únicos. Investigar el recorrido entre `form_start`
 ---
 **Documento base:** «Informe Analytics + SEO del Portafolio — octubre 2026» (PDF, 6 páginas).  
 **Estado:** diagnóstico con acciones pendientes; no se afirma que las validaciones técnicas o conversiones estén ya resueltas.
+
+## 13. Registro de avance — 31 de octubre de 2026
+
+### Confirmado en código y despliegue
+
+- [x] Identificada la doble inicialización de GA4: bloque inline en `index.html` y carga adicional en `js/analytics.js`.
+- [x] Eliminado el bloque duplicado de `index.html` en el commit `3652b1c1c2a203da73121daf2ac734bd2c0bf9b7`.
+- [x] Cloudflare Pages, proyecto `diegopazos`, reportó **despliegue exitoso** del mismo commit desde `main` (31-10-2026, 18:35:50 UTC).
+- [x] Revisado `js/contact-form-20261011.js`: `generate_lead` se envía después de resolver correctamente `emailjs.send(...)`; un error de EmailJS no debería generar ese evento desde este controlador.
+- [x] Confirmado que `js/analytics-config.js` contiene el ID `G-Q18BHF539L` y que `js/analytics.js` es ahora el punto central de inicialización en la portada.
+
+### Aún sin verificar
+
+- [ ] Medir en navegador una sola petición/evento `page_view` por carga; el despliegue correcto **no demuestra** por sí mismo ausencia de duplicados.
+- [ ] Probar envío real y fallido de EmailJS sin compartir datos personales en logs.
+- [ ] Confirmar `generate_lead` en DebugView y marcarlo como evento clave en la propiedad GA4.
+- [ ] Revisar las demás páginas de proyecto para detectar inicializaciones GA4 adicionales.
+- [ ] Verificar que la nueva versión de los archivos JS se sirva correctamente y que no existan caches obsoletos.
+- [ ] Consultar Google Search Console para indexación, cobertura y sitemap.
+
+**Alcance:** se modificó únicamente `index.html` para corregir Analytics; este registro documenta la verificación del despliegue. No se modificaron UI Kits, LAB Studio ni LAB GENRE3D.
