@@ -246,3 +246,16 @@ No se alteraron estilos, UI Kits ni componentes funcionales.
 - [ ] Comprobar otras páginas públicas no incluidas en el sitemap antes de declararlo completo.
 
 **Nota:** el estado activo de Cloudflare no equivale a confirmación de indexación en Google. No se cambiaron UI Kits ni código de diseño.
+
+## 17. Verificación de datos GA4 y acceso a Search Console — 31 de octubre de 2026
+
+Consulta directa de la propiedad GA4 `558310718` a través de Windsor.ai, período 30–31 de octubre de 2026, segmentada por `hostname` y `event_name`:
+
+- **30-10, `diegopazos.pages.dev`:** `page_view` 16, `session_start` 9, `form_start` 1, `generate_lead` 1 y `conversions` (eventos clave) 0.
+- **30-10, `ddepazos.github.io`:** `page_view` 5 y `session_start` 3.
+- La consulta no devolvió registros del 31-10. **No inferir cero tráfico:** puede existir retraso de procesamiento.
+- El evento `generate_lead` llega a GA4, pero no está contabilizado como evento clave en los datos consultados. Revisar en la interfaz de administración de GA4 la configuración de eventos clave; esta consulta no permite cambiarla.
+- El conector `searchconsole` aparece sin cuentas conectadas en Windsor.ai. No hay evidencia disponible aquí de páginas indexadas, excluidas o estado de procesamiento del sitemap.
+- [ ] Conectar la propiedad correspondiente de Search Console y consultar cobertura, consultas, impresiones, clics y estado del sitemap.
+- [ ] Verificar en GA4 que `generate_lead` esté marcado como evento clave y realizar una prueba real posterior.
+- [ ] No confundir eventos con usuarios o leads únicos.
