@@ -122,3 +122,8 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
 .contact-form input,.contact-form textarea{font-size:16px}
 @media(max-width:700px){.main-nav a{min-height:44px;display:inline-flex;align-items:center}.artifact-links a,.link-button{min-height:44px;align-items:center}.artifact-links a{font-size:12px}.lab-case-dialog{max-width:calc(100vw - 24px)}}
 @media(prefers-reduced-motion:reduce){.rubik-animate{animation:none!important}.rubik-cube *{transition:none!important}}
+
+/* Contact and gallery surfaces use the same warm charcoal. */
+.contact-wrap,.design-dialog,.jabones-dialog,.jabones-dialog-bar{background-color:var(--bg-2)}
+.jabones-case-points article,.jabones-result,.design-dialog button{background-color:var(--panel)}
+@media(max-width:700px){html{scroll-padding-top:210px}.contact-form input,.contact-form textarea{scroll-margin-top:210px}}
