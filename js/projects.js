@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.getElementById('portfolio-grid');
-  if (!grid || !window.PORTFOLIO_PROJECTS) return;
+  if (!grid || !window.PORTFOLIO_PROJECTS || grid.children.length) return;
 
   window.PORTFOLIO_PROJECTS.forEach((project) => {
     const card = document.createElement('article');
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tag.className = 'tag';
     tag.textContent = project.category;
 
-    const title = document.createElement('h4');
+    const title = document.createElement('h3');
     title.textContent = project.title;
 
     const summary = document.createElement('p');
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const detailLink = document.createElement('a');
     detailLink.href = project.detail;
     detailLink.className = 'link-button';
-    detailLink.textContent = 'Ver caso';
+    detailLink.textContent = `Ver caso ${project.title}`;
 
     const liveLink = document.createElement('a');
     const hasExternalLive = Boolean(project.live && project.live !== '#' && project.live.startsWith('http'));
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     liveLink.target = hasExternalLive ? '_blank' : '_self';
     liveLink.rel = hasExternalLive ? 'noopener noreferrer' : '';
     liveLink.className = 'link-button primary';
-    liveLink.textContent = hasExternalLive ? (project.slug === 'proletarian-coin' ? 'Ver demo' : 'Ver sitio') : 'Ver caso';
+    liveLink.textContent = `${project.slug === 'proletarian-coin' ? 'Ver demo de' : 'Visitar'} ${project.title}`;
 
     actions.append(detailLink);
     if (hasExternalLive) actions.append(liveLink);

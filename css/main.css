@@ -206,9 +206,9 @@ body {
 .about h2,
 .feature-copy h3,
 .hero-copy h1,
-.section-header h3,
+.section-header h2,
 .manifesto h2,
-.contact h3 {
+.contact h2 {
   margin: 0 0 18px;
   line-height: 0.9;
   letter-spacing: -0.07em;
@@ -224,8 +224,8 @@ body {
 .manifesto h2,
 .about h2,
 .feature-copy h3,
-.section-header h3,
-.contact h3 {
+.section-header h2,
+.contact h2 {
   font-size: clamp(2.3rem, 4vw, 4rem);
   text-transform: uppercase;
 }
@@ -665,7 +665,7 @@ body {
   font-size: 0.8rem;
 }
 
-.service-card h4 {
+.service-card h3 {
   margin: 0;
   font-size: clamp(2rem, 2.4vw, 3rem);
   line-height: 0.92;
@@ -711,7 +711,7 @@ body {
   margin-bottom: 30px;
 }
 
-.process-intro h3 {
+.process-intro h2 {
   margin: 0;
   line-height: 0.86;
   letter-spacing: -0.08em;
@@ -949,7 +949,7 @@ body {
 }
 
 @media (max-width: 620px) {
-  .process-intro h3 {
+  .process-intro h2 {
     font-size: clamp(2.6rem, 10vw, 4rem);
   }
 
@@ -1001,7 +1001,7 @@ body {
   font-weight: 900;
 }
 
-.project-card h4 {
+.project-card h3 {
   margin: 0;
   font-size: 1.9rem;
   line-height: 1;
@@ -1317,7 +1317,7 @@ body {
     padding: 24px 20px;
   }
 
-  .service-card h4 {
+  .service-card h3 {
     font-size: clamp(1.8rem, 8vw, 2.5rem);
     line-height: 1;
   }
