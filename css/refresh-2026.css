@@ -2,7 +2,7 @@
 :root{--bg:#090b0f;--bg-2:#10141a;--panel:#171c23;--panel-2:#1e2530;--ink:#f4f2ec;--muted:#b7c0cb;--line:rgba(231,237,246,.18);--red:#ff654e;--yellow:#f4c95d;--green:#7bd9bd;--shadow:8px 8px 0 rgba(244,201,93,.78);--radius:12px;--max:1240px;--content-max:1240px}
 html{scroll-padding-top:100px}
 body{font-family:"DM Sans","Segoe UI",sans-serif;font-size:16px;line-height:1.65;background:#090b0f;background-image:radial-gradient(ellipse at 75% 5%,rgba(67,93,133,.12),transparent 35%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:auto,32px 32px,32px 32px;color:var(--ink);-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4,.brand,.main-nav,.eyebrow,.artifact-visual strong{font-family:"Space Grotesk","DM Sans",sans-serif}
+h1,h2,h3,h4,.brand,.main-nav,.eyebrow,.artifact-visual strong{font-family:"Sora","DM Sans",sans-serif}
 h1,h2,h3{font-optical-sizing:auto;text-wrap:balance}
 p{overflow-wrap:break-word}
 :where(a,button,input,textarea,select,summary):focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
@@ -22,11 +22,11 @@ p{overflow-wrap:break-word}
 .hero-copy .lead{font-size:clamp(1.05rem,1.55vw,1.25rem);font-weight:450;line-height:1.7;max-width:590px;color:#c8d0da}
 .eyebrow{font-family:"DM Sans",sans-serif;font-size:.72rem;font-weight:800;letter-spacing:.15em;color:var(--yellow)}
 .section{border-top:1px solid var(--line);padding:clamp(68px,8vw,112px) 0}
-.section-header h2,.design-heading h2,.artifact-gallery h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(2.45rem,4.8vw,5.2rem);font-weight:700;line-height:1.04;letter-spacing:-.065em;text-transform:none}
+.section-header h2,.design-heading h2,.artifact-gallery h2{font-family:"Sora",sans-serif;font-size:clamp(2.45rem,4.8vw,5.2rem);font-weight:700;line-height:1.04;letter-spacing:-.065em;text-transform:none}
 .section-header,.design-heading{margin-bottom:34px}
 .project-card,.design-card,.artifact-card{border:1px solid rgba(224,233,246,.18);border-radius:14px;overflow:hidden;background:#151a21;box-shadow:none;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
 .project-card:hover,.design-card:hover,.artifact-card:hover{transform:translateY(-4px);border-color:rgba(244,201,93,.65);box-shadow:0 18px 44px rgba(0,0,0,.22)}
-.project-card h3,.design-caption h3,.artifact-body h3{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.045em;line-height:1.14}
+.project-card h3,.design-caption h3,.artifact-body h3{font-family:"Sora",sans-serif;font-weight:700;letter-spacing:-.045em;line-height:1.14}
 .project-card p,.design-caption p,.artifact-body p{line-height:1.7}
 .featured-thumb{width:100%;object-fit:cover}
 .button,.link-button,.artifact-links a{border-radius:8px;transition:background .2s ease,color .2s ease,transform .2s ease}
