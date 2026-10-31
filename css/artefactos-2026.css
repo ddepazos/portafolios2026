@@ -1,0 +1,25 @@
+/* Portafolio 2026 · artefactos de proyectos */
+.artifact-gallery{padding:clamp(52px,7vw,96px) 0;background:#101114;color:#f6f3ee}
+.artifact-gallery .eyebrow{color:#ff8c62}
+.artifact-gallery h2{color:#fff;max-width:850px}
+.artifact-intro{max-width:720px;color:#c3c5cb;line-height:1.65}
+.artifact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:34px}
+.artifact-card{min-width:0;overflow:hidden;border:1px solid #3c3d43;border-radius:14px;background:#1c1d22}
+.artifact-visual{height:215px;position:relative;display:flex;flex-direction:column;justify-content:space-between;padding:22px;overflow:hidden;background:#222;color:white}
+.artifact-visual strong{font-size:clamp(36px,5vw,68px);line-height:.93;letter-spacing:-.065em;position:relative;z-index:1}
+.artifact-visual span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;position:relative;z-index:1}
+.artifact-visual::after{content:"";position:absolute;width:240px;height:240px;right:-30px;top:-60px;border:2px solid currentColor;opacity:.3;border-radius:50%;box-shadow:0 0 0 32px #ffffff08,0 0 0 65px #ffffff08}
+.artifact-visual--studio{background:radial-gradient(circle at 78% 35%,#e25e3c,transparent 38%),#1a1518}
+.artifact-visual--genre{background:radial-gradient(circle at 78% 45%,#547fef,transparent 40%),#121b35}
+.artifact-visual--suite{background:radial-gradient(circle at 80% 40%,#5b997b,transparent 42%),#112a23}
+.artifact-visual--patrimonio{background:radial-gradient(circle at 85% 35%,#db427f,transparent 42%),#371725}
+.artifact-visual--arte{background:radial-gradient(circle at 75% 40%,#ae75da,transparent 45%),#261d3c}
+.artifact-visual--bridge{background:radial-gradient(circle at 80% 40%,#d8a14a,transparent 40%),#30251a}
+.artifact-body{padding:23px}
+.artifact-status{display:inline-block;padding:5px 9px;border:1px solid #555761;border-radius:999px;font-size:11px;color:#d9dbe0;margin-bottom:12px}
+.artifact-body h3{font-size:24px;color:#fff;margin:0 0 10px}
+.artifact-body p{color:#c3c5cb;line-height:1.6;margin:0 0 18px}
+.artifact-links{display:flex;flex-wrap:wrap;gap:10px}
+.artifact-links a{display:inline-flex;padding:10px 14px;border:1px solid #767982;border-radius:6px;color:white;text-decoration:none;font-weight:650;font-size:13px}
+.artifact-links a:hover,.artifact-links a:focus-visible{background:#fff;color:#111}
+@media(max-width:720px){.artifact-grid{grid-template-columns:1fr}.artifact-visual{height:190px}.artifact-gallery{padding:54px 0}}
