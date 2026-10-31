@@ -210,3 +210,16 @@ Son **eventos**, no usuarios únicos. Investigar el recorrido entre `form_start`
 - [ ] Consultar Google Search Console para indexación, cobertura y sitemap.
 
 **Alcance:** se modificó únicamente `index.html` para corregir Analytics; este registro documenta la verificación del despliegue. No se modificaron UI Kits, LAB Studio ni LAB GENRE3D.
+
+## 14. Auditoría estática de Analytics en páginas interiores — 31 de octubre de 2026
+
+Se inspeccionaron directamente en la rama `main` los siguientes archivos: `proyectos/chile-bajo-la-piel.html`, `nota-negra.html`, `proletarian-coin.html`, `pagana-circular.html`, `triad.html`, `raki.html`, `corpus-tattoo.html`, `recorrido.html`, `portfolio-2025.html` y `design-system.html`.
+
+- [x] Los diez documentos incluyen `../js/analytics-config.js` y `../js/analytics.js`.
+- [x] En esos diez documentos no se encontró un bloque `gtag('config', ...)` adicional ni otra etiqueta de carga de `googletagmanager.com`.
+- [ ] Confirmar comportamiento en navegador y peticiones de red: una inicialización estática correcta no prueba la ausencia de dobles eventos por otras causas.
+- [ ] Revisar cobertura de **todas** las páginas del repositorio; esta muestra no equivale a un inventario exhaustivo.
+- [ ] Verificar canonicals de páginas que carecen de declaración explícita (por ejemplo `triad.html`, `raki.html`, `pagana-circular.html`, `corpus-tattoo.html`, `recorrido.html`, `portfolio-2025.html` y `design-system.html`) antes de editarlas.
+- [ ] Resolver si la ruta de UI Kit es raíz o subcarpeta: `proyectos/raki-ui-kit.html` no existe en `main`; **no** modificar el UI Kit.
+
+**Resultado:** no se realizaron cambios de código en esta etapa; únicamente se añadió evidencia de auditoría al informe.
