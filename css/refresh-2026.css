@@ -566,3 +566,44 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
   #diseno .design-archive-full .design-grid{grid-template-columns:1fr;gap:12px}
   #diseno .design-archive-full .design-card .design-preview{aspect-ratio:4/3}
 }
+
+
+/* Process: concise 3-stage preview and expandable full method · 2026-11-03 */
+#proceso.section.process{padding-block:clamp(28px,4vw,54px)}
+#proceso .process-shell{padding-top:0}
+#proceso .process-intro{margin-bottom:18px}
+#proceso .process-intro .eyebrow{margin:0 0 8px}
+#proceso .process-intro h2{font-family:"Sora","DM Sans",sans-serif;font-size:clamp(1.9rem,3.65vw,3.35rem);line-height:1.12;letter-spacing:-.055em;max-width:970px;text-transform:none}
+#proceso .process-disclosure{background:#292826;border:1px solid var(--line);overflow:hidden}
+#proceso .process-summary{display:block;list-style:none;cursor:pointer;padding:17px}
+#proceso .process-summary::-webkit-details-marker{display:none}
+#proceso .process-summary::marker{content:""}
+#proceso .process-summary:focus-visible{outline:3px solid var(--yellow);outline-offset:-4px}
+#proceso .process-summary-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+#proceso .process-summary-step{display:grid;gap:6px;padding:12px 14px;border:1px solid #645d51;background:#302e2b;min-width:0}
+#proceso .process-summary-step strong{font-family:"Sora","DM Sans",sans-serif;font-size:clamp(.94rem,1.6vw,1.12rem);line-height:1.3;color:var(--ink)}
+#proceso .process-summary-step strong span{color:var(--yellow);font-size:.83em;margin-right:5px}
+#proceso .process-summary-step small{font-size:.78rem;line-height:1.4;color:var(--muted)}
+#proceso .process-summary-action{display:inline-flex;align-items:center;gap:9px;margin-top:14px;padding:7px 12px;border:1px solid var(--yellow);border-radius:3px;font-size:.77rem;line-height:1.4;font-weight:800;color:var(--ink)}
+#proceso .process-summary-action::after{content:"+";font-size:1.1rem;line-height:1;color:var(--yellow)}
+#proceso .process-disclosure[open] .process-summary-action::after{content:"−"}
+#proceso .process-summary-close{display:none}
+#proceso .process-disclosure[open] .process-summary-open{display:none}
+#proceso .process-disclosure[open] .process-summary-close{display:inline}
+#proceso .process-expanded{border-top:1px solid var(--line);padding:18px}
+#proceso .process-expanded .process-grid{margin:0;padding-top:0;border-top:0;gap:14px}
+#proceso .process-expanded .process-card{box-shadow:none;border-width:1px}
+#proceso .process-expanded .process-card .card-head{grid-template-columns:52px 1fr;gap:12px;padding:11px;border-bottom-width:1px}
+#proceso .process-expanded .process-card .card-number{width:48px;height:48px;box-shadow:none;border:1px solid var(--yellow)}
+#proceso .process-expanded .process-card .card-copy{font-size:.87rem;line-height:1.5}
+#proceso .process-expanded .process-card .process-flow-block{border-width:1px}
+#proceso .process-expanded .process-card .stage-box{min-height:37px;border-width:1px}
+#proceso .process-expanded .process-card .flow-result{border-top-width:1px}
+@media(max-width:790px){
+ #proceso .process-summary{padding:13px}
+ #proceso .process-summary-steps{grid-template-columns:1fr;gap:7px}
+ #proceso .process-summary-step{padding:10px 12px}
+ #proceso .process-intro h2{font-size:clamp(1.8rem,6.7vw,2.6rem)}
+ #proceso .process-expanded{padding:13px}
+ #proceso .process-expanded .process-grid{gap:12px}
+}
