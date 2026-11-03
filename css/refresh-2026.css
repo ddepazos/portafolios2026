@@ -459,3 +459,64 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
   #destacados .featured-preview-thumbs>span{height:75px}
 }
 @media(prefers-reduced-motion:reduce){#destacados .featured-preview *{transition:none!important}}
+
+
+/* Case studies · 20% more compact · 2026-11-03 */
+#proyectos.section.projects{
+  padding-block:clamp(48px,5.6vw,86px);
+}
+#proyectos .section-header{
+  margin-bottom:26px;
+}
+#proyectos .section-header h2{
+  font-size:clamp(2.1rem,3.9vw,4.1rem);
+  line-height:1.08;
+  letter-spacing:-.055em;
+}
+#proyectos .portfolio-grid{
+  margin-top:20px;
+  gap:clamp(12px,1.4vw,17px);
+  align-items:stretch;
+}
+#proyectos .project-card{
+  padding:16px;
+  gap:12px;
+  min-width:0;
+}
+#proyectos .project-card .tag{
+  padding:6px 8px;
+  font-size:.64rem;
+  border-width:1px;
+  letter-spacing:.09em;
+}
+#proyectos .project-card h3{
+  font-size:clamp(1.35rem,2.05vw,1.56rem);
+  line-height:1.08;
+  letter-spacing:-.045em;
+}
+#proyectos .project-card p{
+  font-size:.92rem;
+  line-height:1.52;
+  margin:0;
+}
+#proyectos .project-card .project-actions{
+  gap:8px;
+  justify-content:flex-start;
+  align-items:flex-end;
+}
+#proyectos .project-card .link-button{
+  font-size:.67rem;
+  line-height:1.25;
+  padding:9px 10px;
+  letter-spacing:.055em;
+  overflow-wrap:anywhere;
+}
+@media (max-width:700px){
+  #proyectos.section.projects{padding-block:42px}
+  #proyectos .section-header{margin-bottom:18px}
+  #proyectos .section-header h2{font-size:clamp(1.9rem,7vw,2.55rem)}
+  #proyectos .portfolio-grid{margin-top:14px;gap:12px}
+  #proyectos .project-card{padding:15px;gap:11px}
+  #proyectos .project-card p{font-size:.94rem;line-height:1.55}
+  #proyectos .project-card .link-button{min-height:42px;display:inline-flex;align-items:center}
+}
