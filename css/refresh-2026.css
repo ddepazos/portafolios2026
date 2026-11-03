@@ -127,3 +127,20 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
 .contact-wrap,.design-dialog,.jabones-dialog,.jabones-dialog-bar{background-color:var(--bg-2)}
 .jabones-case-points article,.jabones-result,.design-dialog button{background-color:var(--panel)}
 @media(max-width:700px){html{scroll-padding-top:210px}.contact-form input,.contact-form textarea{scroll-margin-top:210px}}
+
+
+/* Compact stack section (2026-11-03): reduce excess whitespace without affecting other sections */
+.section.stack{padding-block:clamp(28px,3.5vw,48px)}
+.section.stack .section-header{margin:0 0 16px}
+.section.stack .section-header .eyebrow{margin-bottom:8px}
+.section.stack .section-header h2{margin:0;font-size:clamp(1.85rem,3vw,2.7rem);line-height:1.12;letter-spacing:-.05em}
+.section.stack .tag-list{margin-top:0;gap:8px}
+.section.stack .skill-tag{gap:7px;padding:7px 11px;min-height:36px;border-radius:4px;font-size:.72rem;line-height:1.2}
+.section.stack .skill-tag .material-symbols-outlined{font-size:17px}
+@media(max-width:700px){
+  .section.stack{padding-block:28px}
+  .section.stack .section-header{margin-bottom:14px}
+  .section.stack .section-header h2{font-size:clamp(1.65rem,7vw,2.1rem)}
+  .section.stack .tag-list{gap:7px}
+  .section.stack .skill-tag{padding:7px 9px;font-size:.68rem;min-height:34px}
+}
