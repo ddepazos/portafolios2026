@@ -144,3 +144,47 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
   .section.stack .tag-list{gap:7px}
   .section.stack .skill-tag{padding:7px 9px;font-size:.68rem;min-height:34px}
 }
+
+
+/* Jesucrisis collapsed preview and expanded gallery (2026-11-03) */
+.jesucrisis-feature{margin-top:32px;padding-top:20px;border-top:1px solid var(--line)}
+.jesucrisis-disclosure{overflow:hidden;border:1px solid rgba(224,233,246,.23);border-radius:14px;background:var(--bg-2)}
+.jesucrisis-summary{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);align-items:center;gap:22px;padding:18px 22px;cursor:pointer;list-style:none}
+.jesucrisis-summary::-webkit-details-marker{display:none}
+.jesucrisis-summary::marker{content:""}
+.jesucrisis-summary:focus-visible{outline:3px solid var(--yellow);outline-offset:-4px}
+.jesucrisis-summary-copy{display:grid;justify-items:start;gap:8px;min-width:0}
+.jesucrisis-summary-copy .eyebrow{margin:0;font-size:.68rem}
+.jesucrisis-summary-title{display:block;font-family:"Sora","DM Sans",sans-serif;font-size:clamp(1.3rem,2.55vw,2.35rem);font-weight:750;line-height:1.14;letter-spacing:-.045em}
+.jesucrisis-summary-subtitle{display:block;color:var(--muted);font-size:.86rem;line-height:1.4}
+.jesucrisis-summary-action{display:inline-flex;align-items:center;gap:9px;padding:8px 12px;border:1px solid var(--accent);border-radius:6px;color:var(--ink);font-size:.76rem;font-weight:800}
+.jesucrisis-summary-action::after{content:"+";font-size:1.15rem;line-height:1;color:var(--yellow)}
+.jesucrisis-disclosure[open] .jesucrisis-summary-action::after{content:"−"}
+.jesucrisis-action-open{display:none}
+.jesucrisis-disclosure[open] .jesucrisis-action-closed{display:none}
+.jesucrisis-disclosure[open] .jesucrisis-action-open{display:inline}
+.jesucrisis-teaser{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;max-height:130px;min-width:0;pointer-events:none}
+.jesucrisis-teaser img{display:block;width:100%;height:130px;object-fit:cover;object-position:center;border-radius:5px;background:#141217}
+.jesucrisis-disclosure[open] .jesucrisis-teaser{max-height:95px}
+.jesucrisis-disclosure[open] .jesucrisis-teaser img{height:95px}
+.jesucrisis-expanded{padding:18px 22px 24px;border-top:1px solid rgba(224,233,246,.23)}
+.jesucrisis-expanded-intro{margin:0 0 18px;max-width:870px;color:var(--muted);line-height:1.55;font-size:.9rem}
+.jesucrisis-expanded .jesucrisis-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.jesucrisis-expanded .jesucrisis-card .design-preview{aspect-ratio:1/1;padding:9px}
+.jesucrisis-expanded .jesucrisis-card .design-caption{padding:15px;min-height:0}
+.jesucrisis-expanded .jesucrisis-card .design-caption h3{font-size:clamp(1.15rem,1.7vw,1.5rem);margin:8px 0}
+.jesucrisis-expanded .jesucrisis-card .design-caption p{font-size:.85rem;line-height:1.5}
+@media(max-width:800px){
+  .jesucrisis-summary{grid-template-columns:1fr;gap:14px;padding:16px}
+  .jesucrisis-teaser{width:100%;max-height:100px}
+  .jesucrisis-teaser img{height:100px}
+  .jesucrisis-expanded{padding:16px}
+  .jesucrisis-expanded .jesucrisis-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+}
+@media(max-width:520px){
+  .jesucrisis-feature{margin-top:26px;padding-top:16px}
+  .jesucrisis-summary-title{font-size:1.35rem}
+  .jesucrisis-summary-subtitle{font-size:.79rem}
+  .jesucrisis-teaser,.jesucrisis-teaser img{height:80px;max-height:80px}
+  .jesucrisis-expanded .jesucrisis-grid{grid-template-columns:1fr}
+}
