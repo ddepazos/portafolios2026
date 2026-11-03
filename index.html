@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="css/main.css?v=20261031-seo" />
     <link rel="stylesheet" href="css/design.css?v=20261013-2" />
     <link rel="stylesheet" href="css/artefactos-2026.css?v=20261031-compact" />
-    <link rel="stylesheet" href="css/refresh-2026.css?v=20261103-jesucrisis-preview" />
+    <link rel="stylesheet" href="css/refresh-2026.css?v=20261103-artifact-panels" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Diego Pazos","url":"https://diegopazos.pages.dev/","jobTitle":"Diseñador UX/UI y diseñador gráfico","knowsAbout":["Diseño UX/UI","Diseño gráfico","Diseño web","Identidad visual","Diseño generativo"],"address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"},"sameAs":["https://github.com/ddepazos"]}</script>
 </head>
   <body>
@@ -204,26 +204,165 @@
           <h2 id="artefactos-title">Artefactos, aplicaciones y sistemas creativos</h2>
           <p class="artifact-intro">Una selección de aplicaciones y herramientas creativas en desarrollo. Explora las interfaces de los proyectos, sus flujos de interacción y las integraciones que conforman LAB Creative Suite.</p>
           <div class="artifact-grid">
-            <article class="artifact-card">
-              <a class="artifact-visual artifact-visual--studio" href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir LAB Studio"><span>01 / Generative Design</span><strong>LAB<br>STUDIO.</strong><span>React · 2D / 3D · Motion</span></a>
-              <div class="artifact-body"><span class="artifact-status">Aplicación en evolución</span><h3>LAB Generative Design Studio</h3><p>Herramientas de composición generativa, capas, animación y superposición 3D. Diseño de interfaz React, composición por capas, motion graphics y exportación de recursos. Integración progresiva con GENRE3D y procesamiento remoto.</p><div class="artifact-links"><a href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer">Ver proyecto</a></div></div>
+            <article class="artifact-card" data-artifact-card="studio">
+              <button type="button" class="artifact-visual artifact-visual--studio" data-artifact-toggle="studio" aria-expanded="false" aria-controls="artifact-detail-studio" aria-label="Desplegar presentación de LAB Generative Design Studio"><span>01 / Generative Design</span><strong>LAB<br>STUDIO.</strong><span>React · 2D / 3D · Motion</span></button>
+              <div class="artifact-body"><span class="artifact-status">Aplicación en evolución</span><h3>LAB Generative Design Studio</h3><p>Herramientas de composición generativa, capas, animación y superposición 3D. Diseño de interfaz React, composición por capas, motion graphics y exportación de recursos. Integración progresiva con GENRE3D y procesamiento remoto.</p><div class="artifact-links"><button type="button" data-artifact-toggle="studio" aria-expanded="false" aria-controls="artifact-detail-studio">Ver proyecto +</button></div></div>
             </article>
-            <article class="artifact-card">
-              <a class="artifact-visual artifact-visual--genre" href="https://lab-genre3d.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir LAB GENRE3D"><span>02 / Modelado y rigging</span><strong>GENRE<br>3D.</strong><span>Three.js · GLB · Animación</span></a>
-              <div class="artifact-body"><span class="artifact-status">Prototipo en desarrollo</span><h3>LAB GENRE3D</h3><p>Editor tridimensional independiente para geometrías, personajes, rigs y animación, con materiales PBR, importación GLB y herramientas de edición. Interoperabilidad con LAB Studio en desarrollo.</p><div class="artifact-links"><a href="https://lab-genre3d.pages.dev/" target="_blank" rel="noopener noreferrer">Ver proyecto</a></div></div>
+            <article class="artifact-card" data-artifact-card="genre">
+              <button type="button" class="artifact-visual artifact-visual--genre" data-artifact-toggle="genre" aria-expanded="false" aria-controls="artifact-detail-genre" aria-label="Desplegar presentación de LAB GENRE3D"><span>02 / Modelado y rigging</span><strong>GENRE<br>3D.</strong><span>Three.js · GLB · Animación</span></button>
+              <div class="artifact-body"><span class="artifact-status">Prototipo en desarrollo</span><h3>LAB GENRE3D</h3><p>Editor tridimensional independiente para geometrías, personajes, rigs y animación, con materiales PBR, importación GLB y herramientas de edición. Interoperabilidad con LAB Studio en desarrollo.</p><div class="artifact-links"><button type="button" data-artifact-toggle="genre" aria-expanded="false" aria-controls="artifact-detail-genre">Ver proyecto +</button></div></div>
             </article>
-            <article class="artifact-card">
-              <a class="artifact-visual artifact-visual--suite" href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Ver interfaz React de LAB Studio como parte de LAB Creative Suite"><span>03 / Sistema creativo</span><strong>LAB<br>SUITE.</strong><span>Arquitectura · Biblioteca · UX</span></a>
-              <div class="artifact-body"><span class="artifact-status">Arquitectura documentada</span><h3>LAB Creative Suite</h3><p>Ecosistema que organiza recursos 2D/3D, modelos, materiales, animaciones y flujos de intercambio. Arquitectura de integración con Blender remoto, Cloudflare R2 y respaldos en Google Drive; servicios en preparación.</p><div class="artifact-links"><a href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Ver interfaz React de LAB Studio, componente de LAB Creative Suite">Ver proyecto</a></div></div>
+            <article class="artifact-card" data-artifact-card="suite">
+              <button type="button" class="artifact-visual artifact-visual--suite" data-artifact-toggle="suite" aria-expanded="false" aria-controls="artifact-detail-suite" aria-label="Desplegar presentación de LAB Creative Suite"><span>03 / Sistema creativo</span><strong>LAB<br>SUITE.</strong><span>Arquitectura · Biblioteca · UX</span></button>
+              <div class="artifact-body"><span class="artifact-status">Arquitectura documentada</span><h3>LAB Creative Suite</h3><p>Ecosistema que organiza recursos 2D/3D, modelos, materiales, animaciones y flujos de intercambio. Arquitectura de integración con Blender remoto, Cloudflare R2 y respaldos en Google Drive; servicios en preparación.</p><div class="artifact-links"><button type="button" data-artifact-toggle="suite" aria-expanded="false" aria-controls="artifact-detail-suite">Ver proyecto +</button></div></div>
             </article>
-            <article class="artifact-card">
-              <a class="artifact-visual artifact-visual--arte" href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir arte generativo LAB"><span>04 / Arte y tecnología</span><strong>ARTE<br>+ CÓDIGO.</strong><span>SVG · Illustrator · After Effects</span></a>
-              <div class="artifact-body"><span class="artifact-status">Propuesta conceptual</span><h3>Arte generativo y tecnología</h3><p>Investigación artística que combina sistemas geométricos, vectores editables y composición audiovisual. Propuesta vinculada a la convocatoria FNA Argentina 2026.</p><div class="artifact-links"><a href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer">Ver proyecto</a></div></div>
+            <article class="artifact-card" data-artifact-card="art">
+              <button type="button" class="artifact-visual artifact-visual--arte" data-artifact-toggle="art" aria-expanded="false" aria-controls="artifact-detail-art" aria-label="Desplegar presentación de Arte generativo y tecnología"><span>04 / Arte y tecnología</span><strong>ARTE<br>+ CÓDIGO.</strong><span>SVG · Illustrator · After Effects</span></button>
+              <div class="artifact-body"><span class="artifact-status">Propuesta conceptual</span><h3>Arte generativo y tecnología</h3><p>Investigación artística que combina sistemas geométricos, vectores editables y composición audiovisual. Propuesta vinculada a la convocatoria FNA Argentina 2026.</p><div class="artifact-links"><button type="button" data-artifact-toggle="art" aria-expanded="false" aria-controls="artifact-detail-art">Ver proyecto +</button></div></div>
             </article>
-            <article class="artifact-card">
-              <a class="artifact-visual artifact-visual--bridge" href="https://lab-genre3d.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir avance LAB 3D Bridge"><span>05 / Interoperabilidad</span><strong>3D<br>BRIDGE.</strong><span>GLB · JSON · Pipeline</span></a>
-              <div class="artifact-body"><span class="artifact-status">Integración en desarrollo</span><h3>LAB 3D Bridge</h3><p>Diseño de un flujo no destructivo para transferir modelos y escenas desde GENRE3D hacia LAB Studio y herramientas de posproducción. Importación completa aún no validada; se muestra la interfaz React de GENRE3D.</p><div class="artifact-links"><a href="https://lab-genre3d.pages.dev/" target="_blank" rel="noopener noreferrer">Ver proyecto</a></div></div>
+            <article class="artifact-card" data-artifact-card="bridge">
+              <button type="button" class="artifact-visual artifact-visual--bridge" data-artifact-toggle="bridge" aria-expanded="false" aria-controls="artifact-detail-bridge" aria-label="Desplegar presentación de LAB 3D Bridge"><span>05 / Interoperabilidad</span><strong>3D<br>BRIDGE.</strong><span>GLB · JSON · Pipeline</span></button>
+              <div class="artifact-body"><span class="artifact-status">Integración en desarrollo</span><h3>LAB 3D Bridge</h3><p>Diseño de un flujo no destructivo para transferir modelos y escenas desde GENRE3D hacia LAB Studio y herramientas de posproducción. Importación completa aún no validada; se muestra la interfaz React de GENRE3D.</p><div class="artifact-links"><button type="button" data-artifact-toggle="bridge" aria-expanded="false" aria-controls="artifact-detail-bridge">Ver proyecto +</button></div></div>
             </article>
+
+            <section class="artifact-detail" id="artifact-detail-studio" data-artifact-panel="studio" aria-labelledby="artifact-detail-title-studio" hidden>
+              <div class="artifact-detail-header">
+                <div><span class="artifact-detail-kicker">01 / Presentación de proyecto</span><h3 id="artifact-detail-title-studio">LAB Generative Design Studio</h3></div>
+                <button type="button" class="artifact-detail-close" data-artifact-close aria-label="Cerrar presentación de LAB Generative Design Studio">Cerrar ×</button>
+              </div>
+              
+  <div class="artifact-detail-layout">
+    <div class="artifact-poster artifact-poster--studio" role="img" aria-label="Identidad de LAB: círculos concéntricos naranja y marca LAB sobre carbón"><span>Generative Design Studio</span><strong>LAB<span>.</span></strong><span>2D / 3D · Motion · React</span></div>
+    <div class="artifact-detail-copy">
+      <h4>Identidad, interfaz y flujo de creación</h4>
+      <p>Recuperamos aquí la presentación visual del proyecto que antes estaba en «Destacados». Es una aplicación React de diseño generativo con lienzo, capas, animación y herramientas de exportación en evolución.</p>
+      <ul class="artifact-chip-list"><li>React + TypeScript</li><li>Diseño UX/UI</li><li>Identidad Graphite</li><li>Motion graphics</li></ul>
+      <h4>Artefactos de diseño</h4>
+      <p>Identidad visual LAB, sistema cromático Graphite, arquitectura de información, componentes del editor y caso UX/UI documentado.</p>
+      <div class="artifact-detail-actions"><button type="button" data-lab-open aria-haspopup="dialog" aria-controls="lab-case-modal">Ver caso UX/UI completo</button><a class="secondary" href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer">Abrir aplicación React</a></div>
+    </div>
+  </div>
+  <div class="artifact-artifacts">
+    <article><strong>01 · Identidad LAB</strong><p>Marca tipográfica, color técnico, retícula y geometrías concéntricas.</p></article>
+    <article><strong>02 · Interfaz Graphite</strong><p>Paneles, inspector, lienzo 2D/3D y jerarquía de herramientas.</p></article>
+    <article><strong>03 · Animación y salida</strong><p>Timeline, composición por capas y formatos de exportación en validación.</p></article>
+  </div>
+            </section>
+
+            <section class="artifact-detail" id="artifact-detail-genre" data-artifact-panel="genre" aria-labelledby="artifact-detail-title-genre" hidden>
+              <div class="artifact-detail-header">
+                <div><span class="artifact-detail-kicker">02 / Presentación de proyecto</span><h3 id="artifact-detail-title-genre">LAB GENRE3D — Modelado y rigging</h3></div>
+                <button type="button" class="artifact-detail-close" data-artifact-close aria-label="Cerrar presentación de LAB GENRE3D — Modelado y rigging">Cerrar ×</button>
+              </div>
+              
+  <div class="artifact-detail-layout">
+    <div class="artifact-poster artifact-poster--genre" role="img" aria-label="Identidad visual LAB GENRE3D, marca menta sobre fondo oscuro"><span>LAB Creative Suite / Modelado 3D</span><strong>GENRE<span>3D.</span></strong><span>Modelado · Rigging · Animación</span></div>
+    <div class="artifact-detail-copy">
+      <h4>Editor 3D independiente en navegador</h4>
+      <p>Se recuperó la presentación gráfica del editor mostrada antes en «Proyectos destacados». El proyecto explora una experiencia de edición 3D orientada a modelos, escenas, materiales y personajes.</p>
+      <ul class="artifact-chip-list"><li>React</li><li>Three.js</li><li>GLB / glTF</li><li>Materiales PBR</li></ul>
+      <h4>Artefactos de interfaz</h4>
+      <p>Identidad GENRE3D, editor de escena con herramientas de transformación, panel de materiales, árbol de objetos y propuesta de flujo para rigging y animación.</p>
+      <div class="artifact-detail-actions"><a href="https://lab-genre3d.pages.dev/" target="_blank" rel="noopener noreferrer">Abrir interfaz React</a></div>
+    </div>
+  </div>
+  <div class="artifact-artifacts">
+    <article><strong>01 · Escena y geometría</strong><p>Visor, selección, gizmos, transformaciones y edición de objetos.</p></article>
+    <article><strong>02 · Materiales</strong><p>Parámetros PBR, importación de recursos y salida GLB.</p></article>
+    <article><strong>03 · Personajes</strong><p>Controles de rig y timeline en desarrollo y pruebas.</p></article>
+  </div>
+            </section>
+
+            <section class="artifact-detail" id="artifact-detail-suite" data-artifact-panel="suite" aria-labelledby="artifact-detail-title-suite" hidden>
+              <div class="artifact-detail-header">
+                <div><span class="artifact-detail-kicker">03 / Presentación de proyecto</span><h3 id="artifact-detail-title-suite">LAB Creative Suite — Arquitectura del ecosistema</h3></div>
+                <button type="button" class="artifact-detail-close" data-artifact-close aria-label="Cerrar presentación de LAB Creative Suite — Arquitectura del ecosistema">Cerrar ×</button>
+              </div>
+              
+  <div class="artifact-detail-layout">
+    <div class="artifact-suite-map" role="group" aria-label="Diagrama de arquitectura LAB Creative Suite, con aplicaciones, motor Blender y respaldo">
+      <div class="artifact-suite-map__apps">
+        <div class="artifact-suite-node"><strong>LAB Studio</strong><small>Composición 2D/3D</small></div>
+        <div class="artifact-suite-node"><strong>LAB GENRE3D</strong><small>Modelado y materiales</small></div>
+      </div>
+      <div class="artifact-suite-arrow" aria-hidden="true">↓ &nbsp; Integración prevista &nbsp; ↓</div>
+      <div class="artifact-suite-node"><strong>LAB Creative Suite Engine</strong><small>Coordinación de procesos y recursos · arquitectura en preparación</small></div>
+      <div class="artifact-suite-arrow" aria-hidden="true">↓</div>
+      <div class="artifact-suite-map__services">
+        <div class="artifact-suite-node"><strong>Blender</strong><small>VM externa prevista</small></div>
+        <div class="artifact-suite-node"><strong>Cloudflare R2</strong><small>Almacenamiento previsto</small></div>
+        <div class="artifact-suite-node"><strong>Drive</strong><small>Respaldos previstos</small></div>
+      </div>
+    </div>
+    <div class="artifact-detail-copy">
+      <h4>Una suite, varias herramientas</h4>
+      <p>Esta es la presentación específica de LAB Creative Suite, no la interfaz de LAB Studio. Integra el diseño del ecosistema, los intercambios entre editores y la futura infraestructura de Blender remoto y respaldos.</p>
+      <ul class="artifact-chip-list"><li>Arquitectura UX</li><li>Biblioteca de recursos</li><li>Interoperabilidad</li><li>Procesamiento remoto</li></ul>
+      <h4>Estado del proyecto</h4>
+      <p>La arquitectura y las aplicaciones componentes están documentadas. La suite todavía no dispone de una aplicación React independiente publicada; la VM y la automatización de respaldos no están confirmadas como operativas.</p>
+      <div class="artifact-detail-actions"><a href="https://www.figma.com/design/f9ZjDmfI0fLwESIGxlHmMU" target="_blank" rel="noopener noreferrer">Ver arquitectura LAB Suite en Figma</a></div>
+    </div>
+  </div>
+  <div class="artifact-artifacts">
+    <article><strong>01 · Sistema creativo</strong><p>Mapa de aplicaciones, roles de cada editor y transferencia de recursos.</p></article>
+    <article><strong>02 · Motor remoto</strong><p>Diseño del flujo hacia Blender sin sobrecargar los editores web.</p></article>
+    <article><strong>03 · Biblioteca privada</strong><p>Plan de organización de modelos, materiales, animaciones y copias de seguridad.</p></article>
+  </div>
+            </section>
+
+            <section class="artifact-detail" id="artifact-detail-art" data-artifact-panel="art" aria-labelledby="artifact-detail-title-art" hidden>
+              <div class="artifact-detail-header">
+                <div><span class="artifact-detail-kicker">04 / Presentación de proyecto</span><h3 id="artifact-detail-title-art">Arte generativo y tecnología</h3></div>
+                <button type="button" class="artifact-detail-close" data-artifact-close aria-label="Cerrar presentación de Arte generativo y tecnología">Cerrar ×</button>
+              </div>
+              
+  <div class="artifact-detail-layout">
+    <div class="artifact-poster artifact-poster--art" role="img" aria-label="Gráfica conceptual de arte generativo con anillos geométricos en violeta"><span>Arte y sistemas visuales</span><strong>ARTE<br>+ CÓDIGO.</strong><span>Geometría · Vectores · Movimiento</span></div>
+    <div class="artifact-detail-copy">
+      <h4>Exploración gráfica asistida por herramientas digitales</h4>
+      <p>Propuesta que cruza composición generativa, ilustración vectorial y movimiento. LAB Studio funciona como entorno relacionado, pero este apartado presenta el proyecto conceptual en sí.</p>
+      <ul class="artifact-chip-list"><li>SVG</li><li>Composición gráfica</li><li>Illustrator</li><li>Motion</li></ul>
+      <h4>Artefactos y líneas de trabajo</h4>
+      <p>Estudios geométricos y de color, composición vectorial editable, variaciones de una misma pieza y preparación de recursos para edición audiovisual.</p>
+      <div class="artifact-detail-actions"><a class="secondary" href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer">Explorar herramienta relacionada</a></div>
+    </div>
+  </div>
+  <div class="artifact-artifacts">
+    <article><strong>01 · Sistema gráfico</strong><p>Variaciones de formas, curvas y patrones paramétricos.</p></article>
+    <article><strong>02 · Vectores</strong><p>Exploración de SVG e integración con herramientas de ilustración.</p></article>
+    <article><strong>03 · Movimiento</strong><p>Estudios de secuencias y composición audiovisual.</p></article>
+  </div>
+            </section>
+
+            <section class="artifact-detail" id="artifact-detail-bridge" data-artifact-panel="bridge" aria-labelledby="artifact-detail-title-bridge" hidden>
+              <div class="artifact-detail-header">
+                <div><span class="artifact-detail-kicker">05 / Presentación de proyecto</span><h3 id="artifact-detail-title-bridge">LAB 3D Bridge — Interoperabilidad</h3></div>
+                <button type="button" class="artifact-detail-close" data-artifact-close aria-label="Cerrar presentación de LAB 3D Bridge — Interoperabilidad">Cerrar ×</button>
+              </div>
+              
+  <div class="artifact-detail-layout">
+    <div class="artifact-flow" role="group" aria-label="Flujo previsto desde GENRE3D mediante GLB y JSON versión 3 hacia LAB Studio">
+      <div class="artifact-flow-step"><strong>GENRE3D</strong><small>Modelo editable</small></div>
+      <span class="artifact-flow-arrow" aria-hidden="true">→</span>
+      <div class="artifact-flow-step"><strong>GLB + JSON v3</strong><small>Transferencia de escena</small></div>
+      <span class="artifact-flow-arrow" aria-hidden="true">→</span>
+      <div class="artifact-flow-step"><strong>LAB Studio</strong><small>Composición 2D/3D</small></div>
+    </div>
+    <div class="artifact-detail-copy">
+      <h4>Intercambio no destructivo entre editores</h4>
+      <p>Diseño del puente de interoperabilidad entre LAB GENRE3D y LAB Studio. El objetivo es conservar geometría, transformaciones y metadatos al incorporar recursos 3D en composiciones creativas.</p>
+      <ul class="artifact-chip-list"><li>GLB</li><li>JSON v3</li><li>Transformaciones</li><li>Metadatos</li></ul>
+      <h4>Estado de validación</h4>
+      <p>El formato de intercambio está documentado; la importación completa de proyectos entre ambas aplicaciones sigue en desarrollo y pruebas.</p>
+      <div class="artifact-detail-actions"><a href="https://lab-genre3d.pages.dev/" target="_blank" rel="noopener noreferrer">Explorar GENRE3D</a><a class="secondary" href="https://lab-studio-asl.pages.dev/" target="_blank" rel="noopener noreferrer">Explorar LAB Studio</a></div>
+    </div>
+  </div>
+  <div class="artifact-artifacts">
+    <article><strong>01 · Contrato de datos</strong><p>Manifiesto JSON v3 y referencias de activos 3D.</p></article>
+    <article><strong>02 · Metadatos</strong><p>Identidad, permisos de edición y transformaciones de objetos.</p></article>
+    <article><strong>03 · Validación</strong><p>Pruebas de carga segura y compatibilidad aún pendientes de consolidación.</p></article>
+  </div>
+            </section>
           </div>
         </div>
       </section>
@@ -935,7 +1074,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
     <script src="js/contact-toggle.js?v=20261031-audit" defer></script>
     <script src="js/contact-form-20261011.js?v=20261031-audit" defer></script>
-    <script src="js/design-gallery.js?v=20261013-2" defer></script>
+    <script src="js/design-gallery.js?v=20261103-artifact-panels" defer></script>
       <script src="js/analytics-config.js?v=20261011-1" defer></script>
     <script src="js/analytics.js?v=20261031-audit" defer></script>
   <style>
