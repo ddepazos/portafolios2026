@@ -1987,3 +1987,8 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
   #proyectos .case-tile-summary{grid-template-columns:16px 50px minmax(0,1fr) 13px}
   #proyectos .case-tile-thumbnail{width:50px;height:45px}
 }
+
+/* Transparent brand marks need breathing room inside case thumbnails. */
+#proyectos .case-tile-thumbnail:is(.case-thumb--triad,.case-thumb--corpus) img{
+  padding:6px;object-fit:contain;object-position:center;
+}
