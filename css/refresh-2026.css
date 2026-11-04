@@ -1849,3 +1849,35 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
     font-size:13px;
   }
 }
+
+
+/* 2026-11-04 · Explicit specificity for clear action text */
+/* These selectors intentionally outrank the legacy 900-weight styles.
+   :where() alone has zero specificity and cannot override those rules. */
+.button,
+.link-button,
+.cta-collapsible,
+.inline-contact-trigger,
+.rubik-toggle,
+.design-open,
+.artifact-links button,
+.artifact-detail-close,
+.artifact-detail-actions a,
+.artifact-detail-actions button{
+  font-family:"DM Sans","Segoe UI",sans-serif;
+  font-weight:700;
+  letter-spacing:.018em;
+  text-shadow:none;
+  -webkit-font-smoothing:auto;
+}
+.hero .cta-collapsible,
+.hero .button.ghost,
+.hero .rubik-toggle{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.018em;
+}
+#destacados .section-header .button{
+  font-weight:700;
+  letter-spacing:.018em;
+}
