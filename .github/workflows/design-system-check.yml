@@ -1,0 +1,35 @@
+name: Portafolio 2026 - Design System Checks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'css/**'
+      - 'js/**'
+      - 'data/**'
+      - 'proyectos/**'
+      - 'scripts/check-design-system.mjs'
+      - '.github/workflows/design-system-check.yml'
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'css/**'
+      - 'js/**'
+      - 'data/**'
+      - 'proyectos/**'
+      - 'scripts/check-design-system.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: Verificar sistema de diseño
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+      - name: Comprobar contrato visual y enlaces locales
+        run: node scripts/check-design-system.mjs
