@@ -1,0 +1,37 @@
+/* PORTAFOLIO 2026 · única fuente de tokens cromáticos para la portada.
+   Cargar después de variables.css y antes de main.css/refresh-2026.css.
+   No se importa desde páginas de proyecto, UI kits ni aplicaciones LAB.
+   Mantener la apariencia aprobada: carbón cálido, marfil y ocre suave. */
+:root {
+  /* Surfaces */
+  --bg: #242321;
+  --bg-2: #292826;
+  --panel: #302e2b;
+  --panel-2: #383530;
+  /* Text and contrast */
+  --ink: #eee9e1;
+  --muted: #c3bdb4;
+  --line: rgba(245, 245, 243, .20);
+  /* Interactions */
+  --accent: #c8b16b;
+  --accent-hover: #d8c68d;
+  --ui-border-strong: #817a6d;
+  --ui-focus: #c8b16b;
+  /* Compatibility aliases for existing components; not literal red/green */
+  --red: var(--accent);
+  --yellow: var(--accent);
+  --green: var(--accent);
+  --shadow: 7px 7px 0 rgba(200, 177, 107, .25);
+  --radius: 0;
+  /* Layout and type */
+  --max: 1240px;
+  --content-max: 1240px;
+  --ui-font-display: "Sora", "DM Sans", sans-serif;
+  --ui-font-body: "DM Sans", "Segoe UI", sans-serif;
+  --ui-space-1: 4px;
+  --ui-space-2: 8px;
+  --ui-space-3: 12px;
+  --ui-space-4: 16px;
+  --ui-space-6: 24px;
+  --ui-space-8: 32px;
+}
