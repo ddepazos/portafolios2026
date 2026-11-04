@@ -8,6 +8,22 @@ window.PORTFOLIO_PROJECTS = [
     live: 'https://ddepazos.github.io/plc/pages/dashboard.html'
   },
   {
+    slug: 'raki',
+    title: 'Raki',
+    category: 'Branding / Packaging / Web',
+    summary: 'Para Raki desarrollé una identidad visual inspirada en el sur de Chile, aplicada a etiquetas, piezas promocionales y web, buscando que todo se sintiera parte de una misma marca.',
+    detail: 'proyectos/raki.html',
+    live: 'https://rakidistribuidora.cl/'
+  },
+  {
+    slug: 'pagana-circular',
+    title: 'Pagana Circular',
+    category: 'UX/UI / Research / E-commerce',
+    summary: 'Caso UX para un e-commerce de moda circular: inventario de contenido, arquitectura de información, análisis heurístico, reorganización de navegación y prototipado en Figma.',
+    detail: 'proyectos/pagana-circular.html',
+    live: 'https://katarsispazos.github.io/pagana/'
+  },
+  {
     slug: 'triad',
     title: 'Triad',
     category: 'Brand / UX',
@@ -24,28 +40,12 @@ window.PORTFOLIO_PROJECTS = [
     live: 'https://diegopazos1984.github.io/parasubida-/'
   },
   {
-    slug: 'pagana-circular',
-    title: 'Pagana Circular',
-    category: 'UX/UI / Research / E-commerce',
-    summary: 'Caso UX para un e-commerce de moda circular: inventario de contenido, arquitectura de información, análisis heurístico, reorganización de navegación y prototipado en Figma.',
-    detail: 'proyectos/pagana-circular.html',
-    live: 'https://katarsispazos.github.io/pagana/'
-  },
-  {
     slug: 'nota-negra',
     title: 'Nota Negra',
     category: 'Editorial / UX/UI / Web',
     summary: 'Diario independiente abordado como sistema editorial digital: jerarquía de información, arquitectura de contenidos, lectura responsive e identidad aplicada a una experiencia web.',
     detail: 'proyectos/nota-negra.html',
     live: '#'
-  },
-  {
-    slug: 'raki',
-    title: 'Raki',
-    category: 'Branding / Packaging / Web',
-    summary: 'Para Raki desarrollé una identidad visual inspirada en el sur de Chile, aplicada a etiquetas, piezas promocionales y web, buscando que todo se sintiera parte de una misma marca.',
-    detail: 'proyectos/raki.html',
-    live: 'https://rakidistribuidora.cl/'
   },
   {
     slug: 'recorrido',
