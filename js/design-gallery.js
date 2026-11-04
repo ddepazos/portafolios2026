@@ -85,6 +85,7 @@
   const hideAll = () => {
     panels.forEach(panel => { panel.hidden = true; });
     triggers.forEach(button => { button.setAttribute('aria-expanded', 'false'); });
+    gallery.querySelectorAll('.artifact-links button[data-artifact-toggle]').forEach(button => { button.textContent = 'Ver ficha +'; });
     cards.forEach(card => card.classList.remove('is-expanded'));
     activeKey = null;
   };
@@ -113,6 +114,9 @@
     activeKey = key;
     triggers.filter(item => item.dataset.artifactToggle === key)
       .forEach(item => item.setAttribute('aria-expanded', 'true'));
+    gallery.querySelectorAll('.artifact-links button[data-artifact-toggle]').forEach(button => {
+      if (button.dataset.artifactToggle === key) button.textContent = 'Ocultar ficha −';
+    });
     cards.find(card => card.dataset.artifactCard === key)?.classList.add('is-expanded');
 
     requestAnimationFrame(() => {
