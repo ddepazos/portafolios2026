@@ -1,0 +1,249 @@
+/* Portafolio 2026 — Shared case-study UI
+   Applies ONLY to <body class="case-study-2026"> in the nine internal study pages.
+   Keeps brand artwork, images, embedded prototyping and project-specific color studies unchanged.
+   Visual language: warm charcoal #242321, panels #302e2b, ivory #eee9e1, golden ochre #c8b16b.
+*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap");
+
+body.case-study-2026{
+  --bg:#242321;
+  --bg-2:#292826;
+  --panel:#302e2b;
+  --panel-2:#383530;
+  --ink:#eee9e1;
+  --muted:#c3bdb4;
+  --line:rgba(245,245,243,.20);
+  --yellow:#c8b16b;
+  --red:#c8b16b;
+  --accent:#c8b16b;
+  --accent-hover:#d8c68d;
+  --shadow:3px 3px 0 rgba(200,177,107,.18);
+  background-color:var(--bg);
+  background-image:linear-gradient(rgba(255,255,255,.019) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.019) 1px,transparent 1px);
+  background-size:32px 32px;
+  color:var(--ink);
+  font-family:"DM Sans","Segoe UI",sans-serif;
+  font-size:16px;
+  line-height:1.58;
+  overflow-wrap:break-word;
+}
+.case-study-2026 :where(h1,h2,h3,h4){
+  font-family:"Sora","DM Sans",sans-serif;
+  font-weight:700;
+  letter-spacing:-.045em;
+  color:var(--ink);
+}
+.case-study-2026 :where(a,button,summary):focus-visible{
+  outline:2px solid var(--yellow);
+  outline-offset:3px;
+}
+.case-study-2026 .site-header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(36,35,33,.97);
+  border-bottom:1px solid var(--line);
+}
+.case-study-2026 .nav-wrap{
+  min-height:70px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 22px;
+  justify-content:space-between;
+  align-items:center;
+  padding-block:10px;
+}
+.case-study-2026 .site-header .brand{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  border:0;
+  padding:0;
+  color:var(--ink);
+  font-size:.86rem;
+  font-weight:800;
+  letter-spacing:.075em;
+  text-decoration:none;
+}
+.case-study-2026 .site-header .brand img{
+  width:36px;
+  height:36px;
+  padding:2px;
+  border:1px solid #534f49;
+  background:var(--bg);
+}
+.case-study-2026 .main-nav{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px 20px;
+}
+.case-study-2026 .main-nav a{
+  font-size:.78rem;
+  letter-spacing:.02em;
+  text-decoration:none;
+  color:var(--ink);
+  border-bottom:0;
+  transition:color .16s ease;
+}
+.case-study-2026 .main-nav a:hover{color:var(--yellow)}
+.case-study-2026 .container{width:min(1160px,calc(100% - 32px))}
+.case-study-2026 :where(.case-hero,.ds-hero){
+  padding:clamp(35px,5vw,67px) 0 clamp(23px,3.4vw,43px);
+  background:transparent;
+  border:0;
+}
+.case-study-2026 :where(.case-hero,.ds-hero) h1{
+  font-size:clamp(2.55rem,6vw,5.6rem);
+  line-height:1.08;
+  letter-spacing:-.055em;
+  margin:0 0 17px;
+  max-width:1020px;
+  overflow-wrap:normal;
+  word-break:normal;
+}
+.case-study-2026 .case-hero-brand__copy h1{font-size:clamp(2.45rem,5.8vw,5.2rem);line-height:1.08}
+.case-study-2026 :where(.case-hero,.ds-hero) .lead,
+.case-study-2026 :where(.case-intro,.ds-intro,.case-kicker){
+  font-size:clamp(.95rem,1.6vw,1.07rem);
+  line-height:1.6;
+  color:var(--muted);
+}
+.case-study-2026 :where(.case-meta,.ds-meta){
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:10px;
+  margin-top:20px;
+}
+.case-study-2026 :where(.case-meta,.ds-meta)>div{
+  min-width:0;
+  padding:14px 15px;
+  border:1px solid #5d5851;
+  background:var(--panel);
+  box-shadow:none;
+  border-radius:0;
+  color:var(--ink);
+}
+.case-study-2026 :where(.case-meta,.ds-meta) strong{
+  color:var(--yellow);
+  font-size:.7rem;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.case-study-2026 :where(.case-tags,.ds-tags){display:flex;flex-wrap:wrap;gap:7px;margin-block:16px}
+.case-study-2026 :where(.case-tags,.ds-tags)>span{
+  padding:6px 9px;
+  border:1px solid #5d5851;
+  background:var(--panel);
+  color:var(--ink);
+  font-size:.7rem;
+  letter-spacing:.045em;
+  border-radius:0;
+}
+.case-study-2026 :where(.case-section,.ds-section){
+  padding:clamp(28px,3.7vw,48px) 0;
+  border-top:1px solid var(--line);
+}
+.case-study-2026 :where(.case-section,.ds-section) h2{
+  font-size:clamp(1.55rem,2.8vw,2.55rem);
+  line-height:1.17;
+  letter-spacing:-.045em;
+  margin:0 0 20px;
+}
+.case-study-2026 :where(.case-section,.ds-section) h3{
+  font-size:clamp(1.03rem,1.75vw,1.42rem);
+  line-height:1.3;
+}
+.case-study-2026 :where(.case-section,.ds-section) p,
+.case-study-2026 :where(.case-section,.ds-section) li{
+  font-size:.92rem;
+  line-height:1.6;
+}
+.case-study-2026 :where(.case-grid,.ds-grid){gap:13px}
+.case-study-2026 .case-grid > :where(.case-card,.case-block),
+.case-study-2026 .ds-grid > :where(.ds-card),
+.case-study-2026 .case-meta + .case-block{
+  min-width:0;
+  padding:clamp(14px,1.7vw,20px);
+  background:var(--panel);
+  border:1px solid #615b52;
+  box-shadow:none;
+  border-radius:0;
+  color:var(--ink);
+}
+.case-study-2026 .case-grid > :where(.case-card,.case-block) p,
+.case-study-2026 .ds-grid > .ds-card p{color:var(--muted)}
+.case-study-2026 :where(.case-number,.ds-number){color:var(--yellow)}
+.case-study-2026 :where(.button,.link-button,.cta-row a){
+  min-height:40px;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:7px;
+  padding:10px 14px;
+  border:1px solid #786e60;
+  border-radius:0;
+  box-shadow:none;
+  background:var(--panel);
+  color:var(--ink);
+  font-size:.75rem;
+  letter-spacing:.055em;
+  text-decoration:none;
+  line-height:1.3;
+  font-weight:800;
+}
+.case-study-2026 :where(.button.primary,.link-button.primary){
+  background:var(--yellow);
+  border-color:var(--yellow);
+  color:#242321;
+}
+.case-study-2026 :where(.button,.link-button,.cta-row a):hover{
+  border-color:var(--yellow);
+  box-shadow:none;
+  transform:none;
+}
+.case-study-2026 :where(.button.primary,.link-button.primary):hover{background:var(--accent-hover)}
+.case-study-2026 .cta-row{gap:9px;margin-top:19px}
+.case-study-2026 .section.case-contact{
+  padding:clamp(27px,3.7vw,44px) 0;
+  border-top:1px solid var(--line);
+}
+.case-study-2026 .section.case-contact h2{font-size:clamp(1.5rem,2.8vw,2.4rem);line-height:1.14}
+.case-study-2026 .site-footer{
+  padding:14px 0 16px;
+  background:var(--bg-2);
+  border-top:1px solid var(--line);
+  box-shadow:none;
+  font-size:.8rem;
+  color:var(--muted);
+}
+.case-study-2026 .site-footer .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:8px 20px;
+}
+.case-study-2026 .site-footer p{margin:0}
+.case-study-2026 .site-footer a{text-decoration:none;color:var(--ink);border:0}
+.case-study-2026 .site-footer a:hover{color:var(--yellow)}
+/* Project artwork and prototypes retain project-specific color values. */
+.case-study-2026 :where(img,video,canvas,svg){max-width:100%}
+.case-study-2026 :where(.case-block,.case-card,.ds-card,.case-meta>div){overflow-wrap:break-word}
+@media(max-width:870px){
+  .case-study-2026 :where(.case-meta,.ds-meta){grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:650px){
+  .case-study-2026 .container{width:calc(100% - 26px)}
+  .case-study-2026 .nav-wrap{min-height:62px;gap:8px;padding-block:9px}
+  .case-study-2026 :where(.case-hero,.ds-hero){padding:30px 0 24px}
+  .case-study-2026 :where(.case-hero,.ds-hero) h1{font-size:clamp(2.2rem,10vw,3.5rem);line-height:1.1}
+  .case-study-2026 .case-hero-brand__copy h1{font-size:clamp(2.1rem,9vw,3.2rem)}
+  .case-study-2026 :where(.case-section,.ds-section){padding:28px 0}
+  .case-study-2026 :where(.case-meta,.ds-meta){gap:7px}
+  .case-study-2026 :where(.case-meta,.ds-meta)>div{padding:11px}
+  .case-study-2026 .site-footer .container{justify-content:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+  .case-study-2026 :where(a,button){transition:none}
+}
