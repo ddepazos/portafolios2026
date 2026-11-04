@@ -1,5 +1,5 @@
 /* Portafolio 2026 · Art direction refresh / additive, non-destructive */
-:root{--bg:#090b0f;--bg-2:#10141a;--panel:#171c23;--panel-2:#1e2530;--ink:#f4f2ec;--muted:#b7c0cb;--line:rgba(231,237,246,.18);--red:#ff654e;--yellow:#f4c95d;--green:#7bd9bd;--shadow:8px 8px 0 rgba(244,201,93,.78);--radius:12px;--max:1240px;--content-max:1240px}
+/* Tokens consolidado: css/design-tokens-2026.css (portada exclusivamente) */
 html{scroll-padding-top:100px}
 body{font-family:"DM Sans","Segoe UI",sans-serif;font-size:16px;line-height:1.65;background:#090b0f;background-image:radial-gradient(ellipse at 75% 5%,rgba(67,93,133,.12),transparent 35%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:auto,32px 32px,32px 32px;color:var(--ink);-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4,.brand,.main-nav,.eyebrow,.artifact-visual strong{font-family:"Sora","DM Sans",sans-serif}
@@ -76,7 +76,7 @@ p{overflow-wrap:break-word}
 @media(max-width:700px){.hero-copy .hero-manifesto{margin-top:30px}.hero-manifesto h2{font-size:1.35rem}}
 
 /* A4 poster-inspired visual identity · homepage only; UI Kits untouched */
-:root{--bg:#242321;--bg-2:#292826;--panel:#302e2b;--panel-2:#383530;--ink:#eee9e1;--muted:#c3bdb4;--line:rgba(245,245,243,.2);--red:#c8b16b;--yellow:#c8b16b;--green:#c8b16b;--shadow:7px 7px 0 rgba(200,177,107,.25);--radius:0}
+
 body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,.016) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.016) 1px,transparent 1px);background-size:40px 40px,40px 40px;color:var(--ink)}
 .site-header{background:rgba(36,35,33,.96);border-bottom:1px solid #514c46}
 .brand img,.project-card,.design-card,.artifact-card,.button,.link-button,.artifact-links a,.rubik-stage,.feature-panel,.stat-box,.artifact-status,.cta-collapsible,.hero-panel,.panel-feature,.expertise-item,.design-preview{border-radius:0!important}
@@ -99,7 +99,7 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
 ::selection{background:#c8b16b;color:#242321}
 
 /* Muted golden ochre and warm charcoal · 2026-10-31 */
-:root{--accent:#c8b16b;--accent-hover:#d8c68d}
+
 .hero-copy .lead,.hero-manifesto>p:last-child,.artifact-body p,.artifact-intro,.hero-meta{color:var(--muted)}
 .rubik-stage,.feature-panel,.stat-box,.service-card,.process-card,.expertise-item,.panel-box:not(.accent),.contact-form,.rubik-toggle,.site-footer{background-color:var(--bg-2)}
 .project-card,.design-card,.artifact-card{background-color:var(--panel)}
