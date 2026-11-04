@@ -858,7 +858,7 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
   gap:7px;
   min-width:0;
 }
-#proyectos .case-studies-preview-list span{
+#proyectos .case-studies-preview-list > .case-priority{
   min-width:0;
   display:flex;
   align-items:center;
@@ -888,7 +888,7 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
   #proyectos.section.projects{padding-block:30px}
   #proyectos .section-header h2{font-size:clamp(1.75rem,7vw,2.35rem)}
   #proyectos .case-studies-preview-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
-  #proyectos .case-studies-preview-list span{min-height:32px;padding:7px 8px;font-size:.68rem}
+  #proyectos .case-studies-preview-list > .case-priority{min-height:32px;padding:7px 8px;font-size:.68rem}
   #proyectos .case-studies-expanded{padding:10px}
   #proyectos .case-studies-expanded .portfolio-grid{gap:11px}
 }
