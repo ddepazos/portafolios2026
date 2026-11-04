@@ -53,11 +53,12 @@ Pruebas con navegador real por Cloudflare Browser Rendering, usando `https://die
 
 | Vista | Ancho viewport | Ancho documento | Desbordamiento horizontal |
 |---|---:|---:|---|
+| Móvil estrecho | 320 px | 320 px | No |
 | Móvil | 390 px | 390 px | No |
 | Tablet | 768 px | 768 px | No |
 | Escritorio | 1366 px | 1366 px | No |
 
-Comprobaciones adicionales en móvil: token `--accent: #c8b16b`, nueve fichas con apertura única, formulario inactivo inicialmente. Las medidas demuestran ausencia de overflow horizontal, **no** equivalen a una auditoría visual/manual completa, ni verifican el envío real de correos.
+Comprobaciones funcionales en navegador real: nueve fichas con apertura única y orden prioritario correcto; formulario de contacto abre y cierra mediante Escape; modal LAB abre y cierra; cubo Rubik pausa (`aria-pressed=false`) y reanuda (`aria-pressed=true`). Los **28 recursos gráficos locales** de la portada respondieron con estado HTTP 200 y tipo de contenido de imagen. Las medidas demuestran ausencia de overflow horizontal, **no** equivalen a una auditoría manual exhaustiva, ni verifican el envío real de correos.
 
 **Atención:** la galería «Artefactos 2026» es extensa en móvil pese a no desbordar horizontalmente. Cualquier futura compactación debe aprobarse por separado y respetar las fichas existentes.
 
