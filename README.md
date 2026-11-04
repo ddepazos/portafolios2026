@@ -75,3 +75,14 @@ La versión actual prioriza una identidad personal fuerte, un enfoque visual rec
 ## Google Analytics 4
 
 La integración está preparada en `js/analytics-config.js` y `js/analytics.js`. Para activarla se debe ingresar el ID público de medición con formato `G-XXXXXXXXXX` en `js/analytics-config.js`. Mientras el valor esté vacío, el sitio no envía datos a Google Analytics.
+
+
+## Sistema de diseño 2026
+
+La estética aprobada del portafolio se mantiene en **carbón cálido, marfil y ocre**. Los tokens de portada están centralizados en `css/design-tokens-2026.css` (sin alterar los estilos propios de Raki, las páginas de caso ni los proyectos LAB).
+
+- Guía de componentes, contratos de CSS y pruebas: [SISTEMA_DISENO_PORTAFOLIO_2026.md](docs/SISTEMA_DISENO_PORTAFOLIO_2026.md).
+- Revisión estática sin dependencias: `node scripts/check-design-system.mjs`.
+- GitHub Actions: `.github/workflows/design-system-check.yml` verifica cambios del sitio.
+- Responsive revisado en navegador real a **320, 390, 768 y 1366 px** sin desbordamiento horizontal.
+
