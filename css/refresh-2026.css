@@ -1670,3 +1670,27 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
 @media(prefers-reduced-motion:reduce){
  .hero .cta-collapsible,.hero a.panel-feature,.hero .panel-feature__mosaic img{transition:none}
 }
+
+
+/* LAB Suite Engine: pending transfer action, no fake upload · 2026-11-04 */
+.artifact-gallery [data-artifact-panel="bridge"] .engine-send-status{
+  margin:0 0 12px;
+  color:#c3bdb4;
+  font-size:.76rem;
+  font-weight:650;
+  line-height:1.4;
+}
+.artifact-gallery [data-artifact-panel="bridge"] .engine-send-pending:disabled{
+  opacity:.74;
+  cursor:not-allowed;
+  background:#303a43;
+  border:1px dashed #788087;
+  color:#e2e5e5;
+  filter:none;
+}
+.artifact-gallery [data-artifact-panel="bridge"] .engine-send-pending:disabled:hover{
+  background:#303a43;
+  border-color:#788087;
+  color:#e2e5e5;
+  filter:none;
+}
