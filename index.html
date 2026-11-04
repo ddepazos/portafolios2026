@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="css/main.css?v=20261031-seo" />
     <link rel="stylesheet" href="css/design.css?v=20261013-2" />
     <link rel="stylesheet" href="css/artefactos-2026.css?v=20261031-compact" />
-    <link rel="stylesheet" href="css/refresh-2026.css?v=20261104-case-colors" />
+    <link rel="stylesheet" href="css/refresh-2026.css?v=20261104-contact-modal-footer" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Diego Pazos","url":"https://diegopazos.pages.dev/","jobTitle":"Diseñador UX/UI y diseñador gráfico","knowsAbout":["Diseño UX/UI","Diseño gráfico","Diseño web","Identidad visual","Diseño generativo"],"address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"},"sameAs":["https://github.com/ddepazos"]}</script>
 </head>
   <body>
@@ -1113,7 +1113,7 @@
             </button>
           </div>
 
-          <div class="contact-form-panel" id="contact-form-panel" data-contact-panel aria-hidden="true">
+          <div class="contact-form-panel" id="contact-form-panel" data-contact-panel role="region" aria-label="Formulario para solicitar un proyecto" aria-hidden="true">
             <form id="contactForm" class="contact-form">
               <div class="field-row two-up">
                 <label>
@@ -1259,11 +1259,159 @@
       <script src="js/analytics-config.js?v=20261011-1" defer></script>
     <script src="js/analytics.js?v=20261031-audit" defer></script>
   <style>
-.lab-case-dialog{background:var(--bg);border-color:var(--accent)}
-.lab-case-kicker,.lab-case-panel small{color:var(--accent)}
-.lab-case-panel{background:var(--panel)}
-.lab-case-actions a{background:var(--accent);color:var(--bg)}
-.lab-case-dialog a:focus-visible,.lab-case-close:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+/* LAB case study modal: page chrome matches the 2026 warm charcoal/ochre UI.
+   Graphite color swatches and LAB artwork inside remain unchanged. */
+.lab-case-dialog{
+  width:min(910px,calc(100% - 24px));
+  max-height:calc(100dvh - 38px);
+  overflow:auto;
+  padding:0;
+  border:1px solid #736b5d;
+  border-radius:0;
+  background:#242321;
+  color:#eee9e1;
+  box-shadow:0 26px 80px rgba(0,0,0,.6);
+  scrollbar-color:#81745e #292826;
+  font-family:"DM Sans","Segoe UI",sans-serif;
+}
+.lab-case-dialog::backdrop{background:rgba(14,13,12,.8);backdrop-filter:blur(4px)}
+.lab-case-inner{padding:clamp(17px,3vw,32px)}
+.lab-case-top{
+  position:sticky;
+  top:0;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:13px;
+  margin:0;
+  padding:0 0 13px;
+  border-bottom:1px solid #625b51;
+  background:#242321;
+}
+.lab-case-kicker,.lab-case-panel small{
+  color:#c8b16b;
+  font-weight:800;
+  letter-spacing:.1em;
+}
+.lab-case-kicker{font-size:.69rem}
+.lab-case-close{
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  width:41px;
+  height:41px;
+  min-width:41px;
+  min-height:41px;
+  padding:0;
+  border:1px solid #837764;
+  background:#383530;
+  color:#eee9e1;
+  font:700 1.4rem/1 "DM Sans",sans-serif;
+  cursor:pointer;
+}
+.lab-case-close:hover{border-color:#c8b16b;color:#c8b16b}
+.lab-case-dialog h2{
+  margin:18px 0 11px;
+  font-family:"Sora","DM Sans",sans-serif;
+  font-size:clamp(1.8rem,3.5vw,2.85rem);
+  font-weight:750;
+  line-height:1.14;
+  letter-spacing:-.05em;
+  color:#eee9e1;
+  text-transform:none;
+}
+.lab-case-dialog h3{
+  margin:0 0 9px;
+  font-family:"Sora","DM Sans",sans-serif;
+  font-size:clamp(1.04rem,1.9vw,1.35rem);
+  font-weight:700;
+  line-height:1.28;
+  letter-spacing:-.03em;
+  color:#eee9e1;
+}
+.lab-case-dialog p,.lab-case-dialog li{
+  color:#d5cdc2;
+  font-size:.9rem;
+  line-height:1.55;
+}
+.lab-case-lead{
+  max-width:760px;
+  margin:0 0 14px;
+  font-size:clamp(.98rem,1.8vw,1.1rem);
+  line-height:1.6;
+  color:#e2ddd4;
+}
+.lab-case-hero{
+  min-height:176px;
+  margin:16px 0;
+  padding:17px 20px;
+  border:1px solid #63594e;
+  color:#eee9e1;
+}
+.lab-case-hero strong{font-size:clamp(3.4rem,8vw,6rem);line-height:.95}
+.lab-case-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin:16px 0 22px;
+}
+.lab-case-panel{
+  min-width:0;
+  padding:17px;
+  border:1px solid #615a50;
+  background:#302e2b;
+  box-shadow:none;
+  border-radius:0;
+}
+.lab-case-panel small{font-size:.69rem;margin-bottom:8px}
+.lab-case-panel ul{padding-left:18px;margin-top:8px}
+.lab-case-tags{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 16px}
+.lab-case-tags span{
+  border:1px solid #615a50;
+  background:#302e2b;
+  padding:6px 9px;
+  color:#eee9e1;
+  font-size:.72rem;
+  border-radius:0;
+}
+.lab-case-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:16px;
+}
+.lab-case-dialog .lab-case-actions a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:10px 14px;
+  border:1px solid #c8b16b;
+  border-radius:0;
+  background:#c8b16b;
+  color:#242321;
+  font-size:.76rem;
+  line-height:1.3;
+  font-weight:800;
+  text-decoration:none;
+}
+.lab-case-dialog .lab-case-actions a+a{
+  border:1px solid #7b7061;
+  background:#383530;
+  color:#eee9e1;
+}
+.lab-case-dialog .lab-case-actions a:hover{border-color:#d8c68d;filter:brightness(1.06)}
+.lab-case-dialog a:focus-visible,
+.lab-case-close:focus-visible{outline:2px solid #c8b16b;outline-offset:3px}
+@media(max-width:680px){
+ .lab-case-dialog{width:calc(100% - 14px);max-height:calc(100dvh - 16px)}
+ .lab-case-inner{padding:16px}
+ .lab-case-grid{grid-template-columns:1fr;gap:10px}
+ .lab-case-panel{padding:14px}
+ .lab-case-dialog h2{font-size:clamp(1.6rem,7vw,2.3rem)}
+ .lab-case-hero{min-height:146px;padding:14px}
+ .lab-case-hero strong{font-size:clamp(3rem,15vw,5rem)}
+}
 </style>
 </body>
 </html>
