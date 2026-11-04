@@ -954,7 +954,7 @@ body{background-color:#242321;background-image:linear-gradient(rgba(255,255,255,
 }
 #proyectos .case-tile-actions .link-button.primary{background:#c8b16b;color:#242321;border-color:#c8b16b}
 #proyectos .case-tile-actions .link-button:hover{border-color:#c8b16b}
-#proyectos .case-tile-actions .link-button.primary:hover{background:#d8c68d}
+
 #proyectos .case-tile-actions a:focus-visible{outline:2px solid #c8b16b;outline-offset:3px}
 @media(max-width:900px){
  #proyectos .case-compact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
